@@ -1,0 +1,37 @@
+.sprite {
+	*zoom: 1;
+	*display: inline;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	*zoom: 1;
+	*display: inline;
+}
+
+.mainSliderThumbs li {
+	*zoom: 1;
+	*display: inline;
+}
+
+.tovarItem {
+	*zoom: 1;
+	*display: inline;
+}
+
+.copyright {
+	*zoom: 1;
+	*display: inline;
+}
+
+
+.row{
+	zoom: 1;
+}
+
+.ir {
+	*text-indent: -9999px;
+}
+
+.clearfix {
+	*zoom: 1;
+}
