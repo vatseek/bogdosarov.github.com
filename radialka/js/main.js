@@ -81,7 +81,6 @@ $(function() {
 	horizontal: 1,
 	itemNav: 'basic',
 	smart: 1,
-	activateMiddle: 1,
 	mouseDragging: 1,
 	touchDragging: 1,
 	releaseSwing: 1,
@@ -89,9 +88,6 @@ $(function() {
 	scrollBy: 1,
 	speed: 300,
 	elasticBounds: 1,
-	dragHandle: 1,
-	dynamicHandle: 1,
-	clickBar: 1,
 	
 	// paginator
 	pagesBar: '.mainSliderThumbs',
@@ -99,10 +95,11 @@ $(function() {
     function (index) {
     return '<li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> ';
     },
+	activatePageOn: 'click',
     
     // buttons
-	prev: '.js-mainSlider-l',
-	next: '.js-mainSlider-r'
+	prevPage: '.js-mainSlider-l',
+	nextPage: '.js-mainSlider-r'
   });
   
   // init brand slider
