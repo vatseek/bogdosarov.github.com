@@ -9,7 +9,7 @@ $(function() {
 	phone = false, // used when phone screen
 	columCount, // conut of colums in modal
 	mod,
-	windowInnerWidth= window.innerWidth, // used for mediaqueries
+	documentClientWidth= document.body.clientWidth, // used for mediaqueries
 	currentSize = 1, // current page size
 	newSize = 0, // new page size, changes when query transitions
 	n = catList.size(),
@@ -199,19 +199,19 @@ $(function() {
 	// media query - then update dinmic elements
 	function mediaQueries(){
 		if(currentSize != newSize){
-			if((windowInnerWidth >= 1000)){
+			if((documentClientWidth >= 1000)){
 				newSize = 1;
 		    	updateElements(980);
 		    } else
-		    if((windowInnerWidth >= 768) & (windowInnerWidth <= 1000)){
+		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
 		    	newSize = 2;
 		    	updateElements(768);
 		    } else
-		    if((windowInnerWidth >= 480) & (windowInnerWidth <= 767)){
+		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
 		    	newSize = 3;
 		    	updateElements(480);
 		    } else
-		    if(windowInnerWidth < 479){
+		    if(documentClientWidth < 479){
 		    	newSize = 4;
 		    	updateElements(320);
 		    }	
@@ -224,20 +224,20 @@ $(function() {
     mediaQueries();
        
     $(window).resize(function(){
-    	windowInnerWidth = window.innerWidth;	
-    	if((windowInnerWidth >= 1000)){
+    	documentClientWidth = document.body.clientWidth;	
+    	if((documentClientWidth >= 1000)){
 		    	newSize = 1;
 		    } else
-		    if((windowInnerWidth >= 768) & (windowInnerWidth <= 1000)){
+		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
 		    	newSize = 2;
 		    } else
-		    if((windowInnerWidth >= 480) & (windowInnerWidth <= 767)){
+		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
 		    	newSize = 3;
 		    } else
-		    if(windowInnerWidth < 480){
+		    if(documentClientWidth < 480){
 		    	newSize = 4;
 		    }
-		console.log(newSize+' '+currentSize);
+		console.log(newSize+' '+documentClientWidth);
     	mediaQueries();
     });
 });
