@@ -84,8 +84,9 @@ $(function() {
 	mouseDragging: 1,
 	touchDragging: 1,
 	releaseSwing: 1,
+	sweengSpeed: 0.2,
 	startAt: 0,
-	scrollBy: 1,
+	scrollBy: 0,
 	speed: 300,
 	elasticBounds: 1,
 	
