@@ -9,7 +9,7 @@ $(function() {
 	phone = false, // used when phone screen
 	columCount, // conut of colums in modal
 	mod,
-	documentClientWidth= document.body.clientWidth, // used for mediaqueries
+	documentClientWidth= $(window).width()+17, // used for mediaqueries
 	currentSize = 1, // current page size
 	newSize = 0, // new page size, changes when query transitions
 	n = catList.size(),
@@ -225,7 +225,7 @@ $(function() {
     mediaQueries();
        
     $(window).resize(function(){
-    	documentClientWidth = document.body.clientWidth;	
+    	documentClientWidth = $(window).width()+17;	
     	if((documentClientWidth >= 1000)){
 		    	newSize = 1;
 		    } else
