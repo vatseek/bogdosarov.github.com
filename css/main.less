@@ -55,6 +55,11 @@ textarea {
   padding: 0.2em 0;
 }
 
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
 // Border Radius
 
 .border-radius(@radius) {
@@ -93,20 +98,120 @@ textarea {
 
 /* my styles */
 
+html, body, .left-side, .content {
+  height: 100%;
+}
+
+.left-side {
+  position: relative;
+  .box-sizing(border-box);
+  float: left;
+  padding-top: 22px;
+  width: 25%;
+  min-width: 210px;  
+  background-color: #c8c3be; 
+  background:url(../img/bg-2.png),  linear-gradient(to top, #1f1f1f, #4c4c4c);
+  .logo {
+    display: block;
+    font-size: 2.813em;
+    font-weight: bold;
+    color: #08b698;
+    text-decoration: none;
+    text-align: center;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.site-list {
+  margin-top: 30px;
+  padding-left: 12.4693%;
+  .site-list-item {
+    & > a {
+      font-size: 1.813em;
+      text-decoration: none;
+    }
+    ul {
+      margin-left: 15px;
+      li {
+        a {
+          font-size: 1.313em;
+          text-decoration: none;
+          .transition(all 0.2s);
+          &:hover {
+            color:#25cbad;
+          }
+        }
+      }
+    }
+  }
+}
+
+.animation {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  height: 150px;
+  
+  .circle {
+    .box-sizing(border-box);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 5px solid transparent;
+    .border-radius(50%);    
+    animation: rotate linear infinite;
+    
+    &.circle-1 {
+      border-right-color: #00ba9a;
+      animation-duration: 0.85s;
+    }    
+    &.circle-2 {
+      border-width: 3px;
+      border-bottom-color: #00ba9a;
+      margin: 12.5% 0 0 12.5%;
+      width: 75%;
+      height: 75%;
+      animation-duration: 0.95s;
+    }
+    &.circle-3 {
+      border-width: 1px;
+      border-top-color: #00ba9a;
+      margin: 22.5% 0 0 22.5%;
+      width: 55%;
+      height: 55%;
+      animation-duration: 1.05s;
+    }
+  }
+}
+
+@keyframes rotate {
+  /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+.content {
+  float: right;
+  width: 75%;
+}
+
+@media screen and (max-width:800px){
+  .content {
+    display: none;
+  }
+  .left-side {
+    width: 100%;
+  }
+}
+
 /*************/
-
- a, a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
   /*
    * Don't show links for images, or javascript/internal links
    */
@@ -141,5 +246,3 @@ textarea {
   h2, h3 {
     page-break-after: avoid;
   }
-
-}
