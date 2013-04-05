@@ -100,7 +100,7 @@ ul, li {
 
 html, body, .left-side, .content {
   height: 100%;
-  min-height: 500px;
+  min-height: 480px;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -193,8 +193,79 @@ html, body, .left-side, .content {
   }
 }
 
-// icons
+.content {
+  float: right;
+  width: 75%;
+}
 
+.devices {
+  position:relative;
+  width: 760px;
+  height: 575px;
+  top: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: -289px;
+}
+
+iframe {
+    transform-origin:top left;
+    margin:0;
+    padding:0;
+    position:relative;
+    background-color:#fff;
+}
+
+.mobile {
+    background:url("http://i45.tinypic.com/245jzuv.png") no-repeat -278px -479px;
+    position:absolute;
+    width:130px;
+    height:251px;
+    top:330px;
+    left:520px;
+    z-index:3;
+    iframe {
+      width:320px;
+      height:480px;
+      top:42px;
+      left:10px;
+      transform:scale(0.332);
+    }
+}
+
+.tablet {
+    background:url("http://i45.tinypic.com/245jzuv.png") no-repeat 0 -470px;
+    width:264px;
+    height:348px;
+    z-index:2;
+    position:absolute;
+    top:227px;
+    iframe {
+      width:768px;
+      height:1024px;
+      top:36px;
+      left:26px;
+      transform:scale(0.273);
+    }
+}
+
+.desktop {
+    position:absolute;
+    width:594px;
+    height:457px;
+    background: url("http://i45.tinypic.com/245jzuv.png") no-repeat 0 0;
+    top:0px;
+    left:100px;
+    iframe {
+      transform:scale(0.342);
+      left:21px;
+      top:26px;
+      width:1600px;
+      height:900px;
+    }
+}
+
+// icons
 .icon-arrow-down {
   margin-left: 6px;
   width: 17px;
@@ -202,6 +273,8 @@ html, body, .left-side, .content {
   vertical-align: middle;
 }
 
+
+//  keyframes
 @keyframes rotate {
   /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
   from {
@@ -211,11 +284,8 @@ html, body, .left-side, .content {
     transform: rotateZ(0deg);
   }
 }
-.content {
-  float: right;
-  width: 75%;
-}
 
+// media queryes
 @media screen and (max-width:800px){
   .content {
     display: none;
