@@ -100,6 +100,7 @@ ul, li {
 
 html, body, .left-side, .content {
   height: 100%;
+  min-height: 500px;
 }
 
 .left-side {
@@ -109,7 +110,6 @@ html, body, .left-side, .content {
   padding-top: 22px;
   width: 25%;
   min-width: 210px;  
-  background-color: #c8c3be; 
   background:url(../img/bg-2.png),  linear-gradient(to top, #1f1f1f, #4c4c4c);
   .logo {
     display: block;
@@ -208,6 +208,15 @@ html, body, .left-side, .content {
   }
   .left-side {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .left-side {
+    background-color: #c8c3be;
+  }
+  .animation {
+    display: none;
   }
 }
 
