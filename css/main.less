@@ -103,6 +103,11 @@ html, body, .left-side, .content {
   min-height: 500px;
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  background: url(../img/arrow-bottom.png) no-repeat;
+  display: inline-block;
+}
+
 .left-side {
   position: relative;
   .box-sizing(border-box);
@@ -188,6 +193,15 @@ html, body, .left-side, .content {
   }
 }
 
+// icons
+
+.icon-arrow-down {
+  margin-left: 6px;
+  width: 17px;
+  height: 10px;
+  vertical-align: middle;
+}
+
 @keyframes rotate {
   /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
   from {
@@ -213,7 +227,7 @@ html, body, .left-side, .content {
 
 @media screen and (max-width: 750px){
   .left-side {
-    background-color: #303030;
+    background: url(../img/bg-2.png) #303030;
   }
   .animation {
     display: none;
