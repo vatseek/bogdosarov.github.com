@@ -96,6 +96,59 @@ ul, li {
         box-sizing: @boxmodel;
 }
 
+
+// animation
+.animation(@settings){
+  -webkit-animation: @settings;
+     -moz-ainmation: @settings;
+       -o-ainmation: @settings;
+          ainmation: @settings;
+}
+
+// animation-duration
+.animation-duration(@options){
+  -webkit-animation-duration: @options;
+     -moz-animation-duration: @options;
+       -o-animation-duration: @options;
+          animation-duration: @options;
+}
+
+// Transformations
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
+       -o-transform: skew(@x, @y);
+          transform: skew(@x, @y);
+  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+}
+.translate3d(@x, @y, @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+     -moz-transform: translate3d(@x, @y, @z);
+       -o-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
 /* my styles */
 
 html, body, .left-side, .content {
@@ -168,7 +221,7 @@ html, body, .left-side, .content {
     position: absolute;
     border: 5px solid transparent;
     .border-radius(50%);    
-    animation: rotate linear infinite;
+    animation:rotate linear infinite;
     
     &.circle-1 {
       border-right-color: #00ba9a;
@@ -209,7 +262,10 @@ html, body, .left-side, .content {
 }
 
 iframe {
-    transform-origin:top left;
+    -webkit-transform-origin:top left;
+       -moz-transform-origin:top left;
+         -o-transform-origin:top left;
+            transform-origin:top left;
     margin:0;
     padding:0;
     position:relative;
@@ -217,7 +273,7 @@ iframe {
 }
 
 .mobile {
-    background:url("http://i45.tinypic.com/245jzuv.png") no-repeat -278px -479px;
+    background:url(../img/sprite.png) no-repeat -278px -479px;
     position:absolute;
     width:130px;
     height:251px;
@@ -229,12 +285,12 @@ iframe {
       height:480px;
       top:42px;
       left:10px;
-      transform:scale(0.332);
+      .scale(0.332);
     }
 }
 
 .tablet {
-    background:url("http://i45.tinypic.com/245jzuv.png") no-repeat 0 -470px;
+    background:url(../img/sprite.png) no-repeat 0 -470px;
     width:264px;
     height:348px;
     z-index:2;
@@ -245,7 +301,7 @@ iframe {
       height:1024px;
       top:36px;
       left:26px;
-      transform:scale(0.273);
+      .scale(0.273);
     }
 }
 
@@ -253,11 +309,11 @@ iframe {
     position:absolute;
     width:594px;
     height:457px;
-    background: url("http://i45.tinypic.com/245jzuv.png") no-repeat 0 0;
+    background: url(../img/sprite.png) no-repeat 0 0;
     top:0px;
     left:100px;
     iframe {
-      transform:scale(0.342);
+      .scale(0.342);
       left:21px;
       top:26px;
       width:1600px;
@@ -278,10 +334,10 @@ iframe {
 @keyframes rotate {
   /* rotate on 3d transform for best perf, it ensures GPU accelerated animation */
   from {
-    transform: rotateZ(360deg);
+    .rotate(360deg);
   }
   to {
-    transform: rotateZ(0deg);
+    .rotate(0deg);
   }
 }
 
