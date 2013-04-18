@@ -120,18 +120,26 @@ $(function() {
  	 	
  	if(size === 980){
  		dropdownSize(169);
+ 	    $(".catalog-list .tovarItem").removeClass('margin-0');
+ 	    $(".catalog-list .tovarItem:nth-child(3n)").addClass('margin-0');
+ 	    $(".category-list .category-item:nth-child(5n)").addClass('margin-right-0');
  	} else
  	if(size === 768){
  		//brandSlider.reload();
 		dropdownSize(148);
 		// remove padding in second element in catalog-list	
+ 	    $(".catalog-list .tovarItem").removeClass('margin-0');
  	    $(".catalog-list .tovarItem:nth-child(2n)").addClass('margin-0');
+ 	    $(".category-list .category-item").removeClass('margin-right-0');
+ 	    $(".category-list .category-item:nth-child(2n)").addClass('margin-right-0');
  	} else
  	if(size === 480){
  		if(!phone){
  		createSelect('.js-top-navigation');
 	  	createSelect('.js-change-curse');
 	  	createNav('.oll-category','.oll-cat-list');
+	  	$(".category-list .category-item").removeClass('margin-right-0');
+	  	$(".category-list .category-item:nth-child(n)").addClass('margin-right-0');
 	  }
 	  phone = true;
  	} else

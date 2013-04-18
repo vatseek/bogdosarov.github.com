@@ -160,8 +160,10 @@
     	<div class="badges">-30%</div>
     	<div class="badges action"></div>
     	<div class="badges discount"></div>
-    	<style type="text/css" media="screen">
+    	<style>
 			.badges {
+				position: absolutel
+				right:0;
 				width: 41px;
 				height: 28px;
 				padding-top: 13px;
@@ -173,6 +175,7 @@
 				color: #fff; 
 				text-shadow: 0 -1px rgba(0,0,0,.27);
 				background: url(files/sticker-bg.png) no-repeat;
+				z-index: 9;
 			}
 			
 			.badges.action {

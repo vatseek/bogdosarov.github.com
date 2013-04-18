@@ -284,7 +284,7 @@
 
 		<div class="wrapper">
 		 <div class="container">
-		 	<div class="row hidden-phone">
+		 	<div class="row">
 		 		<div class="span4">
 		 			<ul class="top-paging">
 		 				<li><a href="#">Главная</a></li>
@@ -312,12 +312,12 @@
 		 				<ul class="tovarList">
 		 					<li class="tovarItem">
 		 						<a href="#" class="tovar">
-		 							<div class="ticket-action hidden-320">
-		 								АКЦИЯ
-		 							</div>
-		 							<span class="img">
+		 							<div class="img">
+		 								<div class="ticket-action hidden-320">
+		 									АКЦИЯ
+		 								</div>
 		 								<img src="img/fish/c-img2.png" alt="tovar" />
-		 							</span>
+		 							</div>
 		 						</a>
 		 						<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
 		 						<ul class="colors-variant-list">
@@ -333,10 +333,10 @@
 		 						</a>
 		 					</li> <!-- /.tovarItem -->
 		 					<li class="tovarItem">
-		 						<a href="#" class="tovar">
 		 							<div class="ticket-best-prise hidden-320">
 		 								лучшая цена
 		 							</div>
+		 						<a href="#" class="tovar">
 		 							<span class="img">
 		 								<img src="img/fish/c-img1.png" alt="tovar" />
 		 							</span>
@@ -630,9 +630,6 @@
 		<script>
 			$(function() {
 				 
-			    // remove padding in third element in catalog-list	
- 				 $(".catalog-list .tovarItem:nth-child(3n)").addClass('margin-0');
-				
 				$( "#weight-slider" ).slider({
 					range: true,
 					min: 0,

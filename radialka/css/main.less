@@ -1294,7 +1294,8 @@ h2 {
 
 .top-paging {
   position: relative;
-  margin-top: -11px;
+  margin-top: -9px;
+  overflow: hidden;
   
   li {
     float: left;
@@ -1370,6 +1371,9 @@ h2 {
       &.margin-0 {
         margin-right: 0;
       }
+      .tovar {
+        display: block;
+      }
       .img {
         height: 230px;
       }
@@ -1413,12 +1417,13 @@ h2 {
   position: absolute;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
-  right: 0;
-  top: 0;
+  right: 0px;
+  top: 13px;
   width: 48px;
   height: 48px;
   text-align: center;
   text-transform: uppercase;
+  z-index: 9;
 }
 
 .ticket-action {
@@ -1759,6 +1764,15 @@ h2 {
   margin-right: 0 !important;
 }
 
+.bestsellers {
+  .tovarList {
+    .tovarItem {
+      margin:0 20px 40px 0;
+      padding: 0;
+    }
+  }
+}
+
   // media queries
   // styles for screen < 978px and >= 768px
   @media screen and (min-width:768px) and (max-width:1000px) {
@@ -2049,6 +2063,17 @@ h2 {
       margin-left: 20px;
     }
     
+    // page catalog-categories
+    
+    .category-cnt {
+      width: 100%;
+      
+      .span3 {
+        width: 100%;
+      }
+    }
+    
+    
   }
   
   // for device, max scrin size 480px
@@ -2282,7 +2307,23 @@ h2 {
         margin: 0;
       }
     }
+    
+    // page catalog-categories
 
+    .category-list {
+      .category-item {
+        width: 210px;
+        
+        .category-img {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    
+    .top-paging {
+      margin: 14px 0 15px;
+    }
   }
   
   //for device, max screen size = 320px 
@@ -2379,6 +2420,13 @@ h2 {
       }
       .prev-page a {
         background-image: url(../img/arrow-right-mob.png);
+      }
+    }
+    
+    // page catalog-categories
+    .category-list {
+      .category-item {
+        width: 100%;
       }
     }
     
