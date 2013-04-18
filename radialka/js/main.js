@@ -1,43 +1,4 @@
-$(function() {
-$( "#weight-slider" ).slider({
-	range: true,
-	min: 0,
-	max: 500,
-	values: [ 75, 300 ],
-	slide: function( event, ui ) {
-		$("#min-weight").val(ui.values[0]);
-		$("#max-weight").val(ui.values[1]);
-	}
-});
-});
 
-$(function() {
-$( "#prise-slider" ).slider({
-	range: true,
-	min: 0,
-	max: 500,
-	values: [ 75, 300 ],
-	slide: function( event, ui ) {
-		$("#min-prise").val(ui.values[0]);
-		$("#max-prise").val(ui.values[1]);
-	}
-});
-});
-
-$(function() {
-$( "#weight-slider" ).slider({
-	range: true,
-	min: 0,
-	max: 500,
-	values: [ 75, 300 ],
-	slide: function( event, ui ) {
-	$("#min-weight").val(ui.values[0]);
-	$("#max-weight").val(ui.values[1]);
-	}
-});
-$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-" - $" + $( "#slider-range" ).slider( "values", 1 ) );
-});
 $(function() {
 	  
   var catList = $('.js-all-cat-list li'), // list of oll hiden's categoryes
@@ -59,9 +20,6 @@ $(function() {
 	if(navigator.userAgent.indexOf('Mac') > 0){
 		$('body').addClass('mac-os');
 	};
-  
-  // remove padding in third element in catalog-list	
-  $(".catalog-list .tovarItem:nth-child(3n)").addClass('margin-0');
 	
   // placeholder for old browsers
   $('input[placeholder], textarea[placeholder]').placeholder();

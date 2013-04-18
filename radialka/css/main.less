@@ -1048,6 +1048,8 @@ li {
 .featuresList {
   min-height: 41px;
   background-color: #f1f0e8;
+  margin-bottom: 16px;
+  
   // item for futures list
   .featuresItem {
     float: left;
@@ -1102,7 +1104,7 @@ li {
 
 .bottomLine {
   border-bottom: 1px solid #cbd3da;
-  margin-top: 16px;
+  margin-top: 0;
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
@@ -1691,6 +1693,68 @@ h2 {
     margin-top: -11px; 
   }
 } 
+
+// page catalog-categories
+
+.category-list {
+  position: relative;
+  margin: 20px 0 0 0;
+  
+  .category-item {
+    display: inline-block;
+    width: 130px;
+    margin: 0 16px 48px 0;
+    vertical-align: top;
+    
+    .category-img {
+      width: 130px;
+      height: 130px;
+      overflow: hidden;
+      margin-bottom: 17px;
+      img {
+        max-height: 130px;
+        max-width: 130px;
+      }
+    }
+    .cat-name {
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .sabcategory {
+      li {
+        text-align: center;
+        
+        a {
+          font-size: 0.786em;   
+        }
+      }
+    }
+  }
+}
+
+.cat-name-link {
+  color: #274564;
+  font-size: 1.143em; 
+}
+
+.category-short-list {
+  padding-left: 20px;
+  
+  .subcategory-short-list {
+    margin: 0 0 30px 0;
+    li {
+      margin: 5px 0 0 15px;
+      
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.margin-right-0 {
+  margin-right: 0 !important;
+}
 
   // media queries
   // styles for screen < 978px and >= 768px
