@@ -1501,18 +1501,23 @@ h2 {
 }
 
 .filter-parameter {
+  .box-sizing(border-box);
   position: relative;
   
   .border-radius(8px);
-  -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-     -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-          box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.4); 
+     -moz-box-shadow: 0 3px 5px rgba(0,0,0,.4); 
+          box-shadow: 0 3px 5px rgba(0,0,0,.4);
+  border: 1px solid #e8e8e8;
   h3 {
     margin: 16px 0 13px 0;
     padding: 0 12px 9px;
     font-size: 1.143em;
     font-weight: bold; 
   }
+}
+
+.catalog-filter {
   h4 {
     margin: 0 0 12px 0;
     font-size: 1em;
@@ -1547,7 +1552,7 @@ h2 {
 
 .filter-row {
   margin-bottom: 19px; 
-  padding: 0 0 0 14px;
+  padding: 0 12px 0 14px;
   
   input, label {
     vertical-align: middle;
@@ -1557,6 +1562,7 @@ h2 {
     color: #1a62ba;
     font-size: 0.857em;
     border-bottom: 1px dashed;
+    cursor: pointer;
   }
   span {
     margin: 0 7px 0 0;
@@ -1573,11 +1579,15 @@ h2 {
     overflow: hidden;
     
     li { 
-      float: left;
+      // float: left;
+      display: inline-block;
       .border-radius(3px);
-      margin:0 5px 3px 0;
-      padding: 3px 0;
-      border: 1px solid transparent;
+      // margin:0 5px 3px 0;
+      // padding: 3px 3px;
+      padding-top:3px;
+      padding-bottom: 3px;
+      margin: 0 1px 0 0;
+      border: 1px solid #fff;
       
       a {
         display: block;
@@ -1598,7 +1608,7 @@ h2 {
       }
     }
     .checked {
-      margin: 0 6px 0 2px;
+      // margin: 0 6px 0 2px;
       padding: 3px 3px;
       border-color: #cbcbcb;
     }
@@ -1666,16 +1676,25 @@ h2 {
   }
 }
 
+.brands {
+  .brand-list {
+    height: 103px;
+    overflow: hidden;
+  }
+}
+
 .filter-tooltip { 
+  display: none;
   position: absolute; 
-  top: 369px;
   right: 228px;
   min-width: 210px; 
   height: 24px;
+  margin: -25px 0 0 0; 
   background: #f7f7ef; 
   border: 2px solid #ff9c00;
   padding: 4px 8px 0 8px;
   .box-shadow(0 2px 5px rgba(54,34,0,.27));
+  z-index: 99;
   
   &:before, &:after {
     left: 100%; 
@@ -1701,6 +1720,10 @@ h2 {
     margin-top: -11px; 
   }
 } 
+
+.filter-mobail-cnt {
+  display: none;
+}
 
 // page catalog-categories
 
@@ -2324,7 +2347,93 @@ h2 {
     .top-paging {
       margin: 14px 0 15px;
     }
-  }
+    
+    .catalog-filter {
+      h3 {
+        font-size: 1.143em;
+        margin-bottom: 19px;
+      }
+    }
+    
+    .filter-row {
+      h4 {
+        margin-bottom: 12px;
+      }
+      label {
+        font-size: 1.146em;
+      }
+      .input-row {
+        padding-bottom: 12px;
+      }
+    }
+    
+    .color-picker {
+      margin-bottom: 25px; 
+      
+      .colors {
+        li { 
+          margin: 0 6px 5px 0;
+          padding: 3px 3px;
+          
+          a {
+            width: 40px;
+            height: 40px;
+          }
+          .multy-color {
+            background-image: url(../img/multycolor-big.png);
+          }
+        }
+        .checked {
+          border-color: #cbcbcb;
+        }
+      }
+      h4 {
+        margin-bottom: 3px;
+      }
+    }
+    
+    .brands {
+      .brand-list {
+         height: 173px;
+      }
+    }
+    
+    .ui-slider {
+      margin-top: 22px;
+      
+      .ui-slider-handle {
+        width: 20px;
+        height: 37px;
+        margin:0 0 0 -9px;
+        background: url(../img/slider-handle-big.png) no-repeat;
+      }
+    }
+    
+    .prise-slider {
+      margin: 70px 0 73px;
+      
+    }
+    
+    .catalog-filter {
+      .button-group {
+        margin-bottom: 23px;
+        text-align: center;
+        
+        button {
+          width: 190px;
+          height: 40px;
+          font-size: 1.571em;
+        }
+        [class*="btn"] {
+          background-image: url(../img/btn-bg-big.png);
+        }
+        .blue-btn{
+          background-image: url(../img/blue-btn-big.png);
+          margin-right: 20px;
+        }
+      }
+    }
+}
   
   //for device, max screen size = 320px 
   @media screen and (max-width:479px){ 
@@ -2388,6 +2497,9 @@ h2 {
     .catalog-list {
       .tovarList {
         .tovarItem {    
+          .tovar {
+            width: 100%;
+          }
           .colors-variant-list {
             width: 40px;
             margin: 12px auto 8px;
@@ -2419,7 +2531,7 @@ h2 {
         background-image: url(../img/arrow-right-mob.png);
       }
       .prev-page a {
-        background-image: url(../img/arrow-right-mob.png);
+        background-image: url(../img/arrow-left-mob.png);
       }
     }
     
@@ -2430,6 +2542,25 @@ h2 {
       }
     }
     
+    .catalog-filter {
+      .button-group {
+        margin-bottom: 0;
+        padding: 19px 16px 14px;
+        
+        [class*="btn"] {
+          width: 100%;
+          margin: 0 0 8px 0;
+        }
+      }
+    }
+    
+    .color-picker {
+      .colors {
+        li {
+          margin: 0 2px 2px 0;
+        }
+      }
+    }
   }
 
 /* ==========================================================================

@@ -307,9 +307,12 @@
 		 				<div class="span3">
 		 			<div class="catalog-list">
 		 			<div class="filter-parameter-mobail hidden-desctop hidden-table visible-phone">
-		 				<a href=".open-param-link" class="open-param-link">Подбор по параметрам</a>
+		 				<a href="#" class="open-param-link js-show-mobail-filter">Подбор по параметрам</a>
+		 				<div class="filter-mobail-cnt js-filter-mobail">
+		 					
+		 				</div> <!-- /.filter-mobail-cnt -->
 		 			</div> <!-- /.filter-parameter-mobail -->
-		 				<ul class="tovarList">
+		 				<ul class="tovarList js-tovar-list">
 		 					<li class="tovarItem">
 		 						<a href="#" class="tovar">
 		 							<div class="img">
@@ -333,10 +336,10 @@
 		 						</a>
 		 					</li> <!-- /.tovarItem -->
 		 					<li class="tovarItem">
+		 						<a href="#" class="tovar">
 		 							<div class="ticket-best-prise hidden-320">
 		 								лучшая цена
 		 							</div>
-		 						<a href="#" class="tovar">
 		 							<span class="img">
 		 								<img src="img/fish/c-img1.png" alt="tovar" />
 		 							</span>
@@ -489,83 +492,91 @@
 		 		</div>
 		 			</div> <!-- /.row -->
 		 		</div>
-		 		<div class="span1 filter-parameter hidden-phone">
-		 			<div class="filter-tooltip">
-		 				<span>Найдено товаров: 432 </span>
+		 		<div class="span1 filter-parameter hidden-phone js-main-filter">
+		 			<div class="filter-tooltip js-filter-tooltip hidden-phone">
+		 				<span>Найдено товаров: <span class="js-filter-tooltip-size">432</span> </span>
 		 				<a href="#">Показать</a>
 		 			</div>
-		 			<form action="#" method="" accept-charset="utf-8">
-						<h3 class="bottomLine">Подбор по параметрам</h3>
-						<div class="color-picker filter-row">
-							<h4>Цвета</h4>
-							<ul class="colors">
-								<li><a style="background-color: #ffe400;" title="Желтый"></a></li>
-								<li><a style="background-color: #ff8400;" title="Оранжевый"></a></li>
-								<li><a style="background-color: #ffeedd;" title="Бежевый" class="color-beige"></a></li>
-								<li><a style="background-color: #a0704d;" title="Коричневый"></a></li>
-								<li class="checked"><a style="background-color: #e40000;" title="Красный"></a></li>
-								<li><a style="background-color: #e3239d;" title="Розовый"></a></li>
-								<li><a style="background-color: #8d3ea8;" title="Фиолетовый"></a></li>
-								<li><a style="background-color: #314cd7;" title="Синий"></a></li>
-								<li><a style="background-color: #50d0ff;" title="Голубой"></a></li>
-								<li><a style="background-color: #009900;" title="Зеленый"></a></li>
-								<li><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
-								<li class="checked"><a style="background-color: #cccccc;" title="Серый"></a></li>
-								<li><a style="background-color: #212121;" title="Ченый"></a></li>
-								<li><a class="multy-color" title="Разноцветный"></a></li>
-							</ul>
-						</div> <!-- /.color-picker -->
-						
-						<div class="brand filter-row check-list">
-							<h4>Бренд</h4>
-							<div><input type="checkbox" id="brand2" autocomplete="off"/><label for="brand2">Campus</label></div>	
-							<div>
-							  <input type="checkbox" id="brand3" autocomplete="off"/><label for="brand3">Campus</label></div>	
-							<div><input type="checkbox" id="brand4" autocomplete="off"/><label for="brand4">Campus</label></div>	
-							<div><input type="checkbox" id="brand5" autocomplete="off"/><label for="brand5">Campus</label></div>	
-							<div><input type="checkbox" id="brand6" autocomplete="off"/><label for="brand6">Campus</label></div>	
-							<a class="show-oll-brands">показать все бренды</a>
-						</div> <!-- /.brand -->
-						
-						<div class="destination filter-row check-list">
-							<h4>Предназначение</h4>
-							<div><input type="checkbox" id="dest1" /><label for="dest1">Для кемпинга</label></div>
-							<div><input type="checkbox" id="dest2" checked/><label for="dest2">Для кемпинга</label></div>
-							<div><input type="checkbox" id="dest3" /><label for="dest3">Для кемпинга</label></div>
-							<div><input type="checkbox" id="dest4" /><label for="dest4">Для кемпинга</label></div>
-						</div> <!-- /.destination -->
-						
-						<div class="filter-row capacity check-list">
-							<h4>Вместительность</h4>
-							<div><input type="checkbox" id="cap1" /><label for="cap1">1х местные</label></div>
-							<div><input type="checkbox" id="cap2" /><label for="cap2">1х местные</label></div>
-							<div><input type="checkbox" id="cap3" /><label for="cap3">1х местные</label></div>
-							<div><input type="checkbox" id="cap4" /><label for="cap4">1х местные</label></div>
-						</div> <!-- /.capacity -->
-						
-						<div class="weight-slider filter-row ">
-							<h4>Вес</h4>
-							<div>
-								<input type="text" id="min-weight" value="1" /><span>—</span><input type="text" id="max-weight" value="10000"/><span>грн.</span>
+		 			<div class="js-main-filter-cnt">
+		 				<form action="#" method="" accept-charset="utf-8" class="js-filter catalog-filter">
+							<h3 class="bottomLine">Подбор по параметрам</h3>
+							<div class="color-picker filter-row">
+								<h4>Цвета</h4>
+								<ul class="colors js-select-color">
+									<li data-color="1"><a style="background-color: #ffe400;" title="Желтый"></a></li>
+									<li data-color="2"><a style="background-color: #ff8400;" title="Оранжевый"></a></li>
+									<li data-color="3"><a style="background-color: #ffeedd;" title="Бежевый" class="color-beige"></a></li>
+									<li data-color="4"><a style="background-color: #a0704d;" title="Коричневый"></a></li>
+									<li data-color="5"><a style="background-color: #e40000;" title="Красный"></a></li>
+									<li data-color="6"><a style="background-color: #e3239d;" title="Розовый"></a></li>
+									<li data-color="7"><a style="background-color: #8d3ea8;" title="Фиолетовый"></a></li>
+									<li data-color="8"><a style="background-color: #314cd7;" title="Синий"></a></li>
+									<li data-color="9"><a style="background-color: #50d0ff;" title="Голубой"></a></li>
+									<li data-color="10"><a style="background-color: #009900;" title="Зеленый"></a></li>
+									<li data-color="11"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
+									<li data-color="12"><a style="background-color: #cccccc;" title="Серый"></a></li>
+									<li data-color="13"><a style="background-color: #212121;" title="Ченый"></a></li>
+									<li data-color="14"><a class="multy-color" title="Разноцветный"></a></li>
+								</ul>
+							</div> <!-- /.color-picker -->
+							
+							<div class="brands filter-row check-list">
+								<h4>Бренд</h4>
+								<div class="brand-list js-filter-brand-cnt">
+									<div class="input-row"><input type="checkbox" data-count="5" id="brand2" autocomplete="off"/><label for="brand2">Campus</label></div>	
+									<div class="input-row"><input type="checkbox" data-count="100" id="brand3" autocomplete="off"/><label for="brand3">Campus</label></div>	
+									<div class="input-row"><input type="checkbox" data-count="500" id="brand4" autocomplete="off"/><label for="brand4">Campus</label></div>	
+									<div class="input-row"><input type="checkbox" id="brand5" autocomplete="off"/><label for="brand5">Campus</label></div>	
+									<div class="input-row"><input type="checkbox" id="brand6" autocomplete="off"/><label for="brand6">Campus</label></div>
+									<div class="input-row"><input type="checkbox" id="brand6" autocomplete="off"/><label for="brand6">Campus</label></div>
+									<div class="input-row"><input type="checkbox" id="brand7" autocomplete="off"/><label for="brand7">Campus</label></div>
+									<div class="input-row"><input type="checkbox" id="brand8" autocomplete="off"/><label for="brand8">Campus</label></div>
+									<div class="input-row"><input type="checkbox" id="brand9" autocomplete="off"/><label for="brand9">Campus</label></div>
+									<div class="input-row"><input type="checkbox" id="brand10" autocomplete="off"/><label for="brand10">Campus</label></div>
+								</div>	<!-- /.brand-list -->
+								<a class="show-oll-brands js-filter-show-brand">показать все бренды</a>
+							</div> <!-- /.brand -->
+							
+							<div class="destination filter-row check-list">
+								<h4>Предназначение</h4>
+								<div class="input-row"><input type="checkbox" id="dest1" /><label for="dest1">Для кемпинга</label></div>
+								<div class="input-row"><input type="checkbox" id="dest2" checked/><label for="dest2">Для кемпинга</label></div>
+								<div class="input-row"><input type="checkbox" id="dest3" /><label for="dest3">Для кемпинга</label></div>
+								<div class="input-row"><input type="checkbox" id="dest4" /><label for="dest4">Для кемпинга</label></div>
+							</div> <!-- /.destination -->
+							
+							<div class="filter-row capacity check-list">
+								<h4>Вместительность</h4>
+								<div class="input-row"><input type="checkbox" id="cap1" /><label for="cap1">1х местные</label></div>
+								<div class="input-row"><input type="checkbox" id="cap2" /><label for="cap2">1х местные</label></div>
+								<div class="input-row"><input type="checkbox" id="cap3" /><label for="cap3">1х местные</label></div>
+								<div class="input-row"><input type="checkbox" id="cap4" /><label for="cap4">1х местные</label></div>
+							</div> <!-- /.capacity -->
+							
+							<div class="weight-slider filter-row ">
+								<h4>Вес</h4>
+								<div>
+									<input type="text" id="min-weight" value="1" /><span>—</span><input type="text" id="max-weight" value="10000"/><span>грн.</span>
+								</div>
+								<div id="weight-slider"></div>
+							</div> <!-- /.weight -->
+							
+							<div class="prise-slider filter-row ">
+								<h4>Цена</h4>
+								<div>
+									<input type="text" id="min-prise" value="1" /><span>—</span><input type="text" id="max-prise" value="10000"/><span>грн.</span>
+								</div>
+								<div id="prise-slider"></div>
+							</div> <!-- /.prise -->
+							
+							<div class="button-group">
+								<button type="button" class="blue-btn" >Показать</button><button type="button" class="white-btn">Сбросить</button>
 							</div>
-							<div id="weight-slider"></div>
-						</div> <!-- /.weight -->
-						
-						<div class="prise-slider filter-row ">
-							<h4>Цена</h4>
-							<div>
-								<input type="text" id="min-prise" value="1" /><span>—</span><input type="text" id="max-prise" value="10000"/><span>грн.</span>
-							</div>
-							<div id="prise-slider"></div>
-						</div> <!-- /.prise -->
-						
-						<div class="button-group">
-							<button type="button" class="blue-btn" >Показать</button><button type="button" class="white-btn">Сбросить</button>
-						</div>
-					</form>
+		 				</form>
+		 			</div>
 		 		</div>
 		 		<div class="span4 hidden-desctop">
-		 			<ul class="bottom-paging">
+		 			<ul class="bottom-paging  js-bottom-paging">
 		 				<li class="prev-page"><a href="#"><span  class="hidden-320">предыдущая</span></a></li>
 		 				<div class="page-list">
 		 					<li class="page-number hidden-phone"><a href="#"><span>1</span></a></li>
@@ -628,13 +639,34 @@
 		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script src="js/plugins.js"></script>
 		<script>
+			var mobailFilter = false;
 			$(function() {
+				// filter tooltip
+				$('.js-main-filter input[type="checkbox"]').click(function(){
+					if(!$(this).is(':checked') && $(this).parent().find('.js-filter-tooltip')){
+						filterTooltip = $('.js-filter-tooltip').hide();
+					} else {
+						filterTooltip = $('.js-filter-tooltip').detach();
+						filterTooltip.appendTo($(this).parent());
+						filterTooltip.show();
+						filterTooltip.find('.js-filter-tooltip-size').html($(this).data('count'));
+					}
+				});
+				
+				 $('.js-show-mobail-filter').click(function(){
+					$(this).hide()
+					$('.js-tovar-list').hide();
+					$('.js-bottom-paging').hide();
+					$('.js-filter-mobail').show();
+				});
 				 
 				$( "#weight-slider" ).slider({
 					range: true,
+					step: 0.01,
 					min: 0,
-					max: 500,
-					values: [ 75, 300 ],
+					max: 99,
+					animate: 'fast',
+					values: [ 0, 99 ],
 					slide: function( event, ui ) {
 						$("#min-weight").val(ui.values[0]);
 						$("#max-weight").val(ui.values[1]);
@@ -645,7 +677,8 @@
 					range: true,
 					min: 0,
 					max: 500,
-					values: [ 75, 300 ],
+					animate: 'fast',
+					values: [ 0, 500 ],
 					slide: function( event, ui ) {
 						$("#min-prise").val(ui.values[0]);
 						$("#max-prise").val(ui.values[1]);

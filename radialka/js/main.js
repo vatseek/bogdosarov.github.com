@@ -11,12 +11,31 @@ $(function() {
 	documentClientWidth= $(window).width()+17, // used for mediaqueries
 	currentSize = 1, // current page size
 	newSize = 0, // new page size, changes when query transitions
-	n = catList.size();
-  
+	n = catList.size(),
+	filterTooltip = $('.js-filter-tooltip');
+	
+	if(typeof mobailFilter !== 'undefind'){
+		var filterCatalog = $('.js-filter');
+	}
+	
     // add class .mac-os in body wen we used Mak OS or iOS
 	if(navigator.userAgent.indexOf('Mac') > 0){
 		$('body').addClass('mac-os');
 	};
+	
+	// select color in filter on page catalog
+	$(".js-select-color li").click(function(){
+		$(this).toggleClass("checked");
+	});
+	
+	// show oll brands in filter on page catalog
+	$('.js-filter-show-brand').click(function(){
+		var cnt = $('.js-filter-brand-cnt'),
+			height = $('.js-filter-brand-cnt input[type="checkbox"]').size() * $('.js-filter-brand-cnt .input-row').innerHeight();
+		cnt.animate({height: height}, 200);
+	});
+	
+	
 	
   // placeholder for old browsers
   $('input[placeholder], textarea[placeholder]').placeholder();
@@ -123,6 +142,12 @@ $(function() {
  	    $(".catalog-list .tovarItem").removeClass('margin-0');
  	    $(".catalog-list .tovarItem:nth-child(3n)").addClass('margin-0');
  	    $(".category-list .category-item:nth-child(5n)").addClass('margin-right-0');
+ 	    
+ 	    if(typeof mobailFilter !== 'undefind' && mobailFilter){
+			filterCatalog.detach();
+			filterCatalog.appendTo('.js-main-filter-cnt');
+			mobailFilter = false;
+	  	}
  	} else
  	if(size === 768){
  		//brandSlider.reload();
@@ -132,6 +157,12 @@ $(function() {
  	    $(".catalog-list .tovarItem:nth-child(2n)").addClass('margin-0');
  	    $(".category-list .category-item").removeClass('margin-right-0');
  	    $(".category-list .category-item:nth-child(2n)").addClass('margin-right-0');
+ 	    
+ 	    if(typeof mobailFilter !== 'undefind' && mobailFilter){
+			filterCatalog.detach();
+			filterCatalog.appendTo('.js-main-filter-cnt');
+			mobailFilter = false;
+	  	}
  	} else
  	if(size === 480){
  		if(!phone){
@@ -142,6 +173,13 @@ $(function() {
 	  	$(".category-list .category-item:nth-child(n)").addClass('margin-right-0');
 	  }
 	  phone = true;
+	  
+	  if(typeof mobailFilter !== 'undefind' && !mobailFilter){
+		filterCatalog.detach();
+		filterCatalog.appendTo('.js-filter-mobail');
+		mobailFilter = true;
+	  }
+	  
  	} else
  	if(size === 320){
  		if(!phone){
@@ -150,6 +188,12 @@ $(function() {
 	  	createNav('.oll-category','.oll-cat-list');
 	  }
 	  phone = true;
+	  
+	  if(typeof mobailFilter !== 'undefind' && !mobailFilter){
+		filterCatalog.detach();
+		filterCatalog.appendTo('.js-filter-mobail');
+		mobailFilter = true;
+	  }
  	}
 	console.log('Update '+size);
   }
