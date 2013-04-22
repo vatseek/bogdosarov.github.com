@@ -1935,6 +1935,9 @@ h2 {
   .category-cnt .span3 {
     width: 100%;
   }
+  .bestsellers .tovarList .tovarItem:last-child {
+    display: inline-block;
+  }
   .cart-title {
     margin-bottom: 15px;
   }
