@@ -19,33 +19,34 @@
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
-			<div class="modal-cnt modal-cnt-login">
-				<div class="close-modal js-close-modal"><i class="icon-close-modal"></i></div>
+			<div class="modal-cnt modal-cnt-login js-modal-cnt-login">
+				<div class="close-modal js-close-modal"><i class="icon-close-modal close"></i></div>
 				<div class="login-reg-tabs js-login-reg-tabs">
 					<ul class="login-reg-tabs-title">
 						<li class="login-reg-tabs-item"><a href="#autoriz"><span>Авторизация</span></a></li>
 						<li class="login-reg-tabs-item"><a href="#registr"><span>Регистрация</span></a></li>
 					</ul>
 					<div id="autoriz">
-						1
+						empty
 					</div> <!-- /#autoriz -->
 					<div id="registr" class="modal-form">
 						<form action="#" class="register-user">
 							<div class="form-row">
-								<label for="">Ваше имя и фамилия</label>
+								<label for="">Ваше имя и фамилия <i class="icon-asterisk"></i></label> <br />
 								<input type="text" name="user-name" value="" id=""/>
 							</div>
 							<div class="form-row">
-								<label for="">Эл. почта</label>
+								<label for="">Эл. почта <i class="icon-asterisk"></i></label> <br />
 								<input type="email" name="user-email" value="" id=""/>
 							</div>
 							<div class="form-row">
-								<label for="">Номер телефона</label>
+								<label for="">Номер телефона <i class="icon-asterisk"></i></label> <br />
 								<input type="number" name="user-phone" value="" id=""/>
 							</div>
 							<div class="form-row">
-								<label for="">Пароль</label>
-								<input type="password" name="user-pass" value="" id=""/>
+								<label for="">Пароль <i class="icon-asterisk"></i></label> <br />
+								<input type="password" name="user-pass" value="" id="" class="js-user-pass"/>
+								<i class="icon-eye js-remove-pass"></i>
 								<div class="info">Проверте пароль  нажав "глазик"</div>
 							</div>
 							<div class="form-row">
@@ -144,8 +145,8 @@
 					</div> 
 					<div class="span1">
 						<div class="user">
-							<a href="#" class="login"><i class="icon-cas"></i> Войти</a>
-							<a href="#" class="hidden-phone"><i class="icon-user"></i> Зарегистрироваться</a>
+							<a href="#" class="login js-login"><i class="icon-cas"></i> Войти</a>
+							<a href="#" class="hidden-phone js-register"><i class="icon-user"></i> Зарегистрироваться</a>
 						</div>	<!-- /.user-cabinet-ctn -->
 						
 						<div class="shoppingCart float-l  js-shopping-cart">

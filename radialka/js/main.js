@@ -39,6 +39,30 @@ $(function() {
 		var filterCatalog = $('.js-filter');
 	}
 	
+	// show register-login popup
+	$('.js-register').click(function(e) {
+		$( ".js-login-reg-tabs" ).tabs({ active: 1 });
+		$('.js-modal-cnt-login').lightbox_me({
+		centered: true,
+		overlayCSS: {
+			background: '#1e262e',
+			opacity: .9
+		}
+		});
+		e.preventDefault();
+	}); 
+	$('.js-login').click(function(e) {
+		$( ".js-login-reg-tabs" ).tabs({ active: 0 });
+		$('.js-modal-cnt-login').lightbox_me({
+		centered: true,
+		overlayCSS: {
+			background: '#1e262e',
+			opacity: .9
+		}
+		});
+		e.preventDefault();
+	}); 
+	
     // add class .mac-os in body wen we used Mak OS or iOS
 	if(navigator.userAgent.indexOf('Mac') > 0){
 		$('body').addClass('mac-os');
@@ -52,6 +76,12 @@ $(function() {
 	// tabs for login/registration modal
 	$('.js-login-reg-tabs').tabs({
 		active:1 
+	});
+	
+	// show user password
+	$(".js-remove-pass").click(function(){
+		var passInput = $('.js-user-pass')
+		 passInput.attr('type') === 'password' ? passInput.attr({type:'text'}) : passInput.attr({type:'password'});
 	});
 	
 	// show oll brands in filter on page catalog

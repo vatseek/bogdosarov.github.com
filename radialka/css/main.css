@@ -1590,6 +1590,7 @@ h2 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  margin-left: -3px;
   border: solid 3px #cbd3da;
 }
 .shop-cart-cnt .title-cart {
@@ -1978,17 +1979,10 @@ h2 {
     padding: 15px 0 0 0;
   }
 }
-.modal-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #1e262e;
-  opacity: .9;
-  z-index: 9999;
-}
 .modal-cnt {
-  width: 410px;
-  height: 458px;
+  display: none;
+  min-width: 410px;
+  min-height: 458px;
   position: relative;
   background-color: #fff;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 10px 29px 14px rgba(0, 0, 0, 0.33);
@@ -2008,9 +2002,43 @@ h2 {
   z-index: 99;
   cursor: pointer;
 }
+.modal-cnt input {
+  width: 325px;
+  height: 34px;
+  padding: 0 0 0 8px;
+  font-size: 1.286em;
+}
+.modal-cnt label {
+  display: inline-block;
+  font-size: 0.857em;
+  margin-bottom: 4px;
+}
+.modal-cnt label .icon-asterisk {
+  margin-top: 3px;
+  vertical-align: top;
+}
+.modal-cnt .form-row {
+  margin-bottom: 15px;
+}
+.modal-cnt .form-row .icon-eye {
+  position: relative;
+  left: -32px;
+  cursor: pointer;
+}
+.modal-cnt .blue-btn {
+  margin-top: 10px;
+}
+.modal-cnt .info {
+  margin-top: 3px;
+  font-size: 0.786em;
+  color: #7f8489;
+}
+.modal-form form {
+  margin-left: 40px;
+}
 .login-reg-tabs .login-reg-tabs-title {
   overflow: hidden;
-  margin: 28px 0 0 30px;
+  margin: 28px 0 23px 30px;
   height: 33px;
 }
 .login-reg-tabs .login-reg-tabs-title .login-reg-tabs-item {
@@ -2019,7 +2047,7 @@ h2 {
 }
 .login-reg-tabs .login-reg-tabs-title .login-reg-tabs-item a {
   display: inline-block;
-  padding: 5px 9px;
+  padding: 3px 9px;
   border: 1px solid transparent;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2038,6 +2066,7 @@ h2 {
 .login-reg-tabs .login-reg-tabs-title .login-reg-tabs-item.ui-tabs-active a span {
   border-color: transparent;
 }
+/*-----------------------------------------------------------------*/
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
     width: 440px;
@@ -2391,6 +2420,7 @@ h2 {
     position: absolute;
   }
 }
+/*-------------------------------------------------------*/
 @media screen and (max-width: 479px) {
   .hidden-320 {
     display: none !important;
@@ -2691,6 +2721,16 @@ h2 {
   width: 21px;
   height: 21px;
   background-position: -9px -194px;
+}
+.icon-asterisk {
+  width: 4px;
+  height: 4px;
+  background-position: -34px -80px;
+}
+.icon-eye {
+  width: 17px;
+  height: 9px;
+  background-position: -141px -155px;
 }
 .pixel-perfect {
   display: none;
