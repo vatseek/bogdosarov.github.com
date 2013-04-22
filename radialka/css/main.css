@@ -1984,6 +1984,7 @@ h2 {
   z-index: 9999;
 }
 .modal-cnt {
+  display: none;
   width: 410px;
   height: 458px;
   position: relative;
@@ -2004,6 +2005,9 @@ h2 {
   right: 18px;
   z-index: 99;
   cursor: pointer;
+}
+.modal-form label {
+  display: block;
 }
 .login-reg-tabs .login-reg-tabs-title {
   overflow: hidden;

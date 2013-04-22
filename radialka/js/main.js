@@ -51,7 +51,7 @@ $(function() {
 	
 	// tabs for login/registration modal
 	$('.js-login-reg-tabs').tabs({
-		active: 0
+		active:1 
 	});
 	
 	// show oll brands in filter on page catalog
