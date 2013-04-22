@@ -673,6 +673,8 @@
 					}
 				});
 				
+				$("#weight-slider").draggable();
+				
 				$( "#prise-slider" ).slider({
 					range: true,
 					min: 0,
@@ -684,6 +686,7 @@
 						$("#max-prise").val(ui.values[1]);
 					}
 				});
+				$("#prise-slider").draggable();
 				});
 		</script>
 		<script src="js/main.js"></script>

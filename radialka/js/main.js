@@ -49,6 +49,11 @@ $(function() {
 		$(this).toggleClass("checked");
 	});
 	
+	// tabs for login/registration modal
+	$('.js-login-reg-tabs').tabs({
+		active: 0
+	});
+	
 	// show oll brands in filter on page catalog
 	$('.js-filter-show-brand').click(function(){
 		var cnt = $('.js-filter-brand-cnt'),
