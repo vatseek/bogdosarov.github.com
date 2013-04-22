@@ -186,7 +186,10 @@ li {
   padding-top: 34px;
   margin-bottom: 7px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1984,7 +1987,6 @@ h2 {
   z-index: 9999;
 }
 .modal-cnt {
-  display: none;
   width: 410px;
   height: 458px;
   position: relative;
@@ -2005,9 +2007,6 @@ h2 {
   right: 18px;
   z-index: 99;
   cursor: pointer;
-}
-.modal-form label {
-  display: block;
 }
 .login-reg-tabs .login-reg-tabs-title {
   overflow: hidden;

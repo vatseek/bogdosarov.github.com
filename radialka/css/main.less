@@ -277,7 +277,7 @@ li {
   padding-top: 34px;
   margin-bottom: 7px;
 }
-  input[type="text"] {
+  input[type="text"],input[type="number"],input[type="email"],input[type="password"] {
     .box-sizing(border-box);
     .border-radius(2px);
     color: #000;
@@ -2335,7 +2335,6 @@ h2 {
   }
   
   .modal-cnt {
-    display: none;
     width: 410px; height: 458px;
     position: relative;
     background-color: #fff; 
@@ -2344,7 +2343,7 @@ h2 {
     box-shadow: 0 0 1px rgba(0,0,0,.15), 0 10px 29px 14px rgba(0,0,0,.33); 
     border: solid 6px #1a62ba;
     .border-radius(5px);
-     
+    
     .close-modal {
       position: absolute;
       width: 21px;
@@ -2353,15 +2352,6 @@ h2 {
       right: 18px;
       z-index: 99;
       cursor: pointer;
-    }
-  }
-  
-  .modal-form {
-    label {
-      display: block;
-    }
-    input {
-      
     }
   }
   
