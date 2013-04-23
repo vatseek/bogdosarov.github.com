@@ -307,7 +307,7 @@
 		 				<div class="span3">
 		 			<div class="catalog-list">
 		 			<div class="filter-parameter-mobail hidden-desctop hidden-table visible-phone">
-		 				<a href="#" class="open-param-link js-show-mobail-filter">Подбор по параметрам</a>
+		 				<a class="open-param-link js-show-mobail-filter">Подбор по параметрам</a>
 		 				<div class="filter-mobail-cnt js-filter-mobail">
 		 					
 		 				</div> <!-- /.filter-mobail-cnt -->
@@ -316,9 +316,7 @@
 		 					<li class="tovarItem">
 		 						<a href="#" class="tovar">
 		 							<div class="img">
-		 								<div class="ticket-action hidden-320">
-		 									АКЦИЯ
-		 								</div>
+		 								<div class="ticket-action hidden-320">АКЦИЯ</div>
 		 								<img src="img/fish/c-img2.png" alt="tovar" />
 		 							</div>
 		 						</a>
@@ -641,6 +639,10 @@
 		<script>
 			var mobailFilter = false;
 			$(function() {
+				var minPrise = $("#min-prise"),
+					maxPrise = $("#max-prise"),
+					minWeight = $("#min-weight"),
+					maxWeight = $("#max-weight");
 				// filter tooltip
 				$('.js-main-filter input[type="checkbox"]').click(function(){
 					if(!$(this).is(':checked') && $(this).parent().find('.js-filter-tooltip')){
@@ -663,30 +665,44 @@
 				$( "#weight-slider" ).slider({
 					range: true,
 					step: 0.01,
-					min: 0,
+					min: 1,
 					max: 99,
 					animate: 'fast',
-					values: [ 0, 99 ],
+					values: [ 1, 99 ],
 					slide: function( event, ui ) {
-						$("#min-weight").val(ui.values[0]);
-						$("#max-weight").val(ui.values[1]);
+						minWeight.val(ui.values[0]);
+						maxWeight.val(ui.values[1]);
 					}
 				});
-				
-				$("#weight-slider").draggable();
 				
 				$( "#prise-slider" ).slider({
 					range: true,
-					min: 0,
+					min: 1,
 					max: 500,
 					animate: 'fast',
-					values: [ 0, 500 ],
+					values: [ 1, 500 ],
 					slide: function( event, ui ) {
-						$("#min-prise").val(ui.values[0]);
-						$("#max-prise").val(ui.values[1]);
+						minPrise.val(ui.values[0]);
+						maxPrise.val(ui.values[1]);
 					}
 				});
+				
+				minPrise.change(function(){
+					$( "#prise-slider" ).slider("values", [ minPrise.val(), maxPrise.val() ]);
+				});
+				maxPrise.change(function(){
+					$( "#prise-slider" ).slider("values", [ minPrise.val(), maxPrise.val() ]);
+				});
+				minWeight.change(function(){
+					$( "#weight-slider" ).slider("values", [ minWeight.val(), maxWeight.val() ]);
+				});
+				maxWeight.change(function(){
+					$( "#weight-slider" ).slider("values", [ minWeight.val(), maxWeight.val() ]);
+				});
+				
 				$("#prise-slider").draggable();
+				$("#weight-slider").draggable();
+				
 				});
 		</script>
 		<script src="js/main.js"></script>

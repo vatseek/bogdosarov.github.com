@@ -1241,22 +1241,24 @@ h2 {
   right: 0px;
   top: 13px;
   width: 48px;
-  height: 48px;
+  height: 49px;
   text-align: center;
   text-transform: uppercase;
   z-index: 9;
+  background-image: url(../img/sprite.png);
 }
 .ticket-action {
-  padding-top: 16px;
-  background: url(../img/action.png) no-repeat;
+  background-position: -11px -266px;
   color: #fff;
   font-size: 0.857em;
+  line-height: 49px;
 }
 .ticket-best-prise {
   padding-top: 17px;
-  background: url(../img/best-prise.png) no-repeat;
+  background-position: -11px -318px;
   font-size: 0.714em;
   line-height: 0.914em;
+  color: #000;
 }
 .bottom-paging {
   margin-bottom: 13px;
@@ -1319,10 +1321,11 @@ h2 {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  border: 1px solid #e8e8e8;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  outline: 1px solid #e8e8e8;
+  outline: 0px solid rgba(0, 0, 0, 0);
 }
 .filter-parameter h3 {
   margin: 16px 0 13px 0;
@@ -1391,12 +1394,11 @@ h2 {
   overflow: hidden;
 }
 .color-picker .colors li {
-  display: inline-block;
+  float: left;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 3px;
   margin: 0 1px 0 0;
   border: 1px solid #fff;
 }
@@ -1468,7 +1470,8 @@ h2 {
   padding-right: 16px;
 }
 .weight-slider input {
-  width: 45px;
+  width: 50px;
+  margin-right: 5px;
 }
 .weight-slider span {
   margin: 0 7px 0 0;
@@ -1479,6 +1482,7 @@ h2 {
 }
 .prise-slider input {
   width: 61px;
+  margin-right: 5px;
 }
 .prise-slider span {
   margin: 0 7px 0 0;
@@ -1712,6 +1716,19 @@ h2 {
 .confirm-order .without-delivery strong,
 .confirm-order .without-delivery .black {
   color: #000;
+}
+.checkout-cnt {
+  width: 648px;
+  padding: 0 0 0 20px;
+}
+.checkout-cnt input[type="text"],
+.checkout-cnt input[type="password"],
+.checkout-cnt input[type="number"],
+.checkout-cnt input[type="email"],
+.checkout-cnt select {
+  width: 399px;
+  height: 27px;
+  padding-left: 6px;
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .hidden-table {

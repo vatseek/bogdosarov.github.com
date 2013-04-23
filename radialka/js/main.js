@@ -87,8 +87,19 @@ $(function() {
 	// show oll brands in filter on page catalog
 	$('.js-filter-show-brand').click(function(){
 		var cnt = $('.js-filter-brand-cnt'),
-			height = $('.js-filter-brand-cnt input[type="checkbox"]').size() * $('.js-filter-brand-cnt .input-row').innerHeight();
-		cnt.animate({height: height}, 200);
+			height = $('.js-filter-brand-cnt .input-row').innerHeight(),
+			bHeight,
+			size = $('.js-filter-brand-cnt input[type="checkbox"]').size();
+		$(this).toggleClass('js-open-brand');
+		if($(this).hasClass('js-open-brand')){
+			bHeight = size * height;
+			$(this).html('скрыть все бренды');
+			cnt.animate({height: bHeight}, 200);	
+		} else {
+			$(this).html('показать все бренды');
+			bHeight = 5 * height;
+			cnt.animate({height: bHeight}, 200);			
+		}
 	});
 	
 	
