@@ -1572,6 +1572,7 @@ h2 {
   border-bottom: 1px solid #274564;
   color: #274564;
   font-size: 1.143em;
+  text-decoration: none;
 }
 .category-short-list {
   padding-left: 20px;
