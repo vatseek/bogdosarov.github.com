@@ -130,6 +130,11 @@ li {
   min-height: 35px;
   background: url(../img/header-bg-1.png) #edf0f2 repeat-x;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .nav ul ul {
   position: absolute;
   display: none;
@@ -1256,7 +1261,7 @@ h2 {
 }
 .ticket-best-prise {
   padding-top: 17px;
-  background-position: -11px -318px;
+  background-position: -12px -318px;
   font-size: 0.714em;
   line-height: 0.914em;
   color: #000;
@@ -1471,8 +1476,10 @@ h2 {
   padding-right: 16px;
 }
 .weight-slider input {
-  width: 50px;
+  width: 62px;
   margin-right: 5px;
+  padding-left: 1px;
+  text-align: center;
 }
 .weight-slider span {
   margin: 0 7px 0 0;
@@ -1482,8 +1489,10 @@ h2 {
   margin-bottom: 25px;
 }
 .prise-slider input {
-  width: 61px;
+  width: 62px;
   margin-right: 5px;
+  padding-left: 1px;
+  text-align: center;
 }
 .prise-slider span {
   margin: 0 7px 0 0;
