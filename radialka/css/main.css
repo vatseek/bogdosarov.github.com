@@ -1400,7 +1400,7 @@ h2 {
   -moz-border-radius: 3px;
   border-radius: 3px;
   padding: 3px;
-  margin: 0 1px 0 0;
+  margin: 0 3px 2px 0;
   border: 1px solid #fff;
 }
 .color-picker .colors li a {
@@ -1540,8 +1540,8 @@ h2 {
 }
 .category-list .category-item {
   display: inline-block;
-  width: 130px;
-  margin: 0 16px 48px 0;
+  width: 142px;
+  margin: 0 0 48px 0;
   vertical-align: top;
 }
 .category-list .category-item .category-img {
@@ -1564,7 +1564,12 @@ h2 {
 .category-list .category-item .sabcategory li a {
   font-size: 0.786em;
 }
+.category-link {
+  text-decoration: none;
+  outline: none;
+}
 .cat-name-link {
+  border-bottom: 1px solid #274564;
   color: #274564;
   font-size: 1.143em;
 }
@@ -1743,6 +1748,12 @@ h2 {
   }
   [class*="span"] {
     margin-left: 4px;
+  }
+  [class*="span"] .row {
+    margin: 0;
+  }
+  [class*="span"] .row [class*="span"] {
+    margin-left: -4px;
   }
   .span1 {
     width: 179px;
@@ -2292,7 +2303,7 @@ h2 {
     margin: 0;
   }
   .category-list .category-item {
-    width: 210px;
+    width: 209px;
   }
   .category-list .category-item .category-img {
     width: 100%;
@@ -2530,7 +2541,7 @@ h2 {
     background-image: url(../img/arrow-left-mob.png);
   }
   .category-list .category-item {
-    width: 100%;
+    width: 137px;
   }
   .catalog-filter .button-group {
     margin-bottom: 0;

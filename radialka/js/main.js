@@ -218,7 +218,7 @@ $(function() {
  		dropdownSize(169);
  	    $(".catalog-list .tovarItem").removeClass('margin-0');
  	    $(".catalog-list .tovarItem:nth-child(3n)").addClass('margin-0');
- 	    $(".category-list .category-item:nth-child(5n)").addClass('margin-right-0');
+ 	    // $(".category-list .category-item:nth-child(5n)").addClass('margin-right-0');
  	    
  	    if(typeof mobailFilter !== 'undefined'){
  	    	if(mobailFilter){
@@ -233,10 +233,7 @@ $(function() {
 		dropdownSize(148);
 		// remove padding in second element in catalog-list	
  	    $(".catalog-list .tovarItem").removeClass('margin-0');
- 	    $(".catalog-list .tovarItem:nth-child(2n)").addClass('margin-0');
- 	    $(".category-list .category-item").removeClass('margin-right-0');
- 	    $(".category-list .category-item:nth-child(2n)").addClass('margin-right-0');
- 	    
+ 	    $(".catalog-list .tovarItem:nth-child(2n)").addClass('margin-0'); 	    
  	    if(typeof mobailFilter !== 'undefined'){
 			if(mobailFilter){
 				filterCatalog.detach();
@@ -249,9 +246,7 @@ $(function() {
  		if(!phone){
  		createSelect('.js-top-navigation');
 	  	createSelect('.js-change-curse');
-	  	createNav('.oll-category','.oll-cat-list');
-	  	$(".category-list .category-item").removeClass('margin-right-0');
-	  	$(".category-list .category-item:nth-child(n)").addClass('margin-right-0');
+	  	createNav('.oll-category','.oll-cat-list'); 
 	  }
 	  phone = true;
 	  
