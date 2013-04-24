@@ -807,6 +807,7 @@ a[class*="btn"]{
       display: block;
       text-shadow: 0 -1px #000;
       padding:14px 0 14px 30px;
+      cursor: pointer;
     }
     &:hover > a{
       color: #fff;
@@ -2655,15 +2656,21 @@ h2 {
       text-decoration: none;
     }
     
-    .catalog-list {
+    .catalog-list {      
       .tovarList {
+        padding-top: 10px;
+        
         .tovarItem {
           width: 100%;
           margin-right: 0;
+          margin-bottom: 5px;
           
           .tovar {
             width: 230px;
             margin: 0 20px 0 0;
+          }
+          .addToCart {
+            font-size:1.429em;
           }
         }
       }
@@ -2671,6 +2678,7 @@ h2 {
     
     .bottom-paging {
       text-align: center;
+      margin-top: 5px;
       
       .prev-page, .next-page {
         margin: 0;
@@ -2792,40 +2800,40 @@ h2 {
     }
     
     .shop-list-cnt {
-          .shop-list-item {
-            .shop-item-img {
-              width: 100px;
-            }
-            .shop-item-description {
-              width: 295px;
-              padding: 15px 0 0 0;          
-            }
-            .shop-item-count, .shop-item-prise {
-              width: 100%;
-            }
-            .shop-item-prise {
-              padding: 9px 0 17px 100px;
-              font-size: 1.143em;
-              width: 250px;
-              text-align: left;
-              
-              .mobail-summary {
-                display: inline;
-              }
-            }
-            .shop-item-remove {
-              .icon-remove-product {
-                position: relative;
-                top:-35px;
-                left: 35px;
-                margin: 0;
-                width: 35px;
-                height: 35px;
-                background-position: -129px -181px;
-              }
-            }
+      .shop-list-item {
+        .shop-item-img {
+          width: 100px;
+        }
+        .shop-item-description {
+          width: 295px;
+          padding: 15px 0 0 0;          
+        }
+        .shop-item-count, .shop-item-prise {
+          width: 100%;
+        }
+        .shop-item-prise {
+          padding: 9px 0 17px 100px;
+          font-size: 1.143em;
+          width: 250px;
+          text-align: left;
+          
+          .mobail-summary {
+            display: inline;
           }
         }
+        .shop-item-remove {
+          .icon-remove-product {
+            position: relative;
+            top:-35px;
+            left: 35px;
+            margin: 0;
+            width: 35px;
+            height: 35px;
+            background-position: -129px -181px;
+          }
+        }
+      }
+    }
        
        .spinner-cart {
          float: left;
@@ -2959,6 +2967,8 @@ h2 {
     }
     
     .bottom-paging {
+      margin-top: 50px;
+      
       .prev-page, .next-page {
         a { 
           padding: 26px 28px;

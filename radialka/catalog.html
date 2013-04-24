@@ -181,7 +181,7 @@
 						<nav class="nav mainNav hidden-phone">
 							<ul>
 								<li class="oll-category js-toogle">
-									<a href="#">Все категории <i class="icon-small-round-arrow"></i></a>
+									<a>Все категории <i class="icon-small-round-arrow"></i></a>
 									<div class="">
 										<ul class="ollCategories js-all-cat-list">
 												<li>
@@ -554,7 +554,7 @@
 							<div class="weight-slider filter-row ">
 								<h4>Вес</h4>
 								<div>
-									<input type="number" id="min-weight" value="1" /><span>—</span><input type="number" id="max-weight" value="10000"/><span>грн.</span>
+									<input type="number" id="min-weight" value="1" autocomplete="off"/><span>—</span><input type="number" id="max-weight" value="99" autocomplete="off"/><span>грн.</span>
 								</div>
 								<div id="weight-slider"></div>
 							</div> <!-- /.weight -->
@@ -562,7 +562,7 @@
 							<div class="prise-slider filter-row ">
 								<h4>Цена</h4>
 								<div>
-									<input type="number" id="min-prise" value="1" /><span>—</span><input type="number" id="max-prise" value="10000"/><span>грн.</span>
+									<input type="number" id="min-prise" value="1"  autocomplete="off"/><span>—</span><input type="number" id="max-prise" value="10000" autocomplete="off"/><span>грн.</span>
 								</div>
 								<div id="prise-slider"></div>
 							</div> <!-- /.prise -->
@@ -687,16 +687,16 @@
 					}
 				});
 				
-				minPrise.change(function(){
+				minPrise.keyup(function(){
 					$( "#prise-slider" ).slider("values", [ minPrise.val(), maxPrise.val() ]);
 				});
-				maxPrise.change(function(){
+				maxPrise.keyup(function(){
 					$( "#prise-slider" ).slider("values", [ minPrise.val(), maxPrise.val() ]);
 				});
-				minWeight.change(function(){
+				minWeight.keyup(function(){
 					$( "#weight-slider" ).slider("values", [ minWeight.val(), maxWeight.val() ]);
 				});
-				maxWeight.change(function(){
+				maxWeight.keyup(function(){
 					$( "#weight-slider" ).slider("values", [ minWeight.val(), maxWeight.val() ]);
 				});
 				

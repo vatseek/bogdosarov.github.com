@@ -1,5 +1,15 @@
 // global functions and variables
-  
+
+// looking for the right viewport
+  var correctedViewportW = (function (win, docElem) {
+    var mM = win['matchMedia'] || win['msMatchMedia']
+      , client = docElem['clientWidth']
+      , inner = win['innerWidth']
+
+    return mM && client < inner && true === mM('(min-width:' + inner + 'px)')['matches']
+        ? function () { return win['innerWidth'] }
+        : function () { return docElem['clientWidth'] }
+}(window, document.documentElement));
   // Function for remove spaces
   function delSpaces(str){
 	    str = str.replace(/\s/g, '');
@@ -29,7 +39,7 @@ $(function() {
 	phone = false, // used when phone screen
 	columCount, // conut of colums in modal
 	mod,
-	documentClientWidth= $(window).width()+17, // used for mediaqueries
+	documentClientWidth = correctedViewportW() , // used for mediaqueries
 	currentSize = 1, // current page size
 	newSize = 0, // new page size, changes when query transitions
 	n = catList.size(),
@@ -302,7 +312,7 @@ $(function() {
    mediaQueries();
        
     $(window).resize(function(){
-    	documentClientWidth = $(window).width()+17;	
+     	documentClientWidth = correctedViewportW();
     	if((documentClientWidth >= 1000)){
 		    	newSize = 1;
 		    } else

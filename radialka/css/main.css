@@ -680,6 +680,7 @@ a[class*="btn"] {
   display: block;
   text-shadow: 0 -1px #000000;
   padding: 14px 0 14px 30px;
+  cursor: pointer;
 }
 .mainNav .oll-category:hover > a {
   color: #fff;
@@ -2267,16 +2268,24 @@ h2 {
     text-align: center;
     text-decoration: none;
   }
+  .catalog-list .tovarList {
+    padding-top: 10px;
+  }
   .catalog-list .tovarList .tovarItem {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 5px;
   }
   .catalog-list .tovarList .tovarItem .tovar {
     width: 230px;
     margin: 0 20px 0 0;
   }
+  .catalog-list .tovarList .tovarItem .addToCart {
+    font-size: 1.429em;
+  }
   .bottom-paging {
     text-align: center;
+    margin-top: 5px;
   }
   .bottom-paging .prev-page,
   .bottom-paging .next-page {
@@ -2501,6 +2510,9 @@ h2 {
   }
   .sort-by .sort-by-title {
     display: block;
+  }
+  .bottom-paging {
+    margin-top: 50px;
   }
   .bottom-paging .prev-page a,
   .bottom-paging .next-page a {
