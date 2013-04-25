@@ -301,67 +301,87 @@
 		 	<div class="row">
 		 		<div class="span3 checkout-cnt">
 		 			<form action="#" method="" name="checkout" accept-charset="utf-8">
-						<div class="clearfix">
-							<div class="method-payment">
-								<h3>Способ оплаты</h3>
+						<div class="checkout-info">
+							<div class="clearfix">
+								<div class="method-payment">
+									<h3>Способ оплаты</h3>
+									<div class="form-row">
+										<input type="radio" name="radio1" id="check1"/> <label for="check1">Оплата при доставке</label>
+									</div>
+									<div class="form-row">
+										<input type="radio" name="radio1" id="check2"/> <label for="check2">Банковский перевод</label>
+									</div>
+								</div> <!-- /.method-payment -->
+								<div class="method-delivery">
+									<h3>Способ доставки</h3>
+									<div class="form-row">
+										<input type="radio" name="radio2" id="check4"/> <label for="check4">На склад транспортной компании (40 грн.)</label>
+									</div>
+									<div class="form-row">
+										<input type="radio" name="radio2" id="check5"/> <label for="check5">До двери (60 грн.)</label>
+									</div>
+									<div class="form-row">
+										<input type="radio" name="radio2" id="check6"/> <label for="check6">Самовывоз</label>
+									</div>
+								</div> <!-- /.method-delivery -->
+							</div>
+							<div class="delivery-info clearfix">
 								<div class="form-row">
-									<input type="radio" name="radio1" id="check1"/> <label for="check1">Оплата при доставке</label>
+									<label for="">Служба доставки</label>
+									<select name="delivery_service" id="">
+										<option>Новая почта</option>
+										<option>Новая почта</option>
+									</select>
 								</div>
 								<div class="form-row">
-									<input type="radio" name="radio1" id="check2"/> <label for="check2">Банковский перевод</label>
-								</div>
-							</div> <!-- /.method-payment -->
-							<div class="method-delivery">
-								<h3>Способ доставки</h3>
-								<div class="form-row">
-									<input type="radio" name="radio2" id="check4"/> <label for="check4">На склад транспортной компании (40 грн.)</label>
+									<label for="city-delivery"><i class="icon-asterisk"></i>Город доставки</label><input type="text" name="city-delivery" id=""/>
 								</div>
 								<div class="form-row">
-									<input type="radio" name="radio2" id="check5"/> <label for="check5">До двери (60 грн.)</label>
+									<label for="depot">Склад ТК</label><input type="text" name="depot" id="" placeholder="адрес или номер склада"/> <br />
+									<a href="#" class="address-represent">Адреса представительств</a>
+								</div>
+							</div> <!-- /.delivery-info -->
+							<div class="comment-for-order">
+								<a class="comment-order-link js-show-comment-form">Написать коментарий к заказу</a>
+							</div> <!-- /.comment-for-order -->
+						</div> <!-- /.checkout-info -->
+						<div class="checkout-user-info">
+							<div class="autoriz-cnt">
+								<small>Если Вы уже зарегистрированы, пожалуйста <a href="#">авторизуйтесь.</a></small>
+								<div class="form-row">
+									<label for=""><i class="icon-asterisk"></i>Имя и фамилия</label><input type="text" name="" id=""/>
 								</div>
 								<div class="form-row">
-									<input type="radio" name="radio2" id="check6"/> <label for="check6">Самовывоз</label>
+									<label for=""><i class="icon-asterisk"></i>Эл. почта</label><input type="text" name="" id=""/>
 								</div>
-							</div> <!-- /.method-delivery -->
-						</div>
-						<div class="delivery-info clearfix">
-							<div class="form-row">
-								<label for="">Служба доставки</label>
-								<select name="delivery_service" id="">
-									<option>Новая почта</option>
-									<option>Новая почта</option>
-								</select>
+								<div class="form-row">
+									<label for=""><i class="icon-asterisk"></i>Телефон</label><input type="text" name="" id=""/>
+								</div>
+								<div class="form-row user-pass">
+									Ваш пароль <span class="bold">f34f412</span> <a class="set-pass js-set-pass">сменить на свой</a>
+									<input type="password" name="" id="" class="js-new-password reg-pass hidden"/>
+								</div>
 							</div>
-							<div class="form-row">
-								<label for="city-delivery"><i class="icon-asterisk"></i>Город доставки</label><input type="text" name="city-delivery" id=""/>
+							<div class="delivery-data hidden-desctop hidden-table visible-phone js-delivery-info">
+								<div class="delivery-price">
+						 			<div class="clearfix">
+						 				<div class="float-l">Доставка на склад ТК </div><div class="float-r">30 грн.</div>
+						 			</div>
+						 		</div>
+						 		<a class="show-info js-show-info">Хочу бесплатную доставку</a>
+						 		<div class="info-cnt js-info-cnt">
+						 			Для бесплатной доставки вам необходимо добрать товара на сумму <span class="bold">299</span> грн. <br />
+						 			<a href="#">← <span class="border">Продолжить покупки</span></a>
+						 		</div> <!-- /.info-cnt -->
+								<div class="intotal">
+						 			<span class="total-info">Всего к оплате:</span>
+						 			<span class="total-prise"><span class="bold">47 363</span> грн.</span>
+						 		</div> <!-- /.intotal -->
 							</div>
-							<div class="form-row">
-								<label for="depot">Склад ТК</label><input type="text" name="depot" id="" placeholder="адрес или номер склада"/> <br />
-								<a href="#" class="address-represent">Адреса представительств</a>
+							<div class="confirm-cnt">
+								<button class="green-btn">Заказать</button>
 							</div>
-						</div> <!-- /.delivery-info -->
-						<div class="comment-for-order">
-							<a class="comment-order-link js-show-comment-form">Написать коментарий к заказу</a>
-						</div> <!-- /.comment-for-order -->
-						<div class="autoriz-cnt">
-							<small>Если Вы уже зарегистрированы, пожалуйста <a href="#">авторизуйтесь</a></small>
-							<div class="form-row">
-								<label for=""><i class="icon-asterisk"></i>Имя и фамилия</label><input type="text" name="" id=""/>
-							</div>
-							<div class="form-row">
-								<label for=""><i class="icon-asterisk"></i>Эл. почта</label><input type="text" name="" id=""/>
-							</div>
-							<div class="form-row">
-								<label for=""><i class="icon-asterisk"></i>Телефон</label><input type="text" name="" id=""/>
-							</div>
-							<div class="form-row user-pass">
-								Ваш пароль <span class="bold">f34f412</span> <a class="set-pass js-set-pass">сменить на свой</a>
-								<input type="password" name="" id="" class="js-new-password reg-pass hidden"/>
-							</div>
-						</div>
-						<div class="confirm-cnt">
-							<button class="green-btn">Заказать</button>
-						</div>
+						</div> <!-- /.checkout-user-info -->
 					</form>
 		 		</div> <!-- /.checkout-cnt -->
 		 		
@@ -386,12 +406,12 @@
 			 			</div>
 			 		</div>
 			 		<a class="show-info js-show-info">Хочу бесплатную доставку</a>
-			 		<div class="info-cnt">
+			 		<div class="info-cnt js-info-cnt">
 			 			Для бесплатной доставки вам необходимо добрать товара на сумму <span class="bold">299</span> грн. <br />
 			 			<a href="#">← <span class="border">Продолжить покупки</span></a>
 			 		</div> <!-- /.info-cnt -->
 			 		<div class="intotal">
-			 			<span class="total-info">Всего<br /> к оплате:</span>
+			 			<span class="total-info">Всего к оплате:</span>
 			 			<span class="total-prise"><span class="bold">47 363</span> грн.</span>
 			 		</div> <!-- /.intotal -->
 		 		</div> <!-- /.checkout-check-list -->

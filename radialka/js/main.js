@@ -78,6 +78,11 @@ $(function() {
 		$('body').addClass('mac-os');
 	};
 	
+	// show info block
+	$('.js-show-info').click(function(){
+		$('.js-info-cnt').slideToggle(200);
+	});
+	
 	// select color in filter on page catalog
 	$(".js-select-color li").click(function(){
 		$(this).toggleClass("checked");
