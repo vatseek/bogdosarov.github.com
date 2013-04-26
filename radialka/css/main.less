@@ -2013,7 +2013,7 @@ h2 {
   input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
     width: 399px;
     height: 27px;
-    padding-left: 6px; 
+    padding: 5px 0 5px 6px; 
   }
   select {
     margin-left: 14px;
@@ -2130,6 +2130,8 @@ h2 {
   -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
   -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
   box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4);
+  outline: 1px solid #c6c6c6;
+  outline: 0px solid rgba(0,0,0,0);
   
   &:after { 
     content: "";
@@ -2138,7 +2140,7 @@ h2 {
     top: 21px;
     width: 14px;
     height: 26px;
-    background: url(../img/sprite.png) -113px -220px #fff no-repeat; 
+    background: url(../img/sprite.png) -113px -220px no-repeat, #fff; 
   }
   .show-info {
     margin-left: 19px;

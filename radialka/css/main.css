@@ -1750,7 +1750,7 @@ h2 {
 .checkout-cnt select {
   width: 399px;
   height: 27px;
-  padding-left: 6px;
+  padding: 5px 0 5px 6px;
 }
 .checkout-cnt select {
   margin-left: 14px;
@@ -1863,6 +1863,8 @@ h2 {
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  outline: 1px solid #c6c6c6;
+  outline: 0px solid rgba(0, 0, 0, 0);
 }
 .checkout-check-list:after {
   content: "";
@@ -1871,7 +1873,7 @@ h2 {
   top: 21px;
   width: 14px;
   height: 26px;
-  background: url(../img/sprite.png) -113px -220px #ffffff no-repeat;
+  background: url(../img/sprite.png) -113px -220px no-repeat, #ffffff;
 }
 .checkout-check-list .show-info {
   margin-left: 19px;
@@ -2802,6 +2804,7 @@ h2 {
   }
   .checkout-user-info .info-cnt {
     margin-left: 0;
+    margin-right: 0;
   }
   .comment-for-order {
     padding: 0 20px;
