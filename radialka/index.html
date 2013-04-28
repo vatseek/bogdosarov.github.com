@@ -615,55 +615,55 @@
 		<script src="js/plugins.js"></script>
 		<!-- <script src="js/sly.js"></script> -->
 		<script src="js/main.js"></script>
-		<script>
-	        var pageText = $('#mainSlider li'); // array for main slider thumbs
-			var mainSlider = new Sly('#mainSlider',{
-			horizontal: 1,
-			itemNav: 'basic',
-			smart: 1,
-			mouseDragging: 1,
-			touchDragging: 1,
-			releaseSwing: 1,
-			sweengSpeed: 0.2,
-			startAt: 0,
-			scrollBy: 0,
-			speed: 300,
-			elasticBounds: 1,
-			
-			// paginator
-			pagesBar: '.mainSliderThumbs',
-			pageBuilder:    
-		    function (index) {
-		    return '<li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> ';
-		    },
-			activatePageOn: 'click',
-		    
-		    // buttons
-			prevPage: '.js-mainSlider-l',
-			nextPage: '.js-mainSlider-r'
-		  });
-		  
-			// init main slider
-			mainSlider.init();
-			
-			//brand slider options
-			var brandSlider = new Sly('#brandSlider',{ 
-			  horizontal: 1,
-			  itemNav: 'basic',
-			  smart: 1,
-			  activateMiddle: 1,
-			  mouseDragging: 1,
-			  touchDragging: 1,
-			  releaseSwing: 0,
-			  startAt: 0,
-			  speed: 300,
-			  // buttons
-			  prevPage: '.js-brandPrev',
-			  nextPage: '.js-brandNext'
-			});
-			
-			// init brand slider
-		    brandSlider.init();
-		 </script>
+			<script>
+				var pageText = $('#mainSlider li'); // array for main slider thumbs
+				var mainSlider = new Sly('#mainSlider',{
+				horizontal: 1,
+				itemNav: 'basic',
+				smart: 1,
+				mouseDragging: 1,
+				touchDragging: 1,
+				releaseSwing: 1,
+				sweengSpeed: 0.2,
+				startAt: 0,
+				scrollBy: 0,
+				speed: 300,
+				elasticBounds: 1,
+				
+				// paginator
+				pagesBar: '.mainSliderThumbs',
+				pageBuilder:
+				function (index) {
+				return '<li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> ';
+				},
+				activatePageOn: 'click',
+				
+				// buttons
+				prevPage: '.js-mainSlider-l',
+				nextPage: '.js-mainSlider-r'
+				});
+				
+				// init main slider
+				mainSlider.init();
+				
+				//brand slider options
+				var brandSlider = new Sly('#brandSlider',{
+				horizontal: 1,
+				itemNav: 'basic',
+				smart: 1,
+				activateMiddle: 1,
+				mouseDragging: 1,
+				touchDragging: 1,
+				releaseSwing: 0,
+				startAt: 0,
+				speed: 300,
+				// buttons
+				prevPage: '.js-brandPrev',
+				nextPage: '.js-brandNext'
+				});
+				
+				// init brand slider
+				brandSlider.init();
+			</script>
 	</body>
 </html>

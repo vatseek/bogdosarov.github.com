@@ -80,7 +80,7 @@ $(function() {
 	
 	// show info block
 	$('.js-show-info').click(function(){
-		$('.js-info-cnt').slideToggle(200);
+		$('.js-info-cnt').slideToggle(300);
 	});
 	
 	// select color in filter on page catalog
