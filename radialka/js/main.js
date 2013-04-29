@@ -14,7 +14,7 @@
   function delSpaces(str){
 	    str = str.replace(/\s/g, '');
 	    return str;
-	}
+	};
 	
   // Function to separate numbers
   function addSpaces(str){
@@ -27,7 +27,37 @@
   	}
   	str = String(str.reverse()).replace(/,/g, "");
   	return str;
-  }
+  };
+  
+// countdown timer for actions
+function countDown(container,day,hour,minutes){
+	var d, // amount of days
+		h, // amount of hours
+		m, // amount of minutes
+		s, // amount of seconds
+		timerContainer = $(container), // timer visualization
+		start = (hour * 3600)+(minutes * 60)+(day*24*3600), // calculate start date, conver date to seconds
+		decrement = window.setInterval(function(){
+		start -=1;
+		if(start <= 0)
+		{
+	      
+		} else {
+			d = Math.floor(start/86400);
+			h = Math.floor((start-(d*3600*24))/3600);
+			if (h<10){h = '0'+h;}
+			m = Math.floor(((start-(d*3600*24))-h*3600)/60);
+			if (m<10){m = '0'+m;}
+			s = (((start-(d*3600*24))-h*3600)-m*60);
+			if (s<10){s = '0'+s;}
+			if (d<10){d = '0'+d;}
+			timerContainer.find('.js-days').html(d);
+			timerContainer.find('.js-hours').html(h);
+			timerContainer.find('.js-minutes').html(m);
+			timerContainer.find('.js-seconds').html(s);
+		}
+	}, 1000);
+};
 
 $(function() {
   var catList = $('.js-all-cat-list li'), // list of oll hiden's categoryes
@@ -328,5 +358,5 @@ $(function() {
 		console.log(newSize+' '+documentClientWidth);
     	mediaQueries();
     });
-});
 
+});

@@ -342,11 +342,11 @@
 		 						<div class="action-info"><span class="title-action">Акция! Рюкзак Tatonka + аптечка</span>
 		 							<div class="end-action">
 		 								<div class="end-action-title">До окончания акции осталось:</div>
-		 								<div class="end-actoin-timer">
-		 									<div class="days">25</div>
-		 									<div class="hours">09</div>
-		 									<div class="minutes">14</div>
-		 									<div class="seconds">48</div>
+		 								<div class="end-actoin-timer js-cutdown">
+		 									<div class="days js-days">25</div>
+		 									<div class="hours js-hours">09</div>
+		 									<div class="minutes js-minutes">14</div>
+		 									<div class="seconds js-seconds">48</div>
 		 								</div> <!-- /.end-actoin-timet-cnt -->
 		 							</div> <!-- /.end-action -->
 		 						</div> <!-- /.action-info -->
@@ -360,17 +360,17 @@
 			 					<div class="banner">
 			 						<img src="img/banners/free-ship.png" alt="free" />
 			 					</div>
-			 						<div class="product-size">
+			 						<div class="product-size js-product-opt">
 			 							<span>Размер:</span>
 			 							<a class="product-size-count js-product-size"><span>XS</span></a>
-			 							<a class="product-size-count js-product-size"><span>S</span></a>
+			 							<a class="product-size-count js-product-size not-avaliable js-not-avaliable"><span>S</span></a>
 			 							<a class="product-size-count js-product-size"><span>M</span></a>
 			 							<a class="product-size-count js-product-size"><span>L</span></a>
 			 							<a class="product-size-count js-product-size"><span>XL</span></a>
-			 							<a class="product-size-count js-product-size"><span>XXL</span></a>
+			 							<a class="product-size-count js-product-size not-avaliable js-not-avaliable"><span>XXL</span></a>
 			 						</div> <!-- /.product-size -->
 			 						<div class="size-info">
-			 							<a class="show-info js-show-info">Какой розмер выбрать?</a>
+			 							<a class="show-info js-show-info">Какой размер выбрать?</a>
 			 							<div class="product-size-list js-info-cnt">
 			 								<table class="size-list-table">
 			 									<thead>
@@ -412,33 +412,198 @@
 			 						</div> <!-- /.size-info -->
 			 						<div class="product-color clearfix">
 			 							<span>Цвет:</span>
-			 							<ul class="colors js-select-product-color">
+			 							<ul class="colors js-select-product-color js-product-opt">
 											<li data-color="8"><a style="background-color: #2880c0;" title="Синий"></a></li>
-											<li data-color="10"><a style="background-color: #a6d612;" title="Зеленый"></a></li>
+											<li data-color="10" class="not-avaliable js-not-avaliable"><a style="background-color: #a6d612;" title="Зеленый"></a></li>
 											<li data-color="12"><a style="background-color: #7d8285;" title="Серый"></a></li>
 											<li data-color="2"><a style="background-color: #f5a180;" title="Оранжевый"></a></li>
-											<li data-color="11"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
+											<li data-color="11"  class="not-avaliable js-not-avaliable"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
 										</ul>
 			 						</div> <!-- /.product-color -->
 			 						<div class="product-count">
 				 						<div class="spinner-product">
 			 								<input type="number" value="1" class="js-spinner" autocomplete="off"/>
 			 							</div>
-			 							<div class="not-avaliable">
+			 							<div class="not-avaliable js-info-not-av">
 			 								Нет в наличии <br />в выбранной конфигурации
 			 							</div>
-			 							<button class="green-btn buy" type="button">Купить</button>
+			 							<button class="green-btn buy js-buy" type="button">Купить</button>
 			 						</div> <!-- /.product-count -->
 			 						<div class="secondary-features">
 			 							<a class="js-sed-aside">Отложить</a>
 			 							<a class="js-add-to-comparison">Добавить к сравнению</a>
 			 						</div> <!-- /.secondary-function -->
+			 						<div class="share">
+			 							
+			 						</div> <!-- /.share -->
 		 					</div> <!-- /.product-info-cnt -->
 		 				</div>
 		 			</div>
+		 			<div class="row">
+		 				<div class="span3">
+		 					<div class="product-tabs js-product-tabs">
+		 						<ul class="producs-tabs-title">
+		 							<li><a href="#product-tab-1">Описание товара</a></li>
+		 							<li><a href="#product-tab-2">Характеристики</a></li>
+		 							<li><a href="#product-tab-3">Отзывы покупателей <span class="testimonials-amount">54</span></a></li>
+		 						</ul>
+		 						<div class="product-tabs-cnt">
+		 							<div id="product-tab-1" class="product-tabs">
+		 								<p>Новая современная модель рюкзака, который прекрасно подойдет как для однодневных так и для более длительных путешествий.</p>
+		 								<h4>Основные характеристики</h4>
+		 								<ul>
+		 									<li>Петли для крепления ледоруба / лыжных палок</li>
+		 									<li>Внутреннее отделение для хранения ценных вещей</li>
+		 									<li>Боковые карманы</li>
+		 									<li>Карман на бедренном поясе</li>
+		 									<li>Петли для навески дополнительного снаряжения на бедренном поясе</li>
+		 									<li>Подвесная система motionfit</li>
+		 									<li>Объем: 36 л</li>
+		 									<li>Вес: 1350 г</li>
+		 									<li>Размеры: 62 x 29 x 28 cm</li>
+		 									<li>Материалы: 
+		 										<a class="tooltip">
+		 											<span class="tooltip-title">600D Nylon</span>
+		 											<span class="tooltip-description">
+		 												Очень удобная воздухопроницаемая ткань 
+		 												из 100% нейлоновых волокон, 
+		 												которые производятся при 
+		 												помощи специальной технологии и 
+		 												имеют, так называемый, фитильный эффект.
+		 											</span>
+		 										</a>, 450D Nylon, 400D Nylon Dobby, 150D Nylon mini Ripstop
+		 									</li>
+		 								</ul>
+		 							</div>
+		 							<div id="product-tab-2" class="product-tabs">
+		 								<ul>
+		 									<h4>Оптика камеры</h4>
+		 									<li>2X профессиональный стеклянный объектив</li>
+		 									<li>Диафрагма: f/2.8 (высокое качество в слабо освещенных ситуациях)</li>
+		 									<li>Угол обзора: 170 ° Широкий угол обзора (включая 1080p); 127 ° Средний угол обзора (включая 1080); 90 º Узкий угол обзора</li>
+		 								</ul>
+		 								<ul>
+		 									<h4>Параметры видео</h4>
+		 									<div class="more-information">HD Разрешение</div>
+		 									<li>1080p: 1920 × 1080, 30 FPS</li>
+		 									<li>960p: 1280 × 960, 48 FPS + 30 FPS</li>
+		 									<li>720p: 1280 × 720, 60 FPS + 30 FPS</li>
+		 									<small>* Теперь поддерживает покадровое фото каждые 0,5 секунды. Требует Class 10 speed SD Card.</small>
+		 								</ul>
+		 								<ul>
+		 									<h4>Параметры аудио</h4>
+		 									<li>аудио: Моно, 48 кГц, AAC сжатия,</li>
+		 									<li>автоматическая регулировка усиления,</li>
+		 									<li>Стерео Вход для внешнего микрофона (3,5 мм)</li>
+		 								</ul>
+		 							</div>
+		 							<div id="product-tab-3" class="product-tabs">
+		 								<ul class="testimonials-list">
+		 									<li class="testimonial-item">
+		 										<div class="testimonial-title">
+		 											<span class="user-name">Игорь К</span>
+		 											<span class="date-post"> • 27.09.2011</span>
+		 										</div>
+		 										<div class="testimonial-rating js-testim-rating" data-rating-score="5" ></div>
+		 										<div class="testimonial-content">
+		 											Есть ли в наличии рюкзаки Terra Incognita Aspect 20 чёрно-серой раскраски ?? Мне нужно 
+		 											два таких. Заранее спасибо !!
+		 										</div>
+		 									</li> <!-- /.testimonial-item -->
+		 									<li class="testimonial-item">
+		 										<div class="testimonial-title">
+		 											<span class="user-name">Енакентий Петрович</span>
+		 											<span class="date-post"> • 27.09.2011</span>
+		 										</div>
+		 										<div class="testimonial-rating js-testim-rating" data-rating-score="4"></div>
+		 										<div class="testimonial-content">
+		 											Есть ли в наличии рюкзаки Terra 
+		 										</div>
+		 									</li> <!-- /.testimonial-item -->
+		 									<li class="testimonial-item">
+		 										<div class="testimonial-title">
+		 											<span class="user-name">Константин Константинопольский</span>
+		 											<span class="date-post"> • 27.09.2011</span>
+		 										</div>
+		 										<div class="testimonial-rating js-testim-rating"  data-rating-score="3"></div>
+		 										<div class="testimonial-content">
+		 											Есть ли в наличии рюкзаки Terra Incognita Aspect 20 чёрно-серой раскраски ?? Мне нужно 
+		 											два таких. Заранее спасибо спасибо спасибо спасибо спасибо !!
+		 										</div>
+		 									</li> <!-- /.testimonial-item -->
+		 								</ul> <!-- /.testimonials-list -->
+		 							</div>
+		 						</div>
+		 					</div> <!-- /.product-tabs -->
+		 					<div class="tags">
+		 						Метки: 
+		 						<a href="#">1 вход</a>
+		 						<a href="#">Duraflex</a>
+		 						<a href="#">YKK</a>
+		 					</div> <!-- /.tags -->
+		 				</div>
+		 			</div>
 		 		</div> <!-- /.row.product-prev -->
-		 		<div class="span1">
-		 			
+		 		<div class="span1 product-tovar-list hidden-table hidden-phone">
+		 			<h2 class="bottomLine">С этим товаром покупают</h2>
+		 			<ul class="tovarList">
+		 				<li class="tovarItem">
+	 						<a href="#" class="tovar">
+	 							<span class="img">
+	 								<img src="img/fish/img2.png" alt="tovar" />
+	 							</span>
+	 						</a>
+	 						<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+	 						<span class="availability av-yes">Есть в наличии</span>
+	 						<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+	 						<a href="#" class="addToCart" title="Add goods to cart">
+	 							<i class="icon-small-cart"></i>
+	 							<span>Купить</span>
+	 						</a>
+	 					</li> <!-- /.tovarItem -->
+	 					<li class="tovarItem">
+	 						<a href="#" class="tovar">
+	 							<span class="img">
+	 								<img src="img/fish/img2.png" alt="tovar" />
+	 							</span>
+	 						</a>
+	 						<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+	 						<span class="availability av-yes">Есть в наличии</span>
+	 						<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+	 						<a href="#" class="addToCart" title="Add goods to cart">
+	 							<i class="icon-small-cart"></i>
+	 							<span>Купить</span>
+	 						</a>
+	 					</li> <!-- /.tovarItem -->
+	 					<li class="tovarItem">
+	 						<a href="#" class="tovar">
+	 							<span class="img">
+	 								<img src="img/fish/img2.png" alt="tovar" />
+	 							</span>
+	 						</a>
+	 						<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+	 						<span class="availability av-yes">Есть в наличии</span>
+	 						<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+	 						<a href="#" class="addToCart" title="Add goods to cart">
+	 							<i class="icon-small-cart"></i>
+	 							<span>Купить</span>
+	 						</a>
+	 					</li> <!-- /.tovarItem -->
+	 					<li class="tovarItem">
+	 						<a href="#" class="tovar">
+	 							<span class="img">
+	 								<img src="img/fish/img2.png" alt="tovar" />
+	 							</span>
+	 						</a>
+	 						<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+	 						<span class="availability av-yes">Есть в наличии</span>
+	 						<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+	 						<a href="#" class="addToCart" title="Add goods to cart">
+	 							<i class="icon-small-cart"></i>
+	 							<span>Купить</span>
+	 						</a>
+	 					</li> <!-- /.tovarItem -->
+		 			</ul>
 		 		</div>
 		 	</div>
 		 </div>
@@ -549,6 +714,24 @@
   					width: 100,
   					readOnly  : true
 				  });
+				  // Testimonials rating
+				  $('.js-testim-rating').each(function(){
+				  	var score = $(this).data('rating-score');
+				  	console.log(score);
+				  	$(this).raty({
+					  	score: score,
+	  					starOff: 'img/star-off.png',
+	  					starOn : 'img/star-on.png',
+	  					readOnly  : true
+					  });
+				  });
+				  $('.js-testim-rating').raty({
+				  	score: $('.js-product-rating').data('rating-score'),
+  					starOff: 'img/star-off.png',
+  					starOn : 'img/star-on.png',
+  					width: 100,
+  					readOnly  : true
+				  });
 				  
 				  // Chouse product size
 				  $('.js-product-size').click(function(){
@@ -574,12 +757,29 @@
 						$('.js-select-product-color li').removeClass('checked');
 						$(this).addClass('checked');
 					});
-					
-					// Price spinner
-					$('.js-spinner').spinner({
+				
+				 // Check to see whether the goods are in stock
+				  $('.js-product-opt a, .js-product-opt li').click(function(){
+									if($(this).hasClass('js-not-avaliable')){
+										$('.js-info-not-av').fadeIn(300);
+										$('.js-buy').fadeOut(0);
+									} else if($('.js-product-opt .js-not-avaliable.checked').size() === 0) {
+										$('.js-info-not-av').fadeOut(0);
+										$('.js-buy').fadeIn(300);
+									}
+				  });	
+				  
+				 // Price spinner
+				 $('.js-spinner').spinner({
 					min: 1,
 					max: 500
 				 });
+				
+				// countdown timer for action
+				countDown('.js-cutdown', 8, 10, 1);
+				
+				// tabs navigation for product
+				$('.js-product-tabs').tabs({active: 2});
 			});
 		</script>
 	</body>
