@@ -334,13 +334,15 @@
 		 							</ul> <!-- /.product-slider-list -->
 		 						</div> <!-- /.product-slider -->
 		 						<a class="info-zoom js-show-slider"><i class="icon-zoom-in"></i> НАЖМИТЕ, ЧТОБЫ УВЕЛИЧИТЬ</a>
-	 							<ul class="product-slider-thumb js-product-slider-thumb">
-	 								
-	 							</ul> <!-- /.product-slider-thumb -->
+	 							<ul class="product-slider-thumb js-product-slider-thumb hidden-480"></ul> <!-- /.product-slider-thumb -->
+			 					<div class="secondary-features hidden-desctop hidden-table">
+		 							<a class="js-sed-aside">Отложить</a>
+		 							<a class="js-add-to-comparison">Добавить к сравнению</a>
+		 						</div> <!-- /.secondary-function -->
 		 					</div> <!-- /.product-slider-cnt -->
 		 					<div class="product-info-cnt">
 		 						<div class="action-info"><span class="title-action">Акция! Рюкзак Tatonka + аптечка</span>
-		 							<div class="end-action">
+		 							<div class="end-action hidden-phone">
 		 								<div class="end-action-title">До окончания акции осталось:</div>
 		 								<div class="end-actoin-timer js-cutdown">
 		 									<div class="days js-days">25</div>
@@ -353,21 +355,27 @@
 			 					<div class="product-price-cnt">	
 			 						<div class="product-price">23 169 <span class="top">грн.</span></div>
 			 						<div class="available yeas">Есть в наличии</div>
-			 						<a href="#" class="manufacturer-logo"><img src="img/fish/manuf1.png" alt="" /></a>
+			 						<a href="#" class="manufacturer-logo hidden-phone"><img src="img/fish/manuf1.png" alt="" /></a>
 			 					</div> <!-- /.product-price-cnt -->
 			 					<div class="product-rating js-product-rating" data-rating-score="4" ></div>
 			 					<a href="#" class="testimonials-count">Отзывов: 2</a>
-			 					<div class="banner">
+			 					<div class="banner hidden-phone">
 			 						<img src="img/banners/free-ship.png" alt="free" />
 			 					</div>
 			 						<div class="product-size js-product-opt">
 			 							<span>Размер:</span>
-			 							<a class="product-size-count js-product-size"><span>XS</span></a>
-			 							<a class="product-size-count js-product-size not-avaliable js-not-avaliable"><span>S</span></a>
-			 							<a class="product-size-count js-product-size"><span>M</span></a>
-			 							<a class="product-size-count js-product-size"><span>L</span></a>
-			 							<a class="product-size-count js-product-size"><span>XL</span></a>
-			 							<a class="product-size-count js-product-size not-avaliable js-not-avaliable"><span>XXL</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone"><span>XS</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone not-avaliable js-not-avaliable"><span>S</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone"><span>M</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone"><span>L</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone"><span>XL</span></a>
+			 							<a class="product-size-count js-product-size hidden-phone not-avaliable js-not-avaliable"><span>XXL</span></a>
+			 							<select name="product-size" id="" class="hidden-desctop hidden-table">
+			 								<option>XS</option>
+			 								<option>M</option>
+			 								<option>L</option>
+			 								<option>XL</option>
+			 							</select>
 			 						</div> <!-- /.product-size -->
 			 						<div class="size-info">
 			 							<a class="show-info js-show-info">Какой размер выбрать?</a>
@@ -416,12 +424,12 @@
 											<li data-color="8"><a style="background-color: #2880c0;" title="Синий"></a></li>
 											<li data-color="10" class="not-avaliable js-not-avaliable"><a style="background-color: #a6d612;" title="Зеленый"></a></li>
 											<li data-color="12"><a style="background-color: #7d8285;" title="Серый"></a></li>
-											<li data-color="2"><a style="background-color: #f5a180;" title="Оранжевый"></a></li>
-											<li data-color="11"  class="not-avaliable js-not-avaliable"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
+											<li data-color="2" class="hidden-phone"><a style="background-color: #f5a180;" title="Оранжевый"></a></li>
+											<li data-color="11"  class="hidden-phone not-avaliable js-not-avaliable"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
 										</ul>
 			 						</div> <!-- /.product-color -->
 			 						<div class="product-count">
-				 						<div class="spinner-product">
+				 						<div class="spinner-product hidden-phone">
 			 								<input type="number" value="1" class="js-spinner" autocomplete="off"/>
 			 							</div>
 			 							<div class="not-avaliable js-info-not-av">
@@ -429,7 +437,7 @@
 			 							</div>
 			 							<button class="green-btn buy js-buy" type="button">Купить</button>
 			 						</div> <!-- /.product-count -->
-			 						<div class="secondary-features">
+			 						<div class="secondary-features hidden-phone">
 			 							<a class="js-sed-aside">Отложить</a>
 			 							<a class="js-add-to-comparison">Добавить к сравнению</a>
 			 						</div> <!-- /.secondary-function -->
@@ -462,36 +470,47 @@
 		 									<li>Вес: 1350 г</li>
 		 									<li>Размеры: 62 x 29 x 28 cm</li>
 		 									<li>Материалы: 
-		 										<a class="tooltip">
+		 										<span class="tooltip">
 		 											<span class="tooltip-title">600D Nylon</span>
 		 											<span class="tooltip-description">
 		 												Очень удобная воздухопроницаемая ткань 
 		 												из 100% нейлоновых волокон, 
 		 												которые производятся при 
 		 												помощи специальной технологии и 
-		 												имеют, так называемый, фитильный эффект.
+		 												имеют, так называемый, фитильный эффект. <br /><br />
+		 												<a href="#">Полное описание технологии материала</a>
 		 											</span>
-		 										</a>, 450D Nylon, 400D Nylon Dobby, 150D Nylon mini Ripstop
+		 										</span>, 450D Nylon,<span class="tooltip">
+		 											<span class="tooltip-title">400D Nylon Dobby</span>
+		 											<span class="tooltip-description">
+		 												Очень удобная воздухопроницаемая ткань 
+		 												из 100% нейлоновых волокон, 
+		 												которые производятся при 
+		 												помощи специальной технологии и 
+		 												имеют, так называемый, фитильный эффект. <br /><br />
+		 												<a href="#">Полное описание технологии материала</a>
+		 											</span>
+		 										</span>, 150D Nylon mini Ripstop
 		 									</li>
 		 								</ul>
 		 							</div>
 		 							<div id="product-tab-2" class="product-tabs">
-		 								<ul>
 		 									<h4>Оптика камеры</h4>
+		 								<ul>
 		 									<li>2X профессиональный стеклянный объектив</li>
 		 									<li>Диафрагма: f/2.8 (высокое качество в слабо освещенных ситуациях)</li>
 		 									<li>Угол обзора: 170 ° Широкий угол обзора (включая 1080p); 127 ° Средний угол обзора (включая 1080); 90 º Узкий угол обзора</li>
 		 								</ul>
-		 								<ul>
 		 									<h4>Параметры видео</h4>
+		 								<ul>
 		 									<div class="more-information">HD Разрешение</div>
 		 									<li>1080p: 1920 × 1080, 30 FPS</li>
 		 									<li>960p: 1280 × 960, 48 FPS + 30 FPS</li>
 		 									<li>720p: 1280 × 720, 60 FPS + 30 FPS</li>
 		 									<small>* Теперь поддерживает покадровое фото каждые 0,5 секунды. Требует Class 10 speed SD Card.</small>
 		 								</ul>
-		 								<ul>
 		 									<h4>Параметры аудио</h4>
+		 								<ul>
 		 									<li>аудио: Моно, 48 кГц, AAC сжатия,</li>
 		 									<li>автоматическая регулировка усиления,</li>
 		 									<li>Стерео Вход для внешнего микрофона (3,5 мм)</li>
@@ -532,10 +551,39 @@
 		 										</div>
 		 									</li> <!-- /.testimonial-item -->
 		 								</ul> <!-- /.testimonials-list -->
+		 								<div class="user-testimonial">
+		 								<h2 class="bottomLine">Написать отзыв о «Рюкзак Salewa Ascent 36»</h2>
+		 									<form action="#" method="get" accept-charset="utf-8">
+											   <div class="form-row">
+												   	<label>Ваш отзыв:</label><span class="disable-html hidden-phone">HTML теги не работают</span>
+												   	<textarea name="user-testimonial" rows="8" cols="40"></textarea>
+											   </div>
+											   <div class="form-row testim-data">
+											   			<label>Ваша оценка товара:</label>
+											   			<div class="user-rating js-set-product-rating"></div><a class="reset-rating js-reload-rating">сброс</a>
+											   </div>
+											   <div class="form-row testim-data user-name">
+											   	<label>Ваше имя и фамилия:</label>
+											   	<input type="text" name="user-name">
+											   </div>
+											   <div class="form-row testim-data">
+											   	<label class="captcha-label">Код с картинки:</label>
+											   	<img src="http://radialka.net/index.php?route=product/product/captcha" alt="" id="captcha" class="captcha"/>
+											    <input type="text" name="captcha" id="captchaField">
+											   </div>
+											   <div class="form-row send-testimonial">
+											   	<button type="button" class="grey-btn">Написать отзыв</button>
+											   </div>
+											</form>
+		 								</div>
 		 							</div>
 		 						</div>
 		 					</div> <!-- /.product-tabs -->
-		 					<div class="tags">
+		 					<select name="manufactures" id="" class="manufactures hidden-desctop hidden-table">
+							   	<option>Производители</option>
+							   	<option>Супер Фирма</option>
+							</select>
+		 					<div class="tags hidden-phone">
 		 						Метки: 
 		 						<a href="#">1 вход</a>
 		 						<a href="#">Duraflex</a>
@@ -714,23 +762,31 @@
   					width: 100,
   					readOnly  : true
 				  });
+				  
+				  // Set product rating
+				  $('.js-set-product-rating').raty({
+  					starOff: 'img/star-off.png',
+  					starOn : 'img/star-on.png',
+  					cancelOff: 'img/reset.png',
+  					cancelOn: 'img/reset.png',  
+  					cancelHint: 'Сбросить значение',					
+  					cancel: true,
+  					cancelPlace: 'right',
+  					width: 'auto'
+				  });
+				  $('.js-reload-rating').click(function(){
+					$('.js-set-product-rating').raty('reload');
+				  })
+				  
 				  // Testimonials rating
 				  $('.js-testim-rating').each(function(){
 				  	var score = $(this).data('rating-score');
-				  	console.log(score);
 				  	$(this).raty({
 					  	score: score,
-	  					starOff: 'img/star-off.png',
-	  					starOn : 'img/star-on.png',
+	  					starOff: 'img/star-off-small.png',
+	  					starOn : 'img/star-on-small.png',
 	  					readOnly  : true
 					  });
-				  });
-				  $('.js-testim-rating').raty({
-				  	score: $('.js-product-rating').data('rating-score'),
-  					starOff: 'img/star-off.png',
-  					starOn : 'img/star-on.png',
-  					width: 100,
-  					readOnly  : true
 				  });
 				  
 				  // Chouse product size

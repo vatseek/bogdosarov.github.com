@@ -5,7 +5,9 @@
     width: 440px;
     margin: 0 auto;
   }
-  
+  .hidden-480 {
+    display: none !important;
+  }
 }
 @media screen and (max-width:767px) {        
   .visible-phone {
@@ -550,4 +552,144 @@
       h1 {
         font-size: 1.714em;
       }
+  
+  // page product
+  .product-slider-cnt {
+    width: 210px;
+  }
+  
+  .product-slider {
+    .square(210px);
+    
+    li {
+      .square(210px);
+      
+      img {
+        .square(210px);
+      }
+    }
+  }
+
+  [class*="ticket"].big {
+    top: -23px;
+    width: 48px;
+    height: 49px;
+    background-position: -11px -266px;
+    font-size: 1em;
+    line-height: 49px;
+  
+  }
+  
+  .ticket-action.big {
+    background-position: -164px -370px;
+  }
+  
+  .product-info-cnt {
+    width: 210px;
+  }
+  
+  .product-info-cnt {
+    .product-color {
+      .colors {
+        width: auto;
+        
+        li {
+          a {
+            .square(40px);
+          }
+        }
+        .not-avaliable:after {
+            .square(40px);
+            background-position: -177px -326px;
+          }
+      }
+    }
+    .product-count {
+      .green-btn {
+        width: 100%;
+        margin: 0;
+      }
+      .not-avaliable {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  
+  .secondary-features {
+    text-align: center;
+    border-bottom: none;
+    
+    a{
+      display: inline-block;
+      margin: 0 34px 10px;
+    }
+  }
+  
+  .product-tabs {
+    .producs-tabs-title {
+      li {
+        a {
+          padding: 8px 9px;
+        }
+      }
+    }
+  }
+  
+  .user-testimonial {
+    width: 100%;
+    margin: 0;
+    
+    textarea {
+      .box-sizing(border-box);
+      width: 100%;
+    }
+    .testim-data.user-name {
+      input {
+        width: 100%;
+      }
+    }
+    .testim-data {
+      width: 100%;
+      
+      .captcha-label {
+        margin-right: 205px;
+      }
+      .captcha {
+        margin: 0 3px 0 0;
+      }
+      input {
+        float: none;
+        vertical-align: top;
+      }
+    }
+    .grey-btn {
+      width: 100%;
+    }
+  }
+  
+  .user-rating {
+    img {
+      margin-left: 9px;
+    }
+  }
+  
+  .product-tabs .product-tabs-cnt {
+    padding-right: 0;
+    background-image: url(../img/bg/product-tab2.png);
+    background-position: 71px 0;
+  }
+  
+  #product-tab-3 {
+     .testimonials-list {
+      .testimonial-item {
+        padding: 0;
+      }
+    } 
+  }
+  
+  .manufactures {
+    width: 100#;
+  }
+  
 }
