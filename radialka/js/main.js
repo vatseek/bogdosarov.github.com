@@ -321,18 +321,22 @@ $(function() {
 			if((documentClientWidth >= 1000)){
 				newSize = 1;
 		    	updateElements(980);
+		    	device = 980;
 		    } else
 		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
 		    	newSize = 2;
 		    	updateElements(768);
+		    	device = 768;
 		    } else
 		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
 		    	newSize = 3;
 		    	updateElements(480);
+		    	device = 480;
 		    } else
 		    if(documentClientWidth < 479){
 		    	newSize = 4;
 		    	updateElements(320);
+		    	device = 320;
 		    }	
 		    currentSize = newSize; 
  			//console.log(currentSize+' '+newSize);
@@ -346,18 +350,14 @@ $(function() {
      	documentClientWidth = correctedViewportW();
     	if((documentClientWidth >= 1000)){
 		    	newSize = 1;
-		    	device = 980;
 		    } else
 		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
 		    	newSize = 2;
-		    	device = 768;
 		    } else
 		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
 		    	newSize = 3;
-		    	device = 480;
 		    } else
 		    if(documentClientWidth < 480){
-		    	device = 320;
 		    	newSize = 4;
 		    }
     	mediaQueries();

@@ -319,10 +319,10 @@
 				 							<a class="prev js-popupSlider-l"></a>
 				 							<a class="next js-popupSlider-r"></a>
 				 						</div>
-				 						<ul class="product-slider-thumb js-product-thumb">
+				 						<ul class="product-slider-thumb js-product-thumb  hidden-phone">
 	 											
 	 									</ul> <!-- /.product-slider-thumb -->
-	 									<div class="product-price"><span class="bold">1 183</span> грн.</div>
+	 									<div class="product-price  hidden-phone"><span class="bold">1 183</span> грн.</div>
 									</div> <!-- /.product-slider-popup-cnt -->
 								</div> <!-- /.modal-product-slider -->
 								
@@ -753,6 +753,11 @@
 				  });
 				  
 				  productSlider.init();
+				  
+				  if(device === 480) {
+				  	popupProductSlider.set({touchDragging: 0, mouseDragging: 0});
+				  }
+				  console.log('device = '+device);
 				  
 				  // Tovar rating
 				  $('.js-product-rating').raty({

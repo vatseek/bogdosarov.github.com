@@ -3572,6 +3572,9 @@ h2 {
     float: none;
     vertical-align: top;
   }
+  .user-testimonial .send-testimonial {
+    padding-bottom: 23px;
+  }
   .user-testimonial .grey-btn {
     width: 100%;
   }
@@ -3582,12 +3585,44 @@ h2 {
     padding-right: 0;
     background-image: url(../img/bg/product-tab2.png);
     background-position: 71px 0;
+    border-bottom: none;
   }
   #product-tab-3 .testimonials-list .testimonial-item {
     padding: 0;
   }
   .manufactures {
-    width: 100#;
+    width: 100%;
+  }
+  .modal-cnt {
+    border: none;
+    width: 480px;
+  }
+  .modal-cnt .close-modal {
+    right: 25px;
+  }
+  .modal-cnt .icon-close-modal {
+    width: 31px;
+    height: 31px;
+    background-position: -182px -292px;
+  }
+  .modal-cnt .popup-title {
+    font-size: 20px;
+    margin-top: 23px;
+  }
+  .modal-cnt .product-slider-popup-cnt {
+    width: 480px;
+  }
+  .modal-cnt .product-slider-popup {
+    width: 480px;
+    height: 480px;
+  }
+  .modal-cnt .product-slider-popup ul li {
+    width: 480px;
+    height: 480px;
+  }
+  .modal-cnt .product-slider-popup ul li img {
+    width: 480px;
+    height: 480px;
   }
 }
 @media screen and (max-width: 479px) {
