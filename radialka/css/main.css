@@ -2414,8 +2414,12 @@ h2 {
   font-size: 0.786em;
 }
 .product-size-list .size-list-table td {
+  position: relative;
   border-right: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
+}
+.product-size-list .size-list-table .even {
+  background: url(../img/bg/even-table-bg.png) repeat-x #f7f9fa;
 }
 .product-price-cnt {
   position: relative;
@@ -2662,9 +2666,11 @@ h2 {
 }
 .product-tovar-list .tovarList {
   padding-top: 11px;
+  overflow: hidden;
 }
 .product-tovar-list .tovarList .tovarItem {
   margin-bottom: 33px;
+  margin-right: 0;
 }
 .product-tovar-list .tovarList .tovarItem .tovar .img {
   height: 171px;
@@ -2690,6 +2696,11 @@ h2 {
 .tags a {
   margin-left: 2px;
   color: #274564;
+}
+@media screen and (min-width: 1000px) {
+  .hidden-desctop {
+    display: none !important;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .hidden-table {
@@ -3488,10 +3499,16 @@ h2 {
   }
   .product-slider-cnt {
     width: 210px;
+    height: 369px;
+  }
+  .product-slider-cnt .info-zoom {
+    display: inline-block;
+    margin-top: 29px;
   }
   .product-slider {
     width: 210px;
     height: 210px;
+    margin-top: -2px;
   }
   .product-slider li {
     width: 210px;
@@ -3501,8 +3518,17 @@ h2 {
     width: 210px;
     height: 210px;
   }
+  .product-info-cnt .action-info {
+    padding-bottom: 3px;
+  }
+  .product-info-cnt .product-price-cnt {
+    margin-top: -4px;
+  }
+  .product-info-cnt .product-price-cnt .available {
+    margin: -2px 0 11px 2px;
+  }
   [class*="ticket"].big {
-    top: -23px;
+    top: -17px;
     width: 48px;
     height: 49px;
     background-position: -11px -266px;
@@ -3535,9 +3561,13 @@ h2 {
     width: 100%;
     margin: 0;
   }
+  .product-info-cnt .size-info .product-size-list {
+    left: -183px;
+  }
   .secondary-features {
     text-align: center;
     border-bottom: none;
+    margin-top: 41px;
   }
   .secondary-features a {
     display: inline-block;
@@ -3577,6 +3607,8 @@ h2 {
   }
   .user-testimonial .grey-btn {
     width: 100%;
+    height: 35px;
+    background-image: url(../img/bg/grey-btn-bg-big.png);
   }
   .user-rating img {
     margin-left: 9px;

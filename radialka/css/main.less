@@ -2728,8 +2728,12 @@ h2 {
       font-size: 0.786em;
     }
     td {
+      position: relative;
       border-right: 1px solid #cbd3da;
       border-bottom: 1px solid #cbd3da;
+    }
+    .even {
+      background:url(../img/bg/even-table-bg.png) repeat-x #f7f9fa;
     }
   }
 }
@@ -3012,9 +3016,11 @@ h2 {
   }
   .tovarList {
     padding-top: 11px;
+    overflow: hidden;
     
     .tovarItem {
       margin-bottom: 33px;
+      margin-right: 0;
       
       .tovar {
         .img {
@@ -3053,6 +3059,12 @@ h2 {
 }
 
  // media queries
+ 
+ @media screen and (min-width:1000px) {
+   .hidden-desctop {
+     display: none !important;
+   }
+ }
  
   @import "768";
   @import "480";

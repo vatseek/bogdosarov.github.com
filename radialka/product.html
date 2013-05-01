@@ -370,7 +370,7 @@
 			 							<a class="product-size-count js-product-size hidden-phone"><span>L</span></a>
 			 							<a class="product-size-count js-product-size hidden-phone"><span>XL</span></a>
 			 							<a class="product-size-count js-product-size hidden-phone not-avaliable js-not-avaliable"><span>XXL</span></a>
-			 							<select name="product-size" id="" class="hidden-desctop hidden-table">
+			 							<select name="product-size" id="" class="hidden-table hidden-desctop">
 			 								<option>XS</option>
 			 								<option>M</option>
 			 								<option>L</option>
@@ -380,7 +380,9 @@
 			 						<div class="size-info">
 			 							<a class="show-info js-show-info">Какой размер выбрать?</a>
 			 							<div class="product-size-list js-info-cnt">
-			 								<table class="size-list-table">
+			 								<!-- <h2 class="popup-title">Таблица размеров</h2>
+			 								<div class="close-modal js-close-modal hidden-desctop hidden-table"><i class="icon-close-modal js-close-table"></i></div> -->
+			 								<table class="size-list-table js-size-list-table">
 			 									<thead>
 			 										<tr>
 			 											<td rowspan="2">Размер</td>
@@ -841,6 +843,8 @@
 				
 				// tabs navigation for product
 				$('.js-product-tabs').tabs({active: 2});
+				
+				$('.js-size-list-table tbody tr:even').addClass('even');
 			});
 		</script>
 	</body>
