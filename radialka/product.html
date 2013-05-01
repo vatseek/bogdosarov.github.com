@@ -333,9 +333,9 @@
 		 								<li data-thumb-img="img/fish/pprev1.jpg" data-thumb-alt="fish"><img src="img/fish/pimg3.jpg" alt="product" /></li>
 		 							</ul> <!-- /.product-slider-list -->
 		 						</div> <!-- /.product-slider -->
-		 						<a class="info-zoom js-show-slider"><i class="icon-zoom-in"></i> НАЖМИТЕ, ЧТОБЫ УВЕЛИЧИТЬ</a>
+		 						<a class="info-zoom js-show-slider hidden-320"><i class="icon-zoom-in"></i> НАЖМИТЕ, ЧТОБЫ УВЕЛИЧИТЬ</a>
 	 							<ul class="product-slider-thumb js-product-slider-thumb hidden-480"></ul> <!-- /.product-slider-thumb -->
-			 					<div class="secondary-features hidden-desctop hidden-table">
+			 					<div class="secondary-features hidden-desctop hidden-table hidden-320">
 		 							<a class="js-sed-aside">Отложить</a>
 		 							<a class="js-add-to-comparison">Добавить к сравнению</a>
 		 						</div> <!-- /.secondary-function -->
@@ -363,7 +363,7 @@
 			 						<img src="img/banners/free-ship.png" alt="free" />
 			 					</div>
 			 						<div class="product-size js-product-opt">
-			 							<span>Размер:</span>
+			 							<span class="hidden-320">Размер:</span>
 			 							<a class="product-size-count js-product-size hidden-phone"><span>XS</span></a>
 			 							<a class="product-size-count js-product-size hidden-phone not-avaliable js-not-avaliable"><span>S</span></a>
 			 							<a class="product-size-count js-product-size hidden-phone"><span>M</span></a>
@@ -415,13 +415,12 @@
 			 											<tr>
 			 												<td class="bold">XXL</td><td>44-46</td><td>111-116</td><td>18</td><td>46</td>
 			 											</tr>
-			 										</tr>
 			 									</tbody>
 			 								</table>
 			 							</div> <!-- /.size-list -->
 			 						</div> <!-- /.size-info -->
 			 						<div class="product-color clearfix">
-			 							<span>Цвет:</span>
+			 							<span class="hidden-320">Цвет:</span>
 			 							<ul class="colors js-select-product-color js-product-opt">
 											<li data-color="8"><a style="background-color: #2880c0;" title="Синий"></a></li>
 											<li data-color="10" class="not-avaliable js-not-avaliable"><a style="background-color: #a6d612;" title="Зеленый"></a></li>
@@ -452,10 +451,11 @@
 		 			<div class="row">
 		 				<div class="span3">
 		 					<div class="product-tabs js-product-tabs">
-		 						<ul class="producs-tabs-title">
-		 							<li><a href="#product-tab-1">Описание товара</a></li>
-		 							<li><a href="#product-tab-2">Характеристики</a></li>
-		 							<li><a href="#product-tab-3">Отзывы покупателей <span class="testimonials-amount">54</span></a></li>
+		 						<div class="phone-tab-nav js-phone-tab-nav"></div>
+		 						<ul class="producs-tabs-title js-tabs-nav">
+		 							<li><a href="#product-tab-1" class="tab-item js-tab-item">Описание товара</a></li>
+		 							<li><a href="#product-tab-2" class="tab-item js-tab-item">Характеристики</a></li>
+		 							<li><a href="#product-tab-3" class="tab-item js-tab-item">Отзывы покупателей <span class="testimonials-amount">54</span></a></li>
 		 						</ul>
 		 						<div class="product-tabs-cnt">
 		 							<div id="product-tab-1" class="product-tabs">
@@ -842,7 +842,25 @@
 				countDown('.js-cutdown', 8, 10, 1);
 				
 				// tabs navigation for product
-				$('.js-product-tabs').tabs({active: 2});
+				$('.js-product-tabs').tabs({
+					active: 2,
+					create: function(event, ui) {
+						$('.js-phone-tab-nav').html($(".js-tabs-nav .tab-item[href='"+ui.panel.selector+"']").html());
+					},
+					activate: function(event, ui) {
+						$('.js-phone-tab-nav').html($(".js-tabs-nav .tab-item[href='"+ui.newPanel.selector+"']").html());
+					}
+				});
+				
+				$('.js-phone-tab-nav').click(function(){
+					$('.js-tabs-nav').slideToggle(200);
+				});
+				
+				$('.js-tab-item').click(function(){
+					if(device === 320){
+						$('.js-tabs-nav').slideUp(200);
+					}
+				});
 				
 				$('.js-size-list-table tbody tr:even').addClass('even');
 			});

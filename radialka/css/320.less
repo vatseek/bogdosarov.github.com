@@ -158,4 +158,131 @@
       }
     }
   }
+  
+  // page product 
+  .product-slider-cnt {
+    float: none;
+    .box(100%, auto);
+    margin: 0 0 16px 0;
+    
+    .product-slider {
+      .square(296px);
+      
+      li {
+        .square(296px);
+        
+        img {
+          .square(296px);
+        }
+      }
+    }
+  }
+  
+  .product-info-cnt {
+    width: 100%;
+    float: none;
+    
+    .action-info {
+      top: 0;
+      padding-bottom: 7px;
+      
+      &:after, &:before {
+        display: none;
+      } 
+    }
+    .product-price-cnt {
+      margin-top: 16px;
+      text-align: center;
+      
+      .available {
+        display: inline-block;
+        margin: 0 20px 0 0;
+      }
+    }
+    .product-rating {
+      margin-left: 49px;
+    }
+    .product-size {
+      text-align: center;
+    }
+    .size-info {
+      .show-info {
+        margin-left: 88px;
+      }
+      .product-size-list {
+        left: 0;
+        width: 276px;
+        
+        table {
+          width: 100%;
+        }
+      }
+    }
+    .product-color {
+      .colors {
+        margin-right: 70px;
+      }
+    }
+    .product-count {
+      text-align: center;
+      
+      .green-btn {
+        width: 210px;
+      }
+      .not-avaliable {
+        margin-left: 42px;
+        width: 210px;
+      }
+    }
+  }
+  
+  .product-tabs {
+    .phone-tab-nav {
+      .box(286px, 36px);
+      .border-radius(5px 5px 0 0);
+      padding-left: 9px;
+      background-color: #e4e8eb;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1em;
+      line-height: 36px;
+      background:url(../img/sprite.png) no-repeat 276px -445px, url(../img/bg/tab-bg.png) repeat-x;
+      
+      .testimonials-amount {
+        color: #b7b7b7;
+      }
+    }
+    .producs-tabs-title {
+      position: absolute;
+      width: 296px;
+      .border-radius(5px);
+      .box-shadow(0 3px 5px rgba(0,0,0,.4));
+      background: #fff;
+      
+      li {
+        float: none;
+        .border-radius(none);
+        margin: 0;
+        background: #fff;
+        border-top: solid 1px #e5e9ec;
+        text-align: left;
+        
+        a {
+          color: #1a62ba;
+         
+          .testimonials-amount {
+            color: #000;
+          }
+        }
+        &.ui-tabs-active{
+          background: #fff;
+            
+        a {
+          color: #1a62ba;
+          padding-bottom: 8px;
+        }
+        }
+      }
+    }
+  }
 }
