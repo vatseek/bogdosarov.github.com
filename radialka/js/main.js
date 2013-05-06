@@ -263,6 +263,9 @@ $(function() {
 				mobailFilter = false;
 			}
 	  	}
+	  	if(typeof pageProduct !== 'undefined') {
+	  		$('.js-tabs-nav').css({display:'block'});
+	  	}
  	} else
  	if(size === 768){
  		//brandSlider.reload();
@@ -276,6 +279,9 @@ $(function() {
 				filterCatalog.appendTo('.js-main-filter-cnt');
 				mobailFilter = false;
 			}
+	  	}
+	  	if(typeof pageProduct !== 'undefined') {
+	  		$('.js-tabs-nav').css({display:'block'});
 	  	}
  	} else
  	if(size === 480){
@@ -293,6 +299,9 @@ $(function() {
 			mobailFilter = true;	
 	  	}
 	  }
+	  if(typeof pageProduct !== 'undefined') {
+	  		$('.js-tabs-nav').css({display:'block'});
+	  	}
 	  
  	} else
  	if(size === 320){

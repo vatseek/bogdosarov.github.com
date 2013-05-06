@@ -246,7 +246,7 @@
       color: #fff;
       font-size: 1em;
       line-height: 36px;
-      background:url(../img/sprite.png) no-repeat 276px -445px, url(../img/bg/tab-bg.png) repeat-x;
+      background:@sprite no-repeat 276px -445px, url(../img/bg/tab-bg.png) repeat-x;
       
       .testimonials-amount {
         color: #b7b7b7;
@@ -254,6 +254,8 @@
     }
     .producs-tabs-title {
       position: absolute;
+      display: none;
+      overflow: hidden;
       width: 296px;
       .border-radius(5px);
       .box-shadow(0 3px 5px rgba(0,0,0,.4));

@@ -315,35 +315,46 @@
 								<div class="method-delivery">
 									<h3>Способ доставки</h3>
 									<div class="form-row">
-										<input type="radio" name="radio2" id="check4"/> <label for="check4">На склад транспортной компании (40 грн.)</label>
+										<input type="radio" name="radio2" id="check4" checked="checked" class="js-to-warehouse" autocomplete="off"/> <label for="check4">На склад транспортной компании (40 грн.)</label>
 									</div>
 									<div class="form-row">
-										<input type="radio" name="radio2" id="check5"/> <label for="check5">До двери (60 грн.)</label>
+										<input type="radio" name="radio2" id="check5" class="js-to-dor" autocomplete="off"/> <label for="check5">До двери (60 грн.)</label>
 									</div>
 									<div class="form-row">
-										<input type="radio" name="radio2" id="check6"/> <label for="check6">Самовывоз</label>
+										<input type="radio" name="radio2" id="check6" class="js-to-dor" autocomplete="off"/> <label for="check6">Самовывоз</label>
 									</div>
 								</div> <!-- /.method-delivery -->
 							</div>
 							<div class="delivery-info clearfix">
-								<div class="form-row">
-									<label for="">Служба доставки</label>
-									<select name="delivery_service" id="">
-										<option>Новая почта</option>
-										<option>Новая почта</option>
-									</select>
-								</div>
-								<div class="form-row">
-									<label for="city-delivery"><i class="icon-asterisk"></i>Город доставки</label><input type="text" name="city-delivery" id=""/>
-								</div>
-								<div class="form-row">
-									<label for="depot">Склад ТК</label><input type="text" name="depot" id="" placeholder="адрес или номер склада"/>
-									<div><a href="#" class="address-represent">Адреса представительств</a></div>
-								</div>
-							</div> <!-- /.delivery-info -->
+								<div class="to-warehouse js-to-warehouse-cnt">
+									<div class="form-row">
+										<label for="">Служба доставки</label>
+										<select name="delivery_service" id="">
+											<option>Новая почта</option>
+											<option>Новая почта</option>
+										</select>
+									</div>
+									<div class="form-row">
+										<label for="city-delivery"><i class="icon-asterisk"></i>Город доставки</label><input type="text" name="city-delivery" id=""/>
+									</div>
+									<div class="form-row">
+										<label for="depot">Склад ТК</label><input type="text" name="depot" id="" placeholder="адрес или номер склада"/>
+										<div><a href="#" class="address-represent">Адреса представительств</a></div>
+									</div>
+								</div> <!-- /.to-warehouse -->
+								<div class="to-dor js-to-dor-cnt">
+									<div class="form-row">
+										<label for="city-delivery"><i class="icon-asterisk"></i>Город доставки</label><input type="text" name="city-delivery" id=""/>
+									</div>
+									<div class="form-row">
+										<label for="depot"><i class="icon-asterisk"></i>Адрес</label><input type="text" name="depot" id="" placeholder="адрес или номер склада"/>
+									</div>
+								</div> <!-- /.to-dor -->
 							<div class="comment-for-order">
 								<a class="comment-order-link js-show-comment-form">Написать коментарий к заказу</a>
+								<textarea name="user-comment" class="user-comment js-user-comment" placeholder="Комментарий к заказу"></textarea>
 							</div> <!-- /.comment-for-order -->
+							</div> <!-- /.delivery-info -->
 						</div> <!-- /.checkout-info -->
 						<div class="checkout-user-info">
 							<div class="autoriz-cnt">
@@ -465,7 +476,17 @@
 		<script src="js/plugins.js"></script>
 		<script>
 			$(function() {
-				
+				$('.js-to-dor').click(function(){
+					$('.js-to-warehouse-cnt').fadeOut(0);					
+					$('.js-to-dor-cnt').fadeIn(300);
+				});
+				$('.js-to-warehouse').click(function(){
+					$('.js-to-dor-cnt').fadeOut(0);
+					$('.js-to-warehouse-cnt').fadeIn(300);					
+				});
+				$('.js-show-comment-form').click(function(){
+					$('.js-user-comment').slideToggle(300);					
+				});
 			});
 		</script>
 		<script src="js/main.js"></script>

@@ -118,7 +118,7 @@ li {
   display: none;
 }
 .sprite {
-  background: url(../img/sprite2.png) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   display: inline-block;
 }
 .active {
@@ -289,6 +289,7 @@ a[class*="btn"] {
 .autocomplit-list {
   display: none;
   position: absolute;
+  overflow: hidden;
   top: 30px;
   left: 0;
   width: 416px;
@@ -327,7 +328,7 @@ a[class*="btn"] {
   text-decoration: none;
 }
 .autocomplit-list-item a:hover {
-  background: url(../img/autocomplit-h-bg.png) repeat-x;
+  background: url(../img/bg/sprite-bg.png) 0 -36px repeat-x;
   color: #fff;
 }
 .autocomplit-list-item.last {
@@ -672,7 +673,7 @@ a[class*="btn"] {
   text-decoration: none;
 }
 .mainNav  > ul ul li:hover a {
-  background: url(../img/drpdown-m-a-l.png) #369d06 repeat-x;
+  background: url(../img/bg/sprite-bg.png) #369d06 repeat-x;
   color: #fff;
 }
 .mainNav .col {
@@ -1843,18 +1844,33 @@ h2 {
 .autoriz-cnt .form-row input {
   margin-left: 20px;
 }
+.delivery-info .to-dor,
+.autoriz-cnt .to-dor {
+  display: none;
+}
 .delivery-info {
   margin: 40px 0 19px;
   padding-right: 105px;
+  min-height: 187px;
 }
 .delivery-info .address-represent {
   display: inline-block;
   margin: 5px 254px 0 0;
   font-size: 0.857em;
 }
+.comment-for-order {
+  margin-top: 37px;
+}
 .comment-for-order .comment-order-link {
   text-decoration: none;
   border-bottom: 1px dashed #bad0ea;
+}
+.comment-for-order .user-comment {
+  display: none;
+  padding: 10px;
+  width: 96%;
+  height: 110px;
+  margin-top: 12px;
 }
 .autoriz-cnt {
   margin: 31px 0 16px 0;
@@ -2819,7 +2835,7 @@ h2 {
     text-align: center;
   }
   .mainSliderThumbs li {
-    background: url(../img/sprite2.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -2993,6 +3009,9 @@ h2 {
   }
   .delivery-info {
     padding: 0;
+  }
+  .to-dor {
+    display: none;
   }
   .delivery-info .form-row input,
   .autoriz-cnt .form-row input,
@@ -3857,6 +3876,8 @@ h2 {
   }
   .product-tabs .producs-tabs-title {
     position: absolute;
+    display: none;
+    overflow: hidden;
     width: 296px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

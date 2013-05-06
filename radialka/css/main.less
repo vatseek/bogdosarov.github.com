@@ -4,6 +4,10 @@
 
 @link-color: #1a62ba;
 
+@sprite: url(../img/sprite.png);
+
+@sprite-bg: url(../img/bg/sprite-bg.png);
+
 @font-face {
   font-family: 'FedraSansPro-Medium';
   src: url('../font/fedrasanspromedium.eot');
@@ -205,7 +209,7 @@ li {
 }
 
 .sprite {
-  background: url(../img/sprite2.png) no-repeat;
+  background: @sprite no-repeat;
   display: inline-block;
 }
 
@@ -396,6 +400,7 @@ a[class*="btn"]{
 .autocomplit-list {
   display: none;
   position: absolute;
+  overflow: hidden;
   top: 30px;
   left: 0;
   width: 416px;
@@ -433,7 +438,7 @@ a[class*="btn"]{
     text-decoration: none;
   }
   a:hover {
-    background: url(../img/autocomplit-h-bg.png) repeat-x;
+    background: @sprite-bg 0 -36px repeat-x;
     color: #fff;
   }
   &.last{
@@ -443,7 +448,7 @@ a[class*="btn"]{
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  background: url(../img/sprite.png) no-repeat;
+  background: @sprite no-repeat;
   display: inline-block;
 }
 
@@ -811,7 +816,7 @@ a[class*="btn"]{
           text-decoration: none;
         }
         &:hover a{
-          background: url(../img/drpdown-m-a-l.png) #369d06 repeat-x;
+          background: @sprite-bg #369d06 repeat-x;
            color: #fff;
         }
       }
@@ -923,7 +928,7 @@ a[class*="btn"]{
     right: 10px;
     width: 37px;
     height: 37px;
-    background: url(../img/sprite.png) no-repeat;
+    background: @sprite no-repeat;
     background-position: -5px -95px;
     cursor: pointer;
     z-index: 9;
@@ -1033,7 +1038,7 @@ a[class*="btn"]{
   left: 34px;
   width: 9px;
   height: 4px;
-  background: url(../img/sprite.png) no-repeat;
+  background: @sprite no-repeat;
   background-position: -188px -153px;
 }
 
@@ -1156,7 +1161,7 @@ a[class*="btn"]{
       top: 0;
       width: 11px;
       height: 41px;
-      background: url(../img/sprite.png) no-repeat;
+      background: @sprite no-repeat;
       background-position: -201px -54px;
     }
   }
@@ -1278,7 +1283,7 @@ h2 {
     position: absolute;
     top: 30px;
     right: -35px;
-    background: url(../img/sprite.png) no-repeat;
+    background: @sprite no-repeat;
     width: 10px;
     height: 17px;
     background-position: -5px -153px;
@@ -1486,7 +1491,7 @@ h2 {
   width: 48px;
   height: 49px;
   z-index: 9;
-  background: url(../img/sprite.png) -11px -266px;
+  background: @sprite -11px -266px;
   color:#fff;
   font-size: 1em;
   font-family: Helvetica, Arial, sans-serif;
@@ -2008,7 +2013,7 @@ h2 {
     float: right;
     width: 12px;
     height: 12px;
-    background: url(../img/sprite.png) -5px -181px no-repeat;
+    background: @sprite -5px -181px no-repeat;
     cursor: pointer;
   }
   .ui-spinner-up {
@@ -2112,11 +2117,15 @@ h2 {
       margin-left: 20px;
     }
   }
+  .to-dor{
+    display: none;
+  }
 }
 
 .delivery-info {
   margin: 40px 0 19px;
   padding-right: 105px;
+  min-height: 187px;
   
   .address-represent {
     display: inline-block;
@@ -2126,10 +2135,18 @@ h2 {
 }
 
 .comment-for-order {
+  margin-top: 37px;
+  
   .comment-order-link {
     text-decoration: none;
     border-bottom: 1px dashed #bad0ea;
   } 
+  .user-comment {
+    display: none;
+    padding: 10px;
+    .box(96%, 110px);
+    margin-top: 12px;
+  }
 }
 
 .autoriz-cnt {
@@ -2186,7 +2203,7 @@ h2 {
     top: 21px;
     width: 14px;
     height: 26px;
-    background: url(../img/sprite.png) -113px -220px no-repeat, #fff; 
+    background: @sprite -113px -220px no-repeat, #fff; 
   }
   .show-info {
     margin-left: 19px;
@@ -2444,7 +2461,7 @@ h2 {
     position: absolute;
     top: 258px;
     .box(28px,50px);
-    background: url(../img/sprite.png) -76px -290px no-repeat;
+    background: @sprite -76px -290px no-repeat;
     cursor: pointer;
     
     &:hover {
@@ -2629,7 +2646,7 @@ h2 {
           position: absolute;
           top: 3px;
           .square(20px);
-          background: url(../img/sprite.png) -115px -267px;
+          background: @sprite -115px -267px;
         }
       }
       .not-avaliable {
@@ -2762,7 +2779,7 @@ h2 {
     &.yeas {
       padding-left: 15px;
       color: #3a9708;
-      background: url(../img/sprite.png) -177px -215px no-repeat;
+      background: @sprite -177px -215px no-repeat;
     }
   }
   .manufacturer-logo {
@@ -2841,7 +2858,7 @@ h2 {
         padding-left: 31px;
         line-height: 22px;
         font-size: 1.143em;
-        background: url(../img/sprite.png) -188px -256px no-repeat;
+        background: @sprite -188px -256px no-repeat;
       }
       small {
         display: block;
@@ -2991,7 +3008,7 @@ h2 {
       left: 13px;
       .box(19px, 19px);
       content: '';
-      background: url(../img/sprite.png) -69px -272px no-repeat rgba(255,255,255,0.65);
+      background: @sprite -69px -272px no-repeat rgba(255,255,255,0.65);
     }
   }
   &:hover {

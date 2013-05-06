@@ -704,6 +704,7 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 		<script>
+		var pageProduct;
 			$(function() {
 				var mainSliderProduct = $("#product-slider"),
 					popupSliderProduct = $('#product-slider-popup'),
@@ -858,7 +859,7 @@
 				
 				$('.js-tab-item').click(function(){
 					if(device === 320){
-						$('.js-tabs-nav').slideUp(200);
+						$('.js-tabs-nav').slideUp(0);
 					}
 				});
 				
