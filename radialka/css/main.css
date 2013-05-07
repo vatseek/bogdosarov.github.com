@@ -2235,7 +2235,8 @@ h2 {
   width: 197px;
   height: 55px;
   overflow: hidden;
-  font-family: Helvetica, Arial, serif;
+  font-family: "Fedra Sans Pro", Helvetica, Arial, serif;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 2em;
   text-shadow: 0 1px #fff;
@@ -3611,7 +3612,6 @@ h2 {
   .product-info-cnt .product-count .green-btn {
     width: 100%;
     margin: 0;
-    height: 48px;
   }
   .product-info-cnt .product-count .not-avaliable {
     width: 100%;

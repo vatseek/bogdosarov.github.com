@@ -250,8 +250,13 @@ $(function() {
  	if(typeof mainSlider !== "undefined"){mainSlider.reload();} // reload main slider when changet page size
  	if(typeof brandSlider !== "undefined"){brandSlider.reload();} // reload main slider when changet page size
  	if(typeof popupProductSlider !== "undefined"){popupProductSlider.reload();} // reload main slider when changet page size
- 	if(typeof productSlider !== "undefined"){productSlider.reload();} // reload main slider when changet page size
- 	 	
+ 	if(typeof productSlider !== "undefined"){productSlider.reload();} // reload main slider when changet page size	
+ 	if(typeof pageProduct !== "undefined"){
+ 		if(device !== 320){
+ 			$('.js-phone-tab-nav').hide();
+ 			$('.js-tabs-nav').show();
+ 		}
+ 	}
  	if(size === 980){
  		dropdownSize(169);
  	    $(".catalog-list .tovarItem").removeClass('margin-0');
