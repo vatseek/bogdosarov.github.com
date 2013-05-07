@@ -249,6 +249,8 @@ $(function() {
   function updateElements(size){	
  	if(typeof mainSlider !== "undefined"){mainSlider.reload();} // reload main slider when changet page size
  	if(typeof brandSlider !== "undefined"){brandSlider.reload();} // reload main slider when changet page size
+ 	if(typeof popupProductSlider !== "undefined"){popupProductSlider.reload();} // reload main slider when changet page size
+ 	if(typeof productSlider !== "undefined"){productSlider.reload();} // reload main slider when changet page size
  	 	
  	if(size === 980){
  		dropdownSize(169);

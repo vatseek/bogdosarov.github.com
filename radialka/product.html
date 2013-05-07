@@ -704,7 +704,9 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 		<script>
-		var pageProduct;
+		var pageProduct,
+			popupProductSlider,
+			productSlider;
 			$(function() {
 				var mainSliderProduct = $("#product-slider"),
 					popupSliderProduct = $('#product-slider-popup'),
@@ -713,7 +715,7 @@
 					thumbData = mainSliderProduct.find('li');
 					thumbDataPopup = popupSliderProduct.find('li');
 					
-				var popupProductSlider = new Sly(popupSliderProduct,{
+					popupProductSlider = new Sly(popupSliderProduct,{
 					horizontal: 1,
 					itemNav: 'basic',
 					smart: 1,
@@ -736,7 +738,7 @@
 					nextPage: '.js-popupSlider-r'
 				  });
 				  
-				var productSlider = new Sly(mainSliderProduct,{
+					productSlider = new Sly(mainSliderProduct,{
 					horizontal: 1,
 					itemNav: 'basic',
 					smart: 1,
@@ -805,15 +807,17 @@
 				  
 				  // show product-slider popup
 					$('.js-show-slider').click(function(e) {
-						$('.js-modal-product-slider').lightbox_me({
-						centered: true,
-						overlayCSS: {
-							background: '#1e262e',
-							opacity: .9
+						if(device !== 320){
+							$('.js-modal-product-slider').lightbox_me({
+								centered: true,
+								overlayCSS: {
+									background: '#1e262e',
+									opacity: .9
+								}
+							});
+							popupProductSlider.init();
+							e.preventDefault();
 						}
-						});
-						popupProductSlider.init();
-						e.preventDefault();
 					}); 
 					
 					// Set color of product

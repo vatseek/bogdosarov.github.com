@@ -2386,7 +2386,6 @@ h2 {
   border-bottom: 1px dashed #a9b5c1;
 }
 .product-info-cnt .product-count {
-  overflow: hidden;
   height: 49px;
   margin-top: 21px;
 }
@@ -2396,7 +2395,7 @@ h2 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 8px 6px 8px 9px;
+  padding: 9px 6px 10px 9px;
   background-color: #edf0f2;
 }
 .product-info-cnt .product-count .spinner-product input {
@@ -2434,7 +2433,7 @@ h2 {
 .green-btn.buy {
   margin-left: 13px;
   width: 175px;
-  height: 49px;
+  height: 48px;
   font-size: 2.071em;
   background-image: url(../img/bg/green-btn-bg-bigger.png);
 }
@@ -3606,9 +3605,13 @@ h2 {
     height: 40px;
     background-position: -177px -326px;
   }
+  .product-info-cnt .product-count {
+    overflow: visible;
+  }
   .product-info-cnt .product-count .green-btn {
     width: 100%;
     margin: 0;
+    height: 48px;
   }
   .product-info-cnt .product-count .not-avaliable {
     width: 100%;
@@ -3912,6 +3915,9 @@ h2 {
   }
   .product-tabs .phone-tab-nav .testimonials-amount {
     color: #b7b7b7;
+  }
+  .product-tabs #product-tab-1 {
+    overflow: hidden;
   }
   .product-tabs .producs-tabs-title {
     position: absolute;
