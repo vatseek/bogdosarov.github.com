@@ -2235,8 +2235,7 @@ h2 {
   width: 197px;
   height: 55px;
   overflow: hidden;
-  font-family: "Fedra Sans Pro", Helvetica, Arial, serif;
-  text-transform: uppercase;
+  font-family: Helvetica, Arial, serif;
   font-weight: bold;
   font-size: 2em;
   text-shadow: 0 1px #fff;
@@ -2658,6 +2657,52 @@ h2 {
   border-top: solid 1px #cbd3da;
   padding: 14px 0 48px;
 }
+.product-tooltip {
+  position: relative;
+  padding-top: 17px;
+}
+.product-tooltip .tooltip-description {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 100px;
+  left: 17px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 11px;
+  width: 326px;
+  height: auto;
+  min-height: 100px;
+  color: #000;
+  font-size: 0.875em;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
+  outline: 1px solid #c6c6c6;
+  outline: 0px solid rgba(0, 0, 0, 0);
+  line-height: 17px;
+  -webkit-transition: all 700ms;
+  -moz-transition: all 700ms;
+  -o-transition: all 700ms;
+  transition: all 700ms;
+}
+.product-tooltip .tooltip-description:after {
+  position: absolute;
+  bottom: -18px;
+  left: 13px;
+  width: 19px;
+  height: 19px;
+  content: '';
+  background: url(../img/sprite.png) -69px -272px no-repeat rgba(255, 255, 255, 0.36);
+}
+.product-tooltip:hover .tooltip-description {
+  bottom: 35px;
+  visibility: visible;
+  opacity: 1;
+}
 .tooltip {
   position: relative;
 }
@@ -2748,6 +2793,65 @@ h2 {
 }
 .tags a {
   margin-left: 2px;
+  color: #274564;
+}
+.title-page-action {
+  margin-bottom: 0;
+}
+.actions-list {
+  margin-top: 15px;
+}
+.action-item {
+  padding: 1px;
+  float: left;
+  margin: 0 20px 22px 0;
+  width: 353px;
+  height: 245px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
+  -moz-box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
+  outline: 1px solid #d1d4d7;
+  outline: 0px solid rgba(0, 0, 0, 0);
+}
+.action-item .action-img {
+  display: block;
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: 174px;
+  overflow: hidden;
+  background-position: center center;
+  background-size: auto 100%;
+}
+.action-item .action-title {
+  margin: 0 0 0 17px;
+  font-size: 1.286em;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #1a62ba;
+}
+.action-item .action-info {
+  margin: 4px 0 0 18px;
+}
+.action-aside {
+  padding: 41px 0 0 31px;
+  width: 199px;
+}
+.action-aside .social-news-cnt {
+  margin: 40px 0 32px;
+}
+.action-aside h4 {
+  margin: 31px 0 29px;
+}
+.action-nav li {
+  margin-bottom: 4px;
+}
+.action-nav li a {
+  font-size: 1.071em;
+  text-decoration: none;
+  border-bottom: solid 2px #aab1bb;
   color: #274564;
 }
 @media screen and (min-width: 1000px) {
@@ -3071,6 +3175,22 @@ h2 {
   }
   .product-prev .product-size-list {
     left: -100px;
+  }
+  .action-cnt {
+    width: 480px;
+    margin-right: 20px;
+  }
+  .action-cnt .span3 {
+    width: 480px;
+  }
+  .action-item {
+    padding: 1px;
+    float: none;
+    width: 100%;
+    margin: 0 0 13px 0;
+  }
+  .action-aside {
+    padding-left: 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -3713,6 +3833,16 @@ h2 {
     width: 480px;
     height: 480px;
   }
+  .action-cnt {
+    width: 100%;
+    margin-right: 0;
+  }
+  .action-cnt .span3 {
+    width: 100%;
+  }
+  .action-item {
+    width: 438px;
+  }
 }
 @media screen and (max-width: 479px) {
   .hidden-320 {
@@ -3971,6 +4101,17 @@ h2 {
   }
   .user-testimonial .testimonial-data .captcha-label {
     margin-right: 160px;
+  }
+  .action-item {
+    width: 295px;
+    height: 209px;
+  }
+  .action-item .action-img {
+    height: 152px;
+    margin-bottom: 5px;
+  }
+  .action-item .action-info {
+    margin-top: 1px;
   }
 }
 /* ==========================================================================

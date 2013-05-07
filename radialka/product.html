@@ -472,27 +472,20 @@
 		 									<li>Вес: 1350 г</li>
 		 									<li>Размеры: 62 x 29 x 28 cm</li>
 		 									<li>Материалы: 
-		 										<span class="tooltip">
-		 											<span class="tooltip-title">600D Nylon</span>
-		 											<span class="tooltip-description">
-		 												Очень удобная воздухопроницаемая ткань 
+		 										<a href="#" data-tooltip="Очень удобная воздухопроницаемая ткань 
 		 												из 100% нейлоновых волокон, 
 		 												которые производятся при 
 		 												помощи специальной технологии и 
-		 												имеют, так называемый, фитильный эффект. <br /><br />
-		 												<a href="#">Полное описание технологии материала</a>
-		 											</span>
-		 										</span>, 450D Nylon,<span class="tooltip">
-		 											<span class="tooltip-title">400D Nylon Dobby</span>
-		 											<span class="tooltip-description">
-		 												Очень удобная воздухопроницаемая ткань 
+		 												имеют, так называемый, фитильный эффект." class="product-tooltip js-product-tooltip">
+		 												600D Nylon
+		 										</a>, 450D Nylon, 150D Nylon mini Ripstop
+		 										<a href="#" data-tooltip="Очень удобная воздухопроницаемая ткань 
 		 												из 100% нейлоновых волокон, 
 		 												которые производятся при 
 		 												помощи специальной технологии и 
-		 												имеют, так называемый, фитильный эффект. <br /><br />
-		 												<a href="#">Полное описание технологии материала</a>
-		 											</span>
-		 										</span>, 150D Nylon mini Ripstop
+		 												имеют, так называемый, фитильный эффект." class="product-tooltip js-product-tooltip">
+		 												600D Nylon
+		 										</a>, 450D Nylon, 150D Nylon mini Ripstop
 		 									</li>
 		 								</ul>
 		 							</div>
@@ -701,10 +694,10 @@
 		<script>
 			window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
 		</script>
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-		var pageProduct,
+		<script async="async" src="js/plugins.js"></script>
+		<script async="async" src="js/main.js"></script>
+		<script async="async">
+		var pageProduct = true,
 			popupProductSlider,
 			productSlider;
 			$(function() {
@@ -848,7 +841,7 @@
 				
 				// tabs navigation for product
 				$('.js-product-tabs').tabs({
-					active: 2,
+					active: 0,
 					create: function(event, ui) {
 						$('.js-phone-tab-nav').html($(".js-tabs-nav .tab-item[href='"+ui.panel.selector+"']").html());
 					},
@@ -868,6 +861,14 @@
 				});
 				
 				$('.js-size-list-table tbody tr:even').addClass('even');
+				
+				// create tooltips 
+				var tooltipDescript = document.createElement("span");
+				$('.js-product-tooltip').each(function(){
+					tooltipDescript.innerHTML = '<span class="tooltip-description hidden-table hidden-phone">'+$(this).data('tooltip')+'</span>';
+					$(this).append(tooltipDescript);
+				});
+				
 			});
 		</script>
 	</body>

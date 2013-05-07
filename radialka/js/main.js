@@ -80,6 +80,54 @@ $(function() {
 		var filterCatalog = $('.js-filter');
 	}
 	
+	//Know the size of the display and when we has change 
+	//media query - then update dinmic elements
+	function mediaQueries(){
+		if(currentSize != newSize){
+			if((documentClientWidth >= 1000)){
+				newSize = 1;
+		    	device = 980;
+		    	updateElements(980);
+		    } else
+		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
+		    	newSize = 2;
+		    	device = 768;
+		    	updateElements(768);
+		    } else
+		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
+		    	newSize = 3;
+		    	device = 480;
+		    	updateElements(480);
+		    } else
+		    if(documentClientWidth < 479){
+		    	newSize = 4;
+		    	device = 320;
+		    	updateElements(320);
+		    }	
+		    currentSize = newSize; 
+ 			//console.log(currentSize+' '+newSize);
+	    }
+	}
+       
+    $(window).resize(function(){
+     	documentClientWidth = correctedViewportW();
+    	if((documentClientWidth >= 1000)){
+		    	newSize = 1;
+		    } else
+		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
+		    	newSize = 2;
+		    } else
+		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
+		    	newSize = 3;
+		    } else
+		    if(documentClientWidth < 480){
+		    	newSize = 4;
+		    }
+    	mediaQueries();
+    });
+    
+	mediaQueries();
+	
 	// show register-login popup
 	$('.js-register').click(function(e) {
 		$( ".js-login-reg-tabs" ).tabs({ active: 1 });
@@ -252,11 +300,16 @@ $(function() {
  	if(typeof popupProductSlider !== "undefined"){popupProductSlider.reload();} // reload main slider when changet page size
  	if(typeof productSlider !== "undefined"){productSlider.reload();} // reload main slider when changet page size	
  	if(typeof pageProduct !== "undefined"){
- 		if(device !== 320){
- 			$('.js-phone-tab-nav').hide();
- 			$('.js-tabs-nav').show();
+ 		if(device === 320){
+ 			$('.js-phone-tab-nav').show(0);
+ 			$('.js-tabs-nav').hide(0);
+ 			console.log('show '+device);
+ 		}  else {
+ 			$('.js-phone-tab-nav').hide(0);
+ 			$('.js-tabs-nav').show(0);
+ 			console.log('hide '+device);
  		}
- 	}
+ 	} 
  	if(size === 980){
  		dropdownSize(169);
  	    $(".catalog-list .tovarItem").removeClass('margin-0');
@@ -329,54 +382,4 @@ $(function() {
  	}
 	console.log('Update '+size);
   }
-	
-	//Know the size of the display and when we has change 
-	//media query - then update dinmic elements
-	function mediaQueries(){
-		if(currentSize != newSize){
-			if((documentClientWidth >= 1000)){
-				newSize = 1;
-		    	updateElements(980);
-		    	device = 980;
-		    } else
-		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
-		    	newSize = 2;
-		    	updateElements(768);
-		    	device = 768;
-		    } else
-		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
-		    	newSize = 3;
-		    	updateElements(480);
-		    	device = 480;
-		    } else
-		    if(documentClientWidth < 479){
-		    	newSize = 4;
-		    	updateElements(320);
-		    	device = 320;
-		    }	
-		    currentSize = newSize; 
- 			//console.log(currentSize+' '+newSize);
-	    }
-	}
-    
-   
-   mediaQueries();
-       
-    $(window).resize(function(){
-     	documentClientWidth = correctedViewportW();
-    	if((documentClientWidth >= 1000)){
-		    	newSize = 1;
-		    } else
-		    if((documentClientWidth >= 768) & (documentClientWidth <= 1000)){
-		    	newSize = 2;
-		    } else
-		    if((documentClientWidth >= 480) & (documentClientWidth <= 767)){
-		    	newSize = 3;
-		    } else
-		    if(documentClientWidth < 480){
-		    	newSize = 4;
-		    }
-    	mediaQueries();
-    });
-
 });
