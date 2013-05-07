@@ -376,14 +376,35 @@ a[class*="btn"]{
 }
 
 .green-btn {
-  height: 27px;
+  position: relative;
+  height: 25px;
   padding: 2px 10px 4px;
-  //border: 1px solid #5bbe25;
+  border: none;
   background-image: url(../img/green-btn-bg.png);
   font-size: 0.929em;
   font-weight: bold;
   color: #fff;
   text-shadow: 0 1px rgba(0,0,0,.22);
+}
+
+.green-btn:before {
+   content: "";
+   position: absolute;
+  .border-radius(5px);
+   top: -1px;
+   left: -1px;
+   right: -1px;
+   bottom: -1px;
+   z-index: -2;
+  background: #67d02d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #67d02d 0%, #297201 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67d02d), color-stop(100%,#297201)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #67d02d 0%,#297201 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #67d02d 0%,#297201 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #67d02d 0%,#297201 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #67d02d 0%,#297201 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67d02d', endColorstr='#297201',GradientType=0 ); /* IE6-9 */
+
 }
 
 .grey-btn {
