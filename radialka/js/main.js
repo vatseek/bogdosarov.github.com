@@ -31,12 +31,15 @@ var device; // global variable for device identefication
   };
   
 // countdown timer for actions
-function countDown(container,day,hour,minutes){
+function countDown(container){
 	var d, // amount of days
 		h, // amount of hours
 		m, // amount of minutes
 		s, // amount of seconds
 		timerContainer = $(container), // timer visualization
+		day = timerContainer.data('days'),
+		hour = timerContainer.data('hours'),
+		minutes = timerContainer.data('minutes'),
 		start = (hour * 3600)+(minutes * 60)+(day*24*3600), // calculate start date, conver date to seconds
 		decrement = window.setInterval(function(){
 		start -=1;

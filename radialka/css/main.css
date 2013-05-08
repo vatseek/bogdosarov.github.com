@@ -2227,11 +2227,11 @@ h2 {
 .product-slider-thumb li.active {
   border-color: #1a62ba;
 }
-.end-action .end-action-title {
+.ending-stocs .ending-stocs-title {
   margin: 7px 0 5px 2px;
   font-size: 0.929em;
 }
-.end-action .end-actoin-timer {
+.ending-stocs .ending-stocs-timer {
   width: 197px;
   height: 55px;
   overflow: hidden;
@@ -2241,19 +2241,19 @@ h2 {
   text-shadow: 0 1px #fff;
   background: url(../img/end-action.png) no-repeat;
 }
-.end-action .end-actoin-timer .days,
-.end-action .end-actoin-timer .hours,
-.end-action .end-actoin-timer .minutes,
-.end-action .end-actoin-timer .seconds {
+.ending-stocs .ending-stocs-timer .days,
+.ending-stocs .ending-stocs-timer .hours,
+.ending-stocs .ending-stocs-timer .minutes,
+.ending-stocs .ending-stocs-timer .seconds {
   float: left;
   text-align: center;
   margin-top: 1px;
   width: 45px;
 }
-.end-action .end-actoin-timer .days {
+.ending-stocs .ending-stocs-timer .days {
   margin-left: 4px;
 }
-.end-action .end-actoin-timer .hours {
+.ending-stocs .ending-stocs-timer .hours {
   margin: 1px 2px 0 5px;
 }
 .product-info-cnt {
@@ -2854,6 +2854,50 @@ h2 {
   border-bottom: solid 2px #aab1bb;
   color: #274564;
 }
+.action-cnt .action-img {
+  display: block;
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background-position: center center;
+  background-size: auto 100%;
+}
+.action-cnt .ending-stocs {
+  margin-bottom: 11px;
+}
+.action-cnt .ending-stocs-timer {
+  display: inline-block;
+}
+.action-cnt .ending-stocs-info {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.143em;
+}
+.action-cnt .action-descriptions {
+  margin: 0 0 28px 22px;
+  font-size: 1.143em;
+}
+.action-cnt .catalog-list {
+  padding: 0;
+  border: 0;
+}
+.action-cnt .catalog-list .tovarList .tovarItem {
+  margin-bottom: 38px;
+}
+.action-cnt .catalog-list .tovarList .tovarItem img {
+  width: 100%;
+}
+.stocs-detail .action-img {
+  margin: 13px 0 14px;
+}
+.stocs-detail .ending-stocs {
+  margin-left: 19px;
+}
+.stocs-detail .ending-stocs-info {
+  margin: 4px 0 0 17px;
+  line-height: 19px;
+}
 @media screen and (min-width: 1000px) {
   .hidden-desctop {
     display: none !important;
@@ -3183,6 +3227,16 @@ h2 {
   .action-cnt .span3 {
     width: 480px;
   }
+  .action-cnt .stocs-detail .ending-stocs {
+    margin-left: 0;
+  }
+  .action-cnt .action-descriptions {
+    margin-left: 0;
+    padding-right: 10px;
+  }
+  .action-cnt .title-page-action-details .bottomLine {
+    margin: 18px 0 2px;
+  }
   .action-item {
     padding: 1px;
     float: none;
@@ -3191,6 +3245,9 @@ h2 {
   }
   .action-aside {
     padding-left: 10px;
+  }
+  .action-details-asside {
+    padding-left: 1px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -3843,6 +3900,9 @@ h2 {
   .action-item {
     width: 438px;
   }
+  .stocs-detail .action-img {
+    height: 226px;
+  }
 }
 @media screen and (max-width: 479px) {
   .hidden-320 {
@@ -4112,6 +4172,25 @@ h2 {
   }
   .action-item .action-info {
     margin-top: 1px;
+  }
+  .action-cnt .tovarList .tovarItem .tovar {
+    margin-right: 0;
+    height: 294px;
+  }
+  .action-cnt .tovarList .tovarItem .tovarName {
+    font-size: 1.714em;
+  }
+  .stocs-detail .action-img {
+    height: 152px;
+  }
+  .ending-stocs {
+    text-align: center;
+  }
+  .ending-stocs .ending-stocs-info {
+    margin-left: 0;
+  }
+  .action-descriptions {
+    padding: 0;
   }
 }
 /* ==========================================================================

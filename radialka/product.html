@@ -342,9 +342,9 @@
 		 					</div> <!-- /.product-slider-cnt -->
 		 					<div class="product-info-cnt">
 		 						<div class="action-info"><span class="title-action">Акция! Рюкзак Tatonka + аптечка</span>
-		 							<div class="end-action hidden-phone">
-		 								<div class="end-action-title">До окончания акции осталось:</div>
-		 								<div class="end-actoin-timer js-cutdown">
+		 							<div class="ending-stocs hidden-phone">
+		 								<div class="ending-stocs-title">До окончания акции осталось:</div>
+		 								<div class="ending-stocs-timer js-countdown" data-days="1" data-hours="4" data-minutes="50">
 		 									<div class="days js-days">25</div>
 		 									<div class="hours js-hours">09</div>
 		 									<div class="minutes js-minutes">14</div>
@@ -837,7 +837,7 @@
 				 });
 				
 				// countdown timer for action
-				countDown('.js-cutdown', 8, 10, 1);
+				countDown('.js-countdown');
 				
 				// tabs navigation for product
 				$('.js-product-tabs').tabs({

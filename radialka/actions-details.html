@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Радиалка</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!--[if IE]>
+		<link rel="stylesheet" href="css/ie.css">
+		<![endif]-->
+		<script async="async" src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+			<div class="modal-cnt modal-cnt-login js-modal-cnt-login">
+				<div class="close-modal js-close-modal"><i class="icon-close-modal close"></i></div>
+				<div class="login-reg-tabs js-login-reg-tabs">
+					<ul class="login-reg-tabs-title">
+						<li class="login-reg-tabs-item"><a href="#autoriz"><span>Авторизация</span></a></li>
+						<li class="login-reg-tabs-item"><a href="#registr"><span>Регистрация</span></a></li>
+					</ul>
+					<div id="autoriz">
+						empty
+					</div> <!-- /#autoriz -->
+					<div id="registr" class="modal-form">
+						<form action="#" class="register-user">
+							<div class="form-row">
+								<label for="">Ваше имя и фамилия <i class="icon-asterisk"></i></label> <br />
+								<input type="text" name="user-name" value="" id=""/>
+							</div>
+							<div class="form-row">
+								<label for="">Эл. почта <i class="icon-asterisk"></i></label> <br />
+								<input type="email" name="user-email" value="" id=""/>
+							</div>
+							<div class="form-row">
+								<label for="">Номер телефона <i class="icon-asterisk"></i></label> <br />
+								<input type="number" name="user-phone" value="" id=""/>
+							</div>
+							<div class="form-row">
+								<label for="">Пароль <i class="icon-asterisk"></i></label> <br />
+								<input type="password" name="user-pass" value="" id="" class="js-user-pass"/>
+								<i class="icon-eye js-remove-pass"></i>
+								<div class="info">Проверте пароль  нажав "глазик"</div>
+							</div>
+							<div class="form-row">
+								<button class="blue-btn" type="submit">Зарегистрироваться</button>
+							</div>
+						</form> <!-- /.register-user -->
+					</div> <!-- /#registr -->
+				</div> <!-- /.login-reg-tabs -->
+			</div> <!-- /.popup-cnt-login -->
+		<header class="headerSite">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="span3">
+							<nav class="nav headerTopNav js-top-navigation float-l">
+								<ul class="hidden-phone">
+									<li>
+										<a href="#" class="action">акции</a>
+									</li>
+									<li>
+										<a href="#">доставка и оплата</a>
+									</li>
+									<li>
+										<a href="#">гарантии</a>
+									</li>
+									<li>
+										<a href="#">о нас</a>
+									</li>
+									<li class="last">
+										<a href="#">контактная информация</a>
+									</li>
+								</ul>
+							</nav>	<!-- /.headerTopNav -->
+						</div>
+						<div class="span1">
+							<nav class="nav headerTopNav change-curse js-change-curse">
+								<ul class="hidden-phone">
+									<li>
+										<a href="#">гривна</a>
+									</li>
+									<li class="last">
+										<a href="#" class="active">рубли</a>
+									</li>
+								</ul>
+							</nav>	<!-- /.change-curse -->
+						</div>
+					</div>
+				</div>	<!-- /.container -->
+			</div> <!-- /.header-top -->
+
+			<div class="container">
+				<div class="row logo-item">
+					<div class="span1">
+						<a href="#" class="logo"><i class="icon-logo"></i></a>
+						<address class="contactNumbers float-l">
+							<div class="tell">
+								<i class="icon-life hidden-phone"></i> (063) 63-63-463
+							</div>
+							<a href="#" class="show-operators js-show-operators">другие операторы</a>
+							<div class="operators">
+								<div class="tell tell-mts">
+									<i class="icon-mts"></i> (063) 63-63-463
+								</div>
+								<div class="tell tell-mts">
+									<i class="icon-kr"></i> (063) 63-63-463
+								</div>
+							</div>
+							<br />
+							<a href="#" class="order-phone hidden-phone"><i class="icon-tell"></i> <span>заказать обратный звонок</span></a>
+						</address>	<!-- /.contactNumbers -->
+					</div> 
+
+					<div class="span2 hidden-phone">
+						<form action="#" method="get" accept-charset="utf-8" class="search-ctn hidden-table">
+							<fieldset>
+									<input type="text" name="searchData" value="" id="searchData" placeholder="Поиск по каталогу товаров"/>
+									<button type="submit" class="blue-btn">Найти</button>
+								<ul class="autocomplit-list">
+									<li class="autocomplit-list-item">
+										<a href="#1"> <span class="img-ctn"><img src="img/fish/img4.jpg" alt="Kurtka" /></span> <span class="text-ctn"> Куртка Milo Ide — <span class="bold">2 300 грн.</span> </span> </a>
+									</li>
+									<li class="autocomplit-list-item last">
+										<a href="#1"> <span class="img-ctn"><img src="img/fish/img4.jpg" alt="Kurtka" /></span> <span class="text-ctn"> Куртка Milo Ide — <span class="bold">2 300 грн.</span> </span> </a>
+									</li>
+								</ul>	<!-- /.autocomplit-list -->
+							</fieldset>
+						</form>	<!-- /.search-ctn -->
+						<div class="smallBanerList clearfix">
+							<div class="smallBaner">
+								<a href="#"><img src="img/fish/baner-freeship.png" alt="Бесплатная доставка" /></a>
+							</div>	<!-- /.smallBaner -->
+							<div class="smallBaner">
+								<a href="#"><img src="img/fish/baner-payback.png" alt="Возврат товара на протяжении 30 дней" /></a>
+							</div>	<!-- /.smallBaner -->
+						</div>	<!-- /.smallBanerList -->
+					</div> 
+					<div class="span1">
+						<div class="user">
+							<a href="#" class="login js-login"><i class="icon-cas"></i> Войти</a>
+							<a href="#" class="hidden-phone js-register"><i class="icon-user"></i> Зарегистрироваться</a>
+						</div>	<!-- /.user-cabinet-ctn -->
+						
+						<div class="shoppingCart float-l  js-shopping-cart">
+								<noscript><a href="#" class="disabled-js"></noscript>
+							<div class="shoppingCartClosed js-open-cart">
+								<i class="icon-big-cart"></i>
+									<span>В корзине 999 товаров</span>
+								<i class="icon-round-arrow"></i>
+							</div>
+								<noscript></a></noscript>
+						
+							<div class="shopListCtn">
+								<span class="hideLine"></span>
+								<table class="shopList">
+									<tr class="shopList-item">
+										<td class="product-img"><img src="img/fish/img4.jpg" alt="Kurtka" /></td>
+										<td class="product-name"><a href="">Палатка Hannah Compact 3</a></td>
+										<td class="product-count">1 × <span class="bold">25000</span></td>
+										<td class="remove-product"><i class="icon-remove-product js-remove-product"></i></td>
+									</tr>	<!-- /.product-item -->
+									<tr class="shopList-item">
+										<td class="product-img"><img src="img/fish/img4.jpg" alt="Kurtka" /></td>
+										<td class="product-name"><a href="">Палатка Hannah</a></td>
+										<td class="product-count">1 × <span class="bold">2500</span></td>
+										<td class="remove-product"><i class="icon-remove-product js-remove-product"></i></td>
+									</tr>	<!-- /.product-item -->
+									<tr class="shopList-item">
+										<td class="product-img"><img src="img/fish/img4.jpg" alt="Kurtka" /></td>
+										<td class="product-name"><a href="">Палатка Hannah Compact 3</a></td>
+										<td class="product-count">1 × <span class="bold">250</span></td>
+										<td class="remove-product"><i class="icon-remove-product js-remove-product"></i></td>
+									</tr> <!-- /.product-item -->
+								</table> <!-- /.product-list -->
+						
+								<div class="sumarry">
+									<div class="float-l">
+										Итого: <span class="bold">2500 грн.</span>
+									</div>
+									<button class="small-btn js-order">
+										оформить заказ
+									</button>
+								</div>
+							</div>	<!-- /.shopListCtn -->
+						</div>	<!-- /.cart -->
+					</div> 
+				</div> <!-- /.logo-item -->
+				<div class="row hiden-search">
+					<div class="span4">
+						<form action="#" class="search-ctn hidden-desctop hidden-phone">
+							<fieldset>
+									<input type="text" name="searchData" id="search" placeholder="Поиск по каталогу товаров">
+									<button type="submit" class="blue-btn">Найти</button>
+								<ul class="autocomplit-list">
+									<li class="autocomplit-list-item">
+										<a href="#1"> <span class="img-ctn"><img src="img/fish/img4.jpg" alt="Kurtka" /></span> <span class="text-ctn"> Куртка Milo Ide — <span class="bold">2 300 грн.</span> </span> </a>
+									</li>
+									<li class="autocomplit-list-item last">
+										<a href="#1"> <span class="img-ctn"><img src="img/fish/img4.jpg" alt="Kurtka" /></span> <span class="text-ctn"> Куртка Milo Ide — <span class="bold">2 300 грн.</span> </span> </a>
+									</li>
+								</ul>	<!-- /.autocomplit-list -->
+							</fieldset>
+						</form>	<!-- /.search-ctn -->
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span4">
+						<nav class="nav mainNav hidden-phone">
+							<ul>
+								<li class="oll-category js-toogle">
+									<a href="#">Все категории <i class="icon-small-round-arrow"></i></a>
+									<div class="">
+										<ul class="ollCategories js-all-cat-list">
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+												<li>
+													<a href="#">Дайвинг</a>
+												</li>
+										</ul>
+									</div>
+								</li> <!-- /.oll-category -->
+								<table class="main-nav-list js-main-nav">
+									<tr>
+										<td><div><a href="#">Одежда</a></div></td>
+										<td><div><a href="#">Горелки</a></div></td>
+										<td><div><a href="#">Рюкзаки и сумки</a></div></td>
+										<td>
+											<div>
+											<a href="#">Спальники</a>
+											<ul>
+												<li>
+													<a href="#">Палатки</a>
+												</li>
+												<li>
+													<a href="#">Палатки</a>
+												</li>
+												<li>
+													<a href="#">Палатки</a>
+												</li>
+												<li>
+													<a href="#">Палатки</a>
+												</li>
+											</ul>
+											</div>
+										</td>
+										<td class="last-table"><div><a href="#"><span>Палатки</span></a></div></td>
+										<td class="hidden-table last"><div><a href="#"><span>Палатки</span></a></div></td>
+									</tr>
+								</table>
+							</ul>
+						</nav> <!-- /.mainNav -->
+						<nav class="oll-cat hidden-desctop hidden-table">
+							<div class="title-cat js-show-oll-cat">Все категории <i class="icon-small-round-arrow"></i></div>
+							<ul class="oll-cat-list js-oll-cat">
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>	<!-- /.container -->
+		</header>
+		<!-- /.header-site -->
+
+		<div class="wrapper">
+		 <div class="container">
+		 	<div class="row">
+		 		<div class="span3 action-cnt">
+		 			<div class="row">
+				 		<div class="span3">
+				 			<ul class="top-paging">
+				 				<li><a href="#">Главная</a></li>
+				 				<li class="current"><a href="#">Акции</a></li>
+				 			</ul> <!-- /.paging -->
+				 		</div>
+				 	</div>
+		 			<div class="row title-page-action-details">
+				 		<div class="span3">
+				 			<h1 class="bottomLine">Обувь в подарок</h1>
+				 		</div>
+		 			</div>
+		 			<div class="row">
+		 				<div class="span3">
+		 					<div class="stocs-detail">
+		 						<div class="action-img" style="background-image: url(img/fish/action2.jpg)"> </div>
+		 						<div class="ending-stocs">
+		 							<div class="ending-stocs-title">До окончания акции осталось:</div>
+		 							<div class="ending-stocs-timer js-countdown" data-days="1" data-hours="4" data-minutes="50">
+		 										<div class="days js-days">01</div>
+		 										<div class="hours js-hours">04</div>
+		 										<div class="minutes js-minutes">50</div>
+		 										<div class="seconds js-seconds">00</div>
+		 							</div> <!-- /.end-actoin-timet-cnt -->
+		 							<div class="ending-stocs-info">Акция действует <br /> <span class="bold">до 6 мая</span></div>
+		 						</div> <!-- /.ending-stocs -->
+		 					</div> <!-- /.stocs-detail -->
+		 					<div class="action-descriptions">
+		 						Для того, что бы обувь прослужила Вам долго, 
+		 						за ней нужен уход. Мы избавляем Вас от этих забот. 
+		 						При покупке в нашем магазине <a href="#">ботинок </a>и <a href="#">кроссовок</a> 
+		 						таких брендов как Asolo, Scarpa, La Sportiva, 
+		 						Zamberlan Вы  получаете средство для ухода 
+		 						за обувью абсолютно бесплатно. Ваша обувь 
+		 						теперь под надёжной защитой!
+		 					</div>
+		 				</div>
+		 			</div>
+		 			<div class="row">
+		 				<div class="span3">
+		 					<h2 class="bottomLine">Товары, которые участвуют в акции</h2>
+		 					<div class="catalog-list">
+		 						<ul class="tovarList js-tovar-list">
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="img">
+		 									<div class="ticket-action hidden-320"></div>
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</div>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="ticket-best-prise hidden-320"></div>
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="ticket-action hidden-320"></div>
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="ticket hidden-320">-30%</div>
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="ticket-best-prise hidden-320"></div>
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						<li class="tovarItem">
+		 							<a href="#" class="tovar">
+		 								<div class="ticket-action hidden-320"></div>
+		 								<span class="img">
+		 									<img src="img/fish/tovar-1.jpg" alt="tovar" />
+		 								</span>
+		 							</a>
+		 							<a href="#" class="tovarLink"><span class="tovarName">Рюкзак Salewa Nurek 65</span></a>
+		 							<ul class="colors-variant-list">
+		 								<li><a href="#" class="blue"></a></li>
+		 								<li><a href="#" class="green"></a></li>
+		 								<li><a href="#" class="grey"></a></li>
+		 							</ul>
+		 							<span class="availability av-yes">Есть в наличии</span>
+		 							<span class="tovarPrise"><span class="bold">1 183</span> грн.</span>
+		 							<a href="#" class="addToCart" title="Add goods to cart">
+		 								<i class="icon-small-cart"></i>
+		 								<span>Купить</span>
+		 							</a>
+		 						</li> <!-- /.tovarItem -->
+		 						
+		 					</ul> <!-- /.tovarList -->
+		 				</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="span1 action-aside action-details-asside hidden-phone">
+		 			<nav class="action-nav">
+		 				<ul>
+		 					<li><a href="#">О нас</a></li>
+		 					<li><a href="#">Контактная информация</a></li>
+		 					<li><a href="#">Доставка и оплата</a></li>
+		 					<li><a href="#">Условия гарантии</a></li>
+		 				</ul>
+		 			</nav>
+		 			<h4>Акции</h4>
+		 			<nav class="action-nav">
+		 				<ul>
+		 					<li><a href="#">О брендах</a></li>
+		 					<li><a href="#">Материалы и технологии</a></li>
+		 				</ul>
+		 			</nav>
+		 			<div class="social-news-cnt">
+		 				<img src="img/fish/social1.png" alt="" />
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		</div>	<!-- /.wrapper -->
+
+		<footer class="footerSite">
+			<div class="container"> 
+				<div class="row last">
+					<div class="span1">
+						<span class="workOn">
+							<span class="copyright">© 2011–2012 Интернет-магазин «Радиалка»</span><br />
+							    Работает на: <a href="http://myopencart.ru">OpenCart</a><br>
+							     Сделано в веб-студии <a href="http://stfalcon.com" class="studio"><i class="icon-stfacon"></i>stfalcon.com</a>  
+						</span>
+					</div>
+					<div class="span2">
+						<div class="catList footerCatList clearfix">
+							<ul class="catListCol">
+								<li><a href="#">Акции</a></li>
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Условия гарантии</a></li>
+							</ul> <!-- /.catListCol -->
+							<ul class="catListCol">
+								<li><a href="#">О брендах</a></li>
+								<li><a href="#">Материалы и технологии</a></li>
+								<li><a href="#">Наши контакты</a></li>
+								<li><a href="#">Карта сайта</a></li>
+							</ul> <!-- /.catListCol -->
+						</div> <!-- /.catList -->
+					</div>
+					<div class="span1 payment hidden-phone">
+						<div class="usePayment">
+							<span class="text">Оцените магазин:</span>
+							<span class="paymentSystems">
+								<a rel="nofollow" href="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=2508/*http://grade.market.yandex.ru/?id=48583&amp;action=link"><img width="88" height="31" border="0" src="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=2505/*http://grade.market.yandex.ru/?id=48583&amp;action=image&amp;size=0" alt="Читайте отзывы покупателей и оценивайте качество магазина radialka.net на Яндекс.Маркете"></a>
+								<a rel="nofollow" href="http://hotline.ua/top50/" target="_blank"><img width="88" height="31" border="0" src="http://hotline.ua/img/top50.gif" alt="Рейтинг интернет-магазинов hotline.ua"></a>
+							</span>
+						</div> <!--/.usePayment-->
+					</div>
+				</div>
+			</div>
+		</footer> <!-- /.footer-site -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+		</script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+			<script async="async">
+				$(function(){
+					// remove rigt margin in action odd item
+					$('.js-action-list li:odd').addClass('margin-right-0');
+					
+					countDown('.js-countdown');
+				});
+			</script>
+	</body>
+</html>
