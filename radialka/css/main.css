@@ -2854,11 +2854,9 @@ h2 {
   border-bottom: solid 2px #aab1bb;
   color: #274564;
 }
-.action-cnt .action-img {
+.action-cnt .stocs-detail .action-img {
   display: block;
   margin: 0 0 10px 0;
-  width: 100%;
-  height: 270px;
   overflow: hidden;
   background-position: center center;
   background-size: auto 100%;
@@ -2890,6 +2888,8 @@ h2 {
 }
 .stocs-detail .action-img {
   margin: 13px 0 14px;
+  width: 100%;
+  height: 270px;
 }
 .stocs-detail .ending-stocs {
   margin-left: 19px;
@@ -3229,6 +3229,9 @@ h2 {
   }
   .action-cnt .stocs-detail .ending-stocs {
     margin-left: 0;
+  }
+  .action-cnt .stocs-detail .action-img {
+    margin-top: 15px;
   }
   .action-cnt .action-descriptions {
     margin-left: 0;
