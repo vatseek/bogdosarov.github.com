@@ -2842,8 +2842,19 @@ h2 {
 .action-aside .social-news-cnt {
   margin: 40px 0 32px;
 }
-.action-aside h4 {
-  margin: 31px 0 29px;
+.action-aside .red {
+  margin: 0 0 4px 0;
+  color: #b60526;
+  font-size: 1.071em;
+}
+.action-aside .discounts {
+  font-size: 1.071em;
+  text-decoration: none;
+  border-bottom: solid 2px #aab1bb;
+  color: #274564;
+}
+.action-nav {
+  margin-bottom: 35px;
 }
 .action-nav li {
   margin-bottom: 4px;
