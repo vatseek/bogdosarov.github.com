@@ -1227,6 +1227,8 @@ h2 {
 .top-paging li a {
   color: #274564;
   font-size: 0.929em;
+  border: none;
+  text-decoration: underline;
 }
 .top-paging li.current {
   padding-right: 0;
@@ -3249,7 +3251,7 @@ h2 {
     margin-left: 20px;
   }
   .checkout-check-list .check .check-item {
-    padding-left: 10px;
+    padding: 7px 10px 8px;
   }
   .checkout-check-list .delivery-price {
     padding-left: 10px;
