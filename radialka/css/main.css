@@ -2834,7 +2834,6 @@ h2 {
   margin-top: 15px;
 }
 .action-item {
-  padding: 1px;
   float: left;
   margin: 0 20px 22px 0;
   width: 353px;
@@ -2842,11 +2841,8 @@ h2 {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
-  -moz-box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
-  box-shadow: inset 0 0 0 1px rgba(26, 40, 54, 0.2);
-  outline: 1px solid #d1d4d7;
-  outline: 0px solid rgba(0, 0, 0, 0);
+  border: 1px solid #d1d4d7;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .action-item .action-img {
   display: block;
