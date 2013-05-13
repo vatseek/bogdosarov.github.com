@@ -1,6 +1,7 @@
 // global functions and variables
 
 var device; // global variable for device identefication
+
 // looking for the right viewport
   var correctedViewportW = (function (win, docElem) {
     var mM = win['matchMedia'] || win['msMatchMedia']
@@ -17,7 +18,7 @@ var device; // global variable for device identefication
 	    return str;
 	};
 	
-  // Function to separate numbers
+  // Function to separate numbers. Input 1000000000 output: 1 000 000 000
   function addSpaces(str){
   	str = String(str);
   	str = str.split('').reverse();
