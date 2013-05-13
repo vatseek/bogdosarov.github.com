@@ -108,8 +108,8 @@
 					</div> 
 					<div class="span1">
 						<div class="user">
-							<a href="#" class="login"><i class="icon-cas"></i> Войти</a>
-							<a href="#" class="hidden-phone"><i class="icon-user"></i> Зарегистрироваться</a>
+							<a href="#" class="login"><i class="icon-cas"></i> <span>Войти</span></a>
+							<a href="#" class="hidden-phone"><i class="icon-user"></i> <span>Зарегистрироваться</span></a>
 						</div>	<!-- /.user-cabinet-ctn -->
 						
 						<div class="shoppingCart float-l  js-shopping-cart">
@@ -862,9 +862,9 @@
 				
 				$('.js-size-list-table tbody tr:even').addClass('even');
 				
-				// create tooltips 
-				var tooltipDescript = document.createElement("span");
+				// create tooltips
 				$('.js-product-tooltip').each(function(){
+					var tooltipDescript = document.createElement("span");
 					tooltipDescript.innerHTML = '<span class="tooltip-description hidden-table hidden-phone">'+$(this).data('tooltip')+'</span>';
 					$(this).append(tooltipDescript);
 				});
