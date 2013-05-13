@@ -1227,7 +1227,7 @@ h2 {
 .top-paging li a {
   color: #274564;
   font-size: 0.929em;
-  border: 1px solid #AAB1BB;
+  border-bottom: 1px solid #AAB1BB;
 }
 .top-paging li.current {
   padding-right: 0;
