@@ -2842,7 +2842,6 @@ h2 {
   -moz-border-radius: 2px;
   border-radius: 2px;
   border: 1px solid #d1d4d7;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .action-item .action-img {
   display: block;
