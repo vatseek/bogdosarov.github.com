@@ -3830,6 +3830,9 @@ h2 {
   .product-info-cnt {
     width: 210px;
   }
+  .product-info-cnt .product-color .color-title {
+    float: left;
+  }
   .product-info-cnt .product-color .colors {
     width: 154px;
   }
