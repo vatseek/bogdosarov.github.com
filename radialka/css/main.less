@@ -2520,6 +2520,7 @@ h2 {
     .box(28px,50px);
     background: @sprite -76px -290px no-repeat;
     cursor: pointer;
+    border: none;
     
     &:hover {
       background-position: -76px -220px;
@@ -3035,14 +3036,12 @@ h2 {
 .product-tooltip {
     position: relative;
     padding-top: 17px;
-    // text-decoration: none;
-    // border-bottom: 1px dashed #1a62ba;
+    
     .tooltip-description {
     display: block;
     position: absolute;
     visibility: hidden;
-    opacity: 0;
-    bottom: 100px;
+    bottom: 50px;
     left: 17px;
     .border-radius(5px);
     padding: 11px;
@@ -3057,7 +3056,8 @@ h2 {
     outline: 1px solid #c6c6c6;
     outline: 0px solid rgba(0,0,0,0);
     line-height: 17px;
-    .transition(all 700ms);
+    .transition(all 400ms);
+    opacity: 0;
     z-index: 5;
     
     &:after {
@@ -3067,6 +3067,8 @@ h2 {
       .box(19px, 19px);
       content: '';
       background: @sprite -69px -272px no-repeat rgba(255,255,255,0.36);
+      opacity: 0;
+      .transition(all 300ms);
     }
   }
   &:hover {
@@ -3074,58 +3076,62 @@ h2 {
       bottom: 35px;
       visibility: visible;
       opacity: 1;
+      
+      &:after {
+        opacity: 1;
+      }
     }
   }
 }
-.tooltip {
-  position: relative;
-  
-  .tooltip-title {
-    color: #1a62ba;
-    border-bottom: 1px dashed #1a62ba;
-    cursor: pointer;
-  }
-  .tooltip-description {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    top: -200px;
-    left: 17px;
-    .border-radius(5px);
-    padding: 11px;
-    color: #000;
-    font-size: 0.875em;
-    .box(326px, 123px);
-    background-color: #fff; 
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-    -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-    box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4);
-    outline: 1px solid #c6c6c6;
-    outline: 0px solid rgba(0,0,0,0);
-    line-height: 17px;
-    .transition(all 700ms);
-    
-    &:after {
-      position: absolute;
-      bottom: -18px;
-      left: 13px;
-      .box(19px, 19px);
-      content: '';
-      background: @sprite -69px -272px no-repeat rgba(255,255,255,0.65);
-    }
-  }
-  &:hover {
-    .tooltip-title {
-      color: #b60526;
-      border-color: transparent;
-    }
-    .tooltip-description {
-      top: -160px;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}
+// .tooltip {
+  // position: relative;
+//   
+  // .tooltip-title {
+    // color: #1a62ba;
+    // border-bottom: 1px dashed #1a62ba;
+    // cursor: pointer;
+  // }
+  // .tooltip-description {
+    // position: absolute;
+    // visibility: hidden;
+    // opacity: 0;
+    // top: -200px;
+    // left: 17px;
+    // .border-radius(5px);
+    // padding: 11px;
+    // color: #000;
+    // font-size: 0.875em;
+    // .box(326px, 123px);
+    // background-color: #fff; 
+    // -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
+    // -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
+    // box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4);
+    // outline: 1px solid #c6c6c6;
+    // outline: 0px solid rgba(0,0,0,0);
+    // line-height: 17px;
+    // .transition(all 700ms);
+//     
+    // &:after {
+      // position: absolute;
+      // bottom: -18px;
+      // left: 13px;
+      // .box(19px, 19px);
+      // content: '';
+      // background: @sprite -69px -272px no-repeat rgba(255,255,255,0.65);
+    // }
+  // }
+  // &:hover {
+    // .tooltip-title {
+      // color: #b60526;
+      // border-color: transparent;
+    // }
+    // .tooltip-description {
+      // top: -160px;
+      // visibility: visible;
+      // opacity: 1;
+    // }
+  // }
+// }
 
 .product-tovar-list {
   float: right;
