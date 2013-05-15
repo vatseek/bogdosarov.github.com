@@ -2793,10 +2793,13 @@ h2 {
   z-index: 10;
   
   .size-list-table {
+    border-collapse: separate;
     .box(352px, 254px);
     border: 1px solid #cbd3da;
     text-align: center;
     vertical-align: middle;
+    border-bottom: none;
+    border-right: none;
       
     thead {
       color:#586572;
@@ -2804,11 +2807,20 @@ h2 {
     }
     td {
       position: relative;
-      border-right: 1px solid #cbd3da;
-      border-bottom: 1px solid #cbd3da;
+      border-right: solid 1px #cbd3da;
+      border-bottom: solid 1px #cbd3da;
+      // border-bottom-style: solid;
+      // border-right-style: solid;
+      // border-bottom-width: 1px;
+      // border-right-width: 1px;
+      // border-top-style: solid;
+      // border-left-style: solid;
+      // border-top-width: 1px;
+      // border-left-width: 1px;
     }
     .even {
-      background:url(../img/bg/even-table-bg.png) repeat-x #f7f9fa;
+       background:url(../img/bg/even-table-bg.png) repeat-x; 
+       height: 34px;
     }
   }
 }
