@@ -1,0 +1,21 @@
+<style>
+	.badges.big {
+		top: 5px;
+		right: 1px;
+		padding-top: 25px;
+		width: 75px;
+		height: 50px;
+		background: url(files2/sticker-bg-big.png) no-repeat;
+		font: bold 18px Helvetica, Arial, sans-serif;
+	}
+	.badges.big.discount {
+		background-image: url(files2/badge-discount-big.png);
+	}
+	.badges.big.action {
+		background-image: url(files2/badge-big.png);
+	}
+</style>
+
+<div class="badges big">-30%</div>
+<div class="badges big discount"></div>
+<div class="badges big action"></div>
