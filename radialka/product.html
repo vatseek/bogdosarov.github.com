@@ -702,6 +702,7 @@
 			productSlider;
 			
 			$(function() {
+				
 				var mainSliderProduct = $("#product-slider"),
 					popupSliderProduct = $('#product-slider-popup'),
 					mainSliderWrap = mainSliderProduct.parent(),
@@ -731,7 +732,8 @@
 					prevPage: '.js-popupSlider-l',
 					nextPage: '.js-popupSlider-r'
 				  });
-				  
+				
+				// initialisation main slider on page 
 				var	productSlider = new Sly(mainSliderProduct,{
 					horizontal: 1,
 					itemNav: 'basic',
@@ -753,10 +755,10 @@
 				  
 				  productSlider.init();
 				  
+				  // disable touch dragging in slider when we used mobail browser
 				  if(device === 480) {
 				  	popupProductSlider.set({touchDragging: 0, mouseDragging: 0});
 				  }
-				  console.log('device = '+device);
 				  
 				  // Tovar rating
 				  $('.js-product-rating').raty({
@@ -861,6 +863,7 @@
 					}
 				});
 				
+				// add class "even" to event elements in size table
 				$('.js-size-list-table tbody tr:even').addClass('even');
 				
 				// create tooltips

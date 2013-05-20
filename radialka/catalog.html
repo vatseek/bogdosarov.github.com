@@ -632,10 +632,11 @@
 		<script>
 			var mobailFilter = false;
 			$(function() {
-				var minPrise = $("#min-prise"),
-					maxPrise = $("#max-prise"),
-					minWeight = $("#min-weight"),
-					maxWeight = $("#max-weight");
+				var minPrise = $("#min-prise"), // used in price slider
+					maxPrise = $("#max-prise"), // used in price slider
+					minWeight = $("#min-weight"), // used in weight slider
+					maxWeight = $("#max-weight"); // used in weight slider
+				
 				// filter tooltip
 				$('.js-main-filter input[type="checkbox"]').click(function(){
 					if(!$(this).is(':checked') && $(this).parent().find('.js-filter-tooltip')){
@@ -648,6 +649,7 @@
 					}
 				});
 				
+				 // show filter container in mobail deivice
 				 $('.js-show-mobail-filter').click(function(){
 					$(this).hide()
 					$('.js-tovar-list').hide();
@@ -655,6 +657,7 @@
 					$('.js-filter-mobail').show();
 				});
 				 
+				// initialisation weight slider
 				$( "#weight-slider" ).slider({
 					range: true,
 					step: 0.01,
@@ -668,6 +671,7 @@
 					}
 				});
 				
+				// initialisation price slider
 				$( "#prise-slider" ).slider({
 					range: true,
 					min: 1,
@@ -693,6 +697,7 @@
 					$( "#weight-slider" ).slider("values", [ minWeight.val(), maxWeight.val() ]);
 				});
 				
+				// enable touch dragging in sliders
 				$("#prise-slider").draggable();
 				$("#weight-slider").draggable();
 				
