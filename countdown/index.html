@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>countdown</title>
+</head>
+<body>
+	<style type="text/css" media="screen">
+		#numbers {
+			overflow: hidden;
+			height: 1em;
+			text-align: center;
+			font-size: 70px;
+			border: 2px solid #CCCCCC;
+			border-radius: 3px;
+		}
+		#numbers span {
+			position: relative;
+	    	display: inline-block;
+	    	font: bold 1em/1 sans-serif;
+	    	color: gray;
+		}
+	</style>
+	<div id="numbers">
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+		<span>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span>
+	</div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+	  var numbers = $('#numbers span'),
+	      dates = [
+	        '00000000'
+	      ],
+	      current = 0, date;
+	  
+	  // (function() {        
+	    // for (var i = 0; i < numbers.size(); i++) {
+	     // numbers.eq(i).css({
+	       // top: Math.floor(Math.random() * 10) * -1 + 'em'
+	     // });
+	    // }
+	  // })();
+	  
+	  numbersRoll = function(n) {       
+	    for (var i = 0; i < numbers.size(); i++) {
+	    	// console.log(numbers.size());
+	      numbers.eq(i).animate({
+	        top: dates[n].charAt(i) * -1 + 'em'      
+	      }, 1000);
+	    }
+	  };
+	  
+	  numbersRoll(current);
+	  
+	  window.setInterval(function() {
+	    current++;
+	    
+	    if (current >= dates.length) {
+	      current = 0;
+	    }
+	    
+	    numbersRoll(current);
+	  }, 1500);
+	});
+	
+	countDown();
+	
+	countDown(12,12,12);
+	alert()
+	
+	function countDown(days,hours,minutes){
+	var d, // amount of days
+		h, // amount of hours
+		m, // amount of minutes
+		s, // amount of seconds
+		str,
+		day = days,
+		hour = hours,
+		minutes = minutes,
+		start = (hour * 3600)+(minutes * 60)+(day*24*3600), // calculate start date, conver date to seconds
+		decrement = window.setInterval(function(){
+		start -=1;
+		if(start <= 0)
+		{
+	      
+		} else {
+			d = Math.floor(start/86400);
+			h = Math.floor((start-(d*3600*24))/3600);
+			if (h<10){h = '0'+h;}
+			m = Math.floor(((start-(d*3600*24))-h*3600)/60);
+			if (m<10){m = '0'+m;}
+			s = (((start-(d*3600*24))-h*3600)-m*60);
+			if (s<10){s = '0'+s;}
+			if (d<10){d = '0'+d;}
+			str = String(d)+String(h)+String(m)+String(s);
+			console.log(str);
+		}
+	}, 1000);
+	time: function(){
+		return str;		
+	}
+};
+</script>
+</html>
+	
