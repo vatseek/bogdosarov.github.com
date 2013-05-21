@@ -372,6 +372,7 @@
 			 							<a class="product-size-count js-product-size hidden-phone not-avaliable js-not-avaliable"><span>XXL</span></a>
 			 							<select name="product-size" id="" class="hidden-table hidden-desctop">
 			 								<option>XS</option>
+			 								<option class="js-not-avaliable">S</option>
 			 								<option>M</option>
 			 								<option>L</option>
 			 								<option>XL</option>
@@ -425,8 +426,8 @@
 											<li data-color="8"><a style="background-color: #2880c0;" title="Синий"></a></li>
 											<li data-color="10" class="not-avaliable js-not-avaliable"><a style="background-color: #a6d612;" title="Зеленый"></a></li>
 											<li data-color="12"><a style="background-color: #7d8285;" title="Серый"></a></li>
-											<li data-color="2" class="hidden-phone"><a style="background-color: #f5a180;" title="Оранжевый"></a></li>
-											<li data-color="11"  class="hidden-phone not-avaliable js-not-avaliable"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
+											<li data-color="2" class=""><a style="background-color: #f5a180;" title="Оранжевый"></a></li>
+											<li data-color="11"  class="not-avaliable js-not-avaliable"><a style="background-color: #ffffff;" title="Белый" class="color-white"></a></li>
 										</ul>
 			 						</div> <!-- /.product-color -->
 			 						<div class="product-count">
@@ -574,11 +575,7 @@
 		 							</div>
 		 						</div>
 		 					</div> <!-- /.product-tabs -->
-		 					<select name="manufactures" id="" class="manufactures hidden-desctop hidden-table">
-							   	<option>Производители</option>
-							   	<option>Супер Фирма</option>
-							</select>
-		 					<div class="tags hidden-phone">
+		 					<div class="tags">
 		 						Метки: 
 		 						<a href="#">1 вход</a>
 		 						<a href="#">Duraflex</a>
@@ -697,13 +694,8 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 		<script>
-		var pageProduct = true,
-			popupProductSlider,
-			productSlider;
-			
-			$(function() {
-				
-				var mainSliderProduct = $("#product-slider"),
+		var pageProduct = true;
+		var mainSliderProduct = $("#product-slider"),
 					popupSliderProduct = $('#product-slider-popup'),
 					mainSliderWrap = mainSliderProduct.parent(),
 					popupSliderWrap = popupSliderProduct.parent(),
@@ -731,27 +723,29 @@
 					// buttons
 					prevPage: '.js-popupSlider-l',
 					nextPage: '.js-popupSlider-r'
-				  });
-				
-				// initialisation main slider on page 
-				var	productSlider = new Sly(mainSliderProduct,{
-					horizontal: 1,
-					itemNav: 'basic',
-					smart: 1,
-					mouseDragging: 0,
-					touchDragging: 0,
-					startAt: 0,
-					scrollBy: 0,
-					speed: 1,
-					
-					//paginator
-					pagesBar: mainSliderWrap.find('.js-product-slider-thumb'),
-					pageBuilder:    
-					    function (index) {
-					    	return '<li><img src="'+$(thumbData[index]).data('thumb-img')+'" alt="'+$(thumbData[index]).data('thumb-alt')+'" /></li> ';
-					    },
-					activatePageOn: 'click'
-				  });
+		});
+		
+		// initialisation main slider on page 
+		var	productSlider = new Sly(mainSliderProduct,{
+			horizontal: 1,
+			itemNav: 'basic',
+			smart: 1,
+			mouseDragging: 0,
+			touchDragging: 0,
+			startAt: 0,
+			scrollBy: 0,
+			speed: 1,
+			
+			//paginator
+			pagesBar: mainSliderWrap.find('.js-product-slider-thumb'),
+			pageBuilder:    
+			    function (index) {
+			    	return '<li><img src="'+$(thumbData[index]).data('thumb-img')+'" alt="'+$(thumbData[index]).data('thumb-alt')+'" /></li> ';
+			    },
+			activatePageOn: 'click'
+		 });
+		
+			$(function() {				
 				  
 				  productSlider.init();
 				  
@@ -823,7 +817,7 @@
 					});
 				
 				 // Check to see whether the goods are in stock
-				  $('.js-product-opt a, .js-product-opt li').click(function(){
+				  $('.js-product-opt a, .js-product-opt li, .js-product-opt option').click(function(){
 									if($(this).hasClass('js-not-avaliable')){
 										$('.js-info-not-av').fadeIn(300);
 										$('.js-buy').fadeOut(0);
