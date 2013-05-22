@@ -4310,6 +4310,9 @@ h2 {
   .contact-phones .phone-item .icon-kr {
     margin-left: 8px;
   }
+  .contact-phones .phone-item .icon-kr {
+    margin-right: 2px;
+  }
 }
 /* ==========================================================================
  Helper classes
