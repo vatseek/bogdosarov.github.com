@@ -4288,6 +4288,13 @@ h2 {
   .contact-info .contact-map {
     height: 220px;
   }
+  .contact-info .address,
+  .contact-info .work-time {
+    padding-left: 12px;
+  }
+  .contact-phones {
+    padding-left: 12px;
+  }
   .contact-phones .phone-item {
     display: block;
   }
