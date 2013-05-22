@@ -3935,6 +3935,9 @@ h2 {
   .product-tabs .product-tabs-cnt ul .more-information {
     margin-left: 0;
   }
+  .tags {
+    margin-left: 0;
+  }
   #product-tab-3 .testimonials-list .testimonial-item {
     padding: 0;
   }
