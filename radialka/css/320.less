@@ -3,7 +3,10 @@
 @media screen and (max-width:479px){ 
   .hidden-320 {
     display: none !important;
-  }  
+  }
+  .visible-320 {
+    display: block !important;
+  }
   .container {
     width: 296px;
   }
@@ -359,5 +362,21 @@
   }
   .action-descriptions {
     padding: 0;
+  }
+  
+  .contact-info {
+    .contact-map{
+      height: 220px;
+    }
+  }
+  
+  .contact-phones {
+    .phone-item {
+      display: block;
+      
+      .icon-mts, .icon-kr {
+          margin-left: 8px;
+        }
+    }
   }
 }

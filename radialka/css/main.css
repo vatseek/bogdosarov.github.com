@@ -408,7 +408,7 @@ a[class*="btn"] {
 .tell {
   font-size: 1.286em;
 }
-.icon-life {
+.tell .icon-life {
   visibility: hidden;
 }
 .js-show .icon-life {
@@ -2899,6 +2899,52 @@ h2 {
   margin: 4px 0 0 17px;
   line-height: 19px;
 }
+.contact-info {
+  padding-left: 20px;
+}
+.contact-info h2 {
+  margin: 10px 0 4px;
+}
+.contact-info .work-time,
+.contact-info .address {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+.contact-info .work-time span,
+.contact-info .address span,
+.contact-info .work-time a,
+.contact-info .address a {
+  font-size: 1.143em;
+}
+.contact-info .work-time h2,
+.contact-info .address h2 {
+  margin-bottom: 6px;
+}
+.contact-info .address {
+  margin-right: 22px;
+}
+.contact-info .contact-map {
+  margin: 25px 0 19px;
+  width: 709px;
+  height: 352px;
+  overflow: hidden;
+}
+.contact-info .opnen-in-app {
+  font-size: 1.143em;
+}
+.contact-phones {
+  margin-bottom: 29px;
+}
+.contact-phones .phone-item {
+  margin-right: 31px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.contact-phones .phone-item [class*='icon'] {
+  margin: 6px 5px 0 0;
+  vertical-align: top;
+}
 @media screen and (min-width: 1000px) {
   .hidden-desctop {
     display: none !important;
@@ -3260,6 +3306,15 @@ h2 {
   }
   .action-details-asside {
     padding-left: 1px;
+  }
+  .contact-info .contact-map {
+    width: 100%;
+  }
+  .contact-info .opnen-in-app {
+    display: inline-block;
+  }
+  .contact-phones {
+    margin-bottom: 21px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -3925,10 +3980,23 @@ h2 {
   .stocs-detail .action-img {
     height: 226px;
   }
+  .contact-info {
+    padding: 0;
+    margin-bottom: 21px;
+  }
+  .contact-info .contact-map {
+    height: 230px;
+  }
+  .contact-phones .phone-mts {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 479px) {
   .hidden-320 {
     display: none !important;
+  }
+  .visible-320 {
+    display: block !important;
   }
   .container {
     width: 296px;
@@ -4216,6 +4284,16 @@ h2 {
   }
   .action-descriptions {
     padding: 0;
+  }
+  .contact-info .contact-map {
+    height: 220px;
+  }
+  .contact-phones .phone-item {
+    display: block;
+  }
+  .contact-phones .phone-item .icon-mts,
+  .contact-phones .phone-item .icon-kr {
+    margin-left: 8px;
   }
 }
 /* ==========================================================================

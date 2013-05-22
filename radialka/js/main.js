@@ -389,7 +389,7 @@ $(function() {
 	console.log('Update '+size);
 	if(typeof mainSlider !== "undefined"){mainSlider.reload();} // reload main slider when changet page size
  	if(typeof brandSlider !== "undefined"){brandSlider.reload();} // reload main slider when changet page size
- 	if(pageProduct){popupProductSlider.reload();} // reload main slider when changet page size
- 	if(pageProduct){productSlider.reload(); productSlider.slideTo(0);} // reload main slider when changet page size	
+ 	if(typeof pageProduct !== "undefined"){popupProductSlider.reload();} // reload main slider when changet page size
+ 	if(typeof pageProduct !== "undefined"){productSlider.reload(); productSlider.slideTo(0);} // reload main slider when changet page size	
   }
 });
