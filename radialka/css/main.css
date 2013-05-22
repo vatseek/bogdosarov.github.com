@@ -3316,6 +3316,9 @@ h2 {
   .contact-phones {
     margin-bottom: 21px;
   }
+  .contact-phones .phone-item .icon-kr {
+    margin-left: 6px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
