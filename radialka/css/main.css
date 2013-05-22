@@ -3930,6 +3930,11 @@ h2 {
     border-bottom: none;
     background-position: center top;
   }
+  .product-tabs .product-tabs-cnt h4,
+  .product-tabs .product-tabs-cnt p:first-child,
+  .product-tabs .product-tabs-cnt ul .more-information {
+    margin-left: 0;
+  }
   #product-tab-3 .testimonials-list .testimonial-item {
     padding: 0;
   }
