@@ -8,14 +8,6 @@
 
 @sprite-bg: url(../img/bg/sprite-bg.png);
 
-@font-face {
-  font-family: 'FedraSansPro-Medium';
-  src: url('../font/fedrasanspromedium.eot');
-  src: url('../font/fedrasanspromedium.eot?#iefix') format('embedded-opentype'), url('../font/fedrasanspromedium.woff') format('woff'), url('../font/fedrasanspromedium.ttf') format('truetype'), url('../font/fedrasanspromedium.svg#fedrasanspromedium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html, button, input, select, textarea {
   color: #222;
 }
@@ -197,6 +189,12 @@ a {
 
 li {
   list-style: none;
+}
+
+h1, h2 {
+  font-family: 'FedraSansBold', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: auto;
 }
 
 .float-l {
@@ -998,6 +996,7 @@ a[class*="btn"]{
   height: 48px;
   text-align: justify;
   text-align-last: justify;
+  
   &:after{
     content: "";
     display: inline-block;
@@ -1005,21 +1004,30 @@ a[class*="btn"]{
     height: 0;
     overflow: hidden;
   }
+  .thumb-separator {
+    display: inline-block;
+    .box(1px, 24px);
+    background-color: #cbd3da;
+  }
   li {
     display: inline-block;
     position: relative;
-    width: 78px;
+    margin-top: 2px;
+    .box(97px, 45px);
+    .border-radius(5px);
     padding-top: 8px;
     text-align: center;
     line-height: 1.2;
     vertical-align:middle;
     z-index: 99;
+    background-color: #274564;
     a {
       text-decoration: none;
       border-bottom: 1px dashed #a3c0e3;
       cursor: pointer;
       vertical-align: middle;
       font-size: 0.857em;
+      color: #fff;
     }
     &.active {
       &:after {
@@ -1030,13 +1038,13 @@ a[class*="btn"]{
         width: 0;
         position: absolute;
         border-color: rgba(255,255,255, 0);
-        border-bottom-color: #fff;
+        border-bottom-color: #274564;
         border-width: 5px;
         left: 50%;
         margin-left: -5px;
       }
       a {
-        color: #000;
+        color: #fff;
         border-color: transparent;
         cursor: default;
       }
@@ -3085,55 +3093,6 @@ h2 {
     }
   }
 }
-// .tooltip {
-  // position: relative;
-//   
-  // .tooltip-title {
-    // color: #1a62ba;
-    // border-bottom: 1px dashed #1a62ba;
-    // cursor: pointer;
-  // }
-  // .tooltip-description {
-    // position: absolute;
-    // visibility: hidden;
-    // opacity: 0;
-    // top: -200px;
-    // left: 17px;
-    // .border-radius(5px);
-    // padding: 11px;
-    // color: #000;
-    // font-size: 0.875em;
-    // .box(326px, 123px);
-    // background-color: #fff; 
-    // -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-    // -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
-    // box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4);
-    // outline: 1px solid #c6c6c6;
-    // outline: 0px solid rgba(0,0,0,0);
-    // line-height: 17px;
-    // .transition(all 700ms);
-//     
-    // &:after {
-      // position: absolute;
-      // bottom: -18px;
-      // left: 13px;
-      // .box(19px, 19px);
-      // content: '';
-      // background: @sprite -69px -272px no-repeat rgba(255,255,255,0.65);
-    // }
-  // }
-  // &:hover {
-    // .tooltip-title {
-      // color: #b60526;
-      // border-color: transparent;
-    // }
-    // .tooltip-description {
-      // top: -160px;
-      // visibility: visible;
-      // opacity: 1;
-    // }
-  // }
-// }
 
 .product-tovar-list {
   float: right;
@@ -3361,6 +3320,80 @@ h2 {
   }
 }
 
+// page about
+
+.about-shop {
+  overflow: hidden;
+  
+  .sertificat {
+    float: left;
+    margin: 14px 30px 0 19px;
+  }
+  .about-shop-info {
+    float: right;
+    width: 543px;
+    font-size: 1.143em;
+    line-height: 21px;
+    
+    .bold {
+      padding-left: 8px;
+    }
+  }
+}
+
+.team-list {
+  margin-top: 31px;
+}
+
+.team-member {
+    margin-bottom: 39px;
+    overflow: hidden;
+    
+    .team-member-avatar {
+      float: left;
+      margin: 3px 29px 0 20px;
+    }
+    .team-member-info {
+      float: left;
+      width: 527px;
+    }
+    .name {
+      margin-right: 8px;
+      font-size: 1.286em;
+      font-weight: bold;
+    }
+    .post {
+      margin: 4px 0 6px;
+      color: #808080;
+      font-size: 0.857em;
+    }
+    .descript {
+      font-size: 1.143em;
+    }
+}
+
+.social-links {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 16px;
+  
+  a {
+    display: inline-block;
+    margin-right: 3px;
+    .square(16px);
+    background-image: url(../img/sprite.png);
+    border: none;
+  }
+  .vk-link {
+    background-position: -126px  -448px;
+  }
+  .fb-link {
+    background-position: -144px  -448px;
+  }
+  .tw-link {
+    background-position: -162px  -448px;
+  }
+}
  // media queries
  
  @media screen and (min-width:1000px) {
