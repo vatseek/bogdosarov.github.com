@@ -625,7 +625,11 @@
 				pagesBar: '.mainSliderThumbs',
 				pageBuilder:
 				function (index) {
-				return '<li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> <div class="thumb-separator"></div> ';
+					if(index === $(pageText).size()-1) {
+						return '<span class="thumb-item"><li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> </span> ';
+					} else {
+						return '<span class="thumb-item"><li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> <div class="thumb-separator"></div> </span> ';						
+					}
 				},
 				activatePageOn: 'click',
 				

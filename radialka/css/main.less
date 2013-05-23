@@ -1018,31 +1018,10 @@ a[class*="btn"]{
     top: 11px;
     .box(1px, 24px);
     background-color: #cbd3da;
-    
-    &:last-child {
-      display: none;
-    }
   }
-  li {
-    display: inline-block;
-    position: relative;
-    margin-top: 2px;
-    .box(97px, 31px);
-    .border-radius(5px);
-    padding: 5px 0 8px;
-    text-align: center;
-    line-height: 1.2;
-    vertical-align:middle;
-    z-index: 99;
-    
-    a {
-      text-decoration: none;
-      border-bottom: 1px dashed #a3c0e3;
-      cursor: pointer;
-      vertical-align: middle;
-      font-size: 0.857em;
-    }
-    &.active {
+  
+  .thumb-item.active {
+    li {
       background-color: #274564;
       
       &:after {
@@ -1063,6 +1042,27 @@ a[class*="btn"]{
         border-color: transparent;
         cursor: default;
       }
+    }
+  }
+  
+  li {
+    display: inline-block;
+    position: relative;
+    margin-top: 2px;
+    .box(97px, 31px);
+    .border-radius(5px);
+    padding: 5px 0 8px;
+    text-align: center;
+    line-height: 1.2;
+    vertical-align:middle;
+    z-index: 99;
+    
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed #a3c0e3;
+      cursor: pointer;
+      vertical-align: middle;
+      font-size: 0.857em;
     }
   }
 }

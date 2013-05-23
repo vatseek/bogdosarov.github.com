@@ -880,8 +880,26 @@ a[class*="btn"] {
   height: 24px;
   background-color: #cbd3da;
 }
-.mainSliderThumbs .thumb-separator:last-child {
-  display: none;
+.mainSliderThumbs .thumb-item.active li {
+  background-color: #274564;
+}
+.mainSliderThumbs .thumb-item.active li:after {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #274564;
+  border-width: 5px;
+  left: 50%;
+  margin-left: -5px;
+}
+.mainSliderThumbs .thumb-item.active li a {
+  color: #fff;
+  border-color: transparent;
+  cursor: default;
 }
 .mainSliderThumbs li {
   display: inline-block;
@@ -904,27 +922,6 @@ a[class*="btn"] {
   cursor: pointer;
   vertical-align: middle;
   font-size: 0.857em;
-}
-.mainSliderThumbs li.active {
-  background-color: #274564;
-}
-.mainSliderThumbs li.active:after {
-  bottom: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: #274564;
-  border-width: 5px;
-  left: 50%;
-  margin-left: -5px;
-}
-.mainSliderThumbs li.active a {
-  color: #fff;
-  border-color: transparent;
-  cursor: default;
 }
 .thumb-arrow {
   display: block;
