@@ -279,6 +279,7 @@
 				if ($pb[0]) {
 					for (var i = 0; i < pages.length; i++) {
 						pagesHtml += o.pageBuilder.call(self, i);
+						console.log(i);
 					}
 					$pages = $pb.html(pagesHtml).children();
 				}

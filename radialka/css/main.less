@@ -8,6 +8,14 @@
 
 @sprite-bg: url(../img/bg/sprite-bg.png);
 
+@font-face {
+  font-family: 'FedraSansBold';
+  src: url('../fonts/FedraSans Bold.eot');
+  src: local('Fedra Sans Pro'), url('../fonts/FedraSans Bold.woff') format('woff'), url('../fonts/FedraSans Bold.ttf') format('truetype'), url('../fonts/FedraSans Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html, button, input, select, textarea {
   color: #222;
 }
@@ -312,7 +320,7 @@ h1, h2 {
   padding-top: 34px;
   margin-bottom: 7px;
 }
-  input[type="text"],input[type="number"],input[type="email"],input[type="password"] {
+  input[type="text"],input[type="number"],input[type="email"],input[type="password"], input[type="text"]:focus  {
     .box-sizing(border-box);
     .border-radius(2px);
     color: #000;
@@ -1006,30 +1014,37 @@ a[class*="btn"]{
   }
   .thumb-separator {
     display: inline-block;
+    position: relative;
+    top: 11px;
     .box(1px, 24px);
     background-color: #cbd3da;
+    
+    &:last-child {
+      display: none;
+    }
   }
   li {
     display: inline-block;
     position: relative;
     margin-top: 2px;
-    .box(97px, 45px);
+    .box(97px, 31px);
     .border-radius(5px);
-    padding-top: 8px;
+    padding: 5px 0 8px;
     text-align: center;
     line-height: 1.2;
     vertical-align:middle;
     z-index: 99;
-    background-color: #274564;
+    
     a {
       text-decoration: none;
       border-bottom: 1px dashed #a3c0e3;
       cursor: pointer;
       vertical-align: middle;
       font-size: 0.857em;
-      color: #fff;
     }
     &.active {
+      background-color: #274564;
+      
       &:after {
         bottom: 100%;
         border: solid transparent;
@@ -1048,26 +1063,6 @@ a[class*="btn"]{
         border-color: transparent;
         cursor: default;
       }
-    }
-  }
-  .active{
-    li:after{
-      bottom: 100%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      border-color: rgba(255,255,255, 0);
-      border-bottom-color: #fff;
-      border-width: 5px;
-      left: 50%;
-      margin-left: -5px;
-    }
-    a{
-      color: #000;
-      border-color: transparent;
-      cursor: default;
     }
   }
 }
