@@ -584,7 +584,7 @@ a[class*="btn"] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: url(../img/small-btn-bg.png) repeat-x;
+  background: url(../img/bg/sprite-bg.png) repeat-x 0 -826px;
 }
 .shopList-item {
   height: 60px;
