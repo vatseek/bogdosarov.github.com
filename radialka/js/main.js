@@ -132,6 +132,15 @@ $(function() {
     
 	mediaQueries();
 	
+	// init login/register tabs
+	$( ".js-login-reg-tabs" ).tabs({ 
+		active: 1,
+		activate: function(event, ui) {
+			console.log(ui.newPanel.selector);
+			ui.newPanel.selector === '#autoriz' ? $('.js-autofocus-login').focus() : $('.js-autofocus-reg').focus();
+		}
+	});
+	
 	// show register popup
 	$('.js-register').click(function(e) {
 		$( ".js-login-reg-tabs" ).tabs({ active: 1 });
