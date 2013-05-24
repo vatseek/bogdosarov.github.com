@@ -115,7 +115,7 @@ h1,
 h2 {
   font-family: 'FedraSansBold', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  letter-spacing: auto;
+  letter-spacing: 0;
 }
 .float-l {
   float: left;
