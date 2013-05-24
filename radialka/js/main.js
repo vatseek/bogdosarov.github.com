@@ -132,7 +132,7 @@ $(function() {
     
 	mediaQueries();
 	
-	// show register-login popup
+	// show register popup
 	$('.js-register').click(function(e) {
 		$( ".js-login-reg-tabs" ).tabs({ active: 1 });
 		$('.js-modal-cnt-login').lightbox_me({
@@ -143,7 +143,9 @@ $(function() {
 		}
 		});
 		e.preventDefault();
-	}); 
+	});
+	 
+	// show login popup 
 	$('.js-login').click(function(e) {
 		$( ".js-login-reg-tabs" ).tabs({ active: 0 });
 		$('.js-modal-cnt-login').lightbox_me({
