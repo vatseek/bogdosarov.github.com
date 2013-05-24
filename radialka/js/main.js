@@ -140,6 +140,9 @@ $(function() {
 		overlayCSS: {
 			background: '#1e262e',
 			opacity: .9
+		}, 
+		onLoad: function(){
+			$('.js-autofocus-reg').focus();			
 		}
 		});
 		e.preventDefault();
@@ -153,9 +156,11 @@ $(function() {
 		overlayCSS: {
 			background: '#1e262e',
 			opacity: .9
+		}, 
+		onLoad: function(){
+			$('.js-autofocus-login').focus();			
 		}
 		});
-		e.preventDefault();
 	}); 
 	
     // add class .mac-os in body wen we used Mak OS or iOS
