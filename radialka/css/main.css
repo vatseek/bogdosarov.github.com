@@ -2080,7 +2080,6 @@ h2 {
 .modal-cnt {
   display: none;
   min-width: 410px;
-  min-height: 458px;
   position: relative;
   background-color: #fff;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 10px 29px 14px rgba(0, 0, 0, 0.33);
@@ -2134,6 +2133,9 @@ h2 {
 .modal-form form {
   margin-left: 40px;
 }
+.login-reg-tabs {
+  margin-bottom: 24px;
+}
 .login-reg-tabs .login-reg-tabs-title {
   overflow: hidden;
   margin: 28px 0 23px 30px;
@@ -2163,6 +2165,9 @@ h2 {
 }
 .login-reg-tabs .login-reg-tabs-title .login-reg-tabs-item.ui-tabs-active a span {
   border-color: transparent;
+}
+.modal-cnt-login {
+  height: auto;
 }
 .product-slider-cnt {
   position: relative;
