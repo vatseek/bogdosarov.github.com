@@ -1531,7 +1531,7 @@ h2 {
   border: 1px solid #dfe5ea;
 }
 .colors li .multy-color {
-  background-image: url(../img/multycolor.png);
+  background: url(../img/sprite.png) no-repeat -5px -221px;
 }
 .colors .checked {
   padding: 3px 3px;
@@ -1572,7 +1572,7 @@ h2 {
   width: 10px;
   height: 19px;
   margin: 0 0 0 -4px;
-  background: url(../img/slider-handle.png) no-repeat;
+  background: url(../img/sprite.png) no-repeat -108px -50px;
   cursor: pointer;
   border: none;
 }
@@ -3653,7 +3653,7 @@ h2 {
     height: 40px;
   }
   .color-picker .colors li .multy-color {
-    background-image: url(../img/multycolor-big.png);
+    background: url(../img/sprite.png) no-repeat -30px -221px;
   }
   .color-picker .colors .checked {
     border-color: #cbcbcb;
@@ -3671,7 +3671,7 @@ h2 {
     width: 20px;
     height: 37px;
     margin: 0 0 0 -9px;
-    background: url(../img/slider-handle-big.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat -139px -50px;
   }
   .prise-slider {
     margin: 70px 0 73px;
