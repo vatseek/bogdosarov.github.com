@@ -952,7 +952,6 @@ a[class*="btn"] {
   overflow: hidden;
   margin-top: 10px;
   padding-bottom: 4px;
-  border-bottom: 1px solid #cbd3da;
 }
 .banersHoryzontal .banersHoryzontalItem {
   float: left;
@@ -3142,12 +3141,18 @@ h2 {
     height: 20px;
     text-align: center;
   }
+  .mainSliderThumbs .thumb-item.active li {
+    background-color: transparent;
+  }
+  .mainSliderThumbs .thumb-item.active li:after {
+    display: none;
+  }
   .mainSliderThumbs li {
     background: url(../img/sprite.png) no-repeat;
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
+    margin: 0 2px 0 0;
     padding: 0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -3159,6 +3164,9 @@ h2 {
     background-position: -70px -51px;
   }
   .mainSliderThumbs li.active:after {
+    display: none;
+  }
+  .mainSliderThumbs .thumb-separator {
     display: none;
   }
   .banersVerticalItem {

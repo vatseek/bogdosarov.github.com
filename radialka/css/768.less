@@ -157,11 +157,22 @@
 .mainSliderThumbs {
   height: 20px;
   text-align: center;
+  
+  .thumb-item.active {
+    li {
+      background-color: transparent;
+       
+       &:after {
+        display: none;
+       }
+    }
+   
+  }
   li {
     .sprite;
     width: 20px; 
     height: 20px;
-    margin-right: 2px;
+    margin:0 2px 0 0;
     padding: 0;  
     .border-radius(3px);
     background-position: -43px -51px;
@@ -172,6 +183,9 @@
         display: none;
       }
     }
+  }
+  .thumb-separator {
+    display: none;
   }
 }
 

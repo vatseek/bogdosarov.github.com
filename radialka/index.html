@@ -626,7 +626,9 @@
 				pageBuilder:
 				function (index) {
 					if(index === $(pageText).size()-1) {
-						return '<span class="thumb-item"><li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> </span> ';
+						return '<span class="thumb-item"><li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> <div class="thumb-separator invisible"></div> </span> ';
+					} else if (index === 0) {
+						return '<span class="thumb-item"> <div class="thumb-separator invisible"></div> <li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> <div class="thumb-separator"></div> </span> ';						
 					} else {
 						return '<span class="thumb-item"><li><a class="hidden-table hidden-phone">' + ($(pageText[index]).data('slider')) + '</a></li> <div class="thumb-separator"></div> </span> ';						
 					}
