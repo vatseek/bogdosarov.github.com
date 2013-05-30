@@ -2392,7 +2392,7 @@ h2 {
   border-bottom: 1px dashed #a3c0e3;
 }
 .product-info-cnt .product-size select {
-  display: inline-block;
+  display: inline;
   width: 87px;
   margin: 0 0 4px 4px;
 }
@@ -4338,7 +4338,6 @@ h2 {
     width: 210px;
   }
   .product-tabs .product-tabs-cnt {
-    background: url(../img/bg/sprite-bg.png) 0 -814px repeat-x;
     border-top: solid 1px #d4dae0;
   }
   .product-tabs .phone-tab-nav {

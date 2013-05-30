@@ -36,10 +36,13 @@
 	*zoom: 1;
 }
 
-body .product-size-list .size-list-table .even {
-
+.product-info-cnt .product-size .product-size-count.not-avaliable {
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/x3.png', sizingMethod='scale');
 }
-body .product-size-list .size-list-table .even td {
-}
 
+.product-info-cnt .product-size .product-size-count.checked.not-avaliable {
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/x2.png', sizingMethod='scale');
+}
 
