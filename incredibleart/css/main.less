@@ -130,6 +130,7 @@ textarea {
 html, body {
   height: 100%;
    font-family: 'Times New Roman', serif;
+   font-size: 14px;
 }
 
 body {
@@ -144,9 +145,14 @@ li {
   cursor: default;
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  background: url(../img/sprite.jpg) no-repeat;
+  display: inline-block;
+}
+
 .header-site {
   position: relative;
-  padding-top: 8px;
+  padding-top: 3px;
   height: 86px;
 }
 
@@ -158,7 +164,6 @@ li {
   text-align: justify;
   text-transform: uppercase;
   font-family: Times;
-  font-size: 17px;
   color: #000;
   text-decoration: none;
   line-height: 32px;
@@ -182,7 +187,7 @@ li {
 
 .main-nav {
   height: 50px;
-  margin: 31px 0 0 6%;
+  margin: 18px 0 0 4%;
   
   ul {
     overflow: hidden;
@@ -221,7 +226,7 @@ li {
 .languages {
   position: absolute;
   right: 10%;
-  top: 59px;
+  top: 44px;
   
   ul {
     overflow: hidden;
@@ -248,6 +253,7 @@ li {
 
 .wrapper {
   min-height: 300px;
+  border-top: 1px solid transparent;
 }
 
 .work-item {
@@ -275,7 +281,6 @@ li {
   }
   figcaption {
     color: #000;
-    font-size: 18px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -284,9 +289,9 @@ li {
 
 .main-slider {
   position: relative;
-  // top: 100%;
+  top: 100%;
   margin: 0 auto;
-  // margin-top: -185px;
+  margin-top: -190px;
   width: 90%;
   .main-slider-cnt {
     overflow: hidden;
@@ -301,8 +306,13 @@ li {
   .prev-page,.next-page {
     position: absolute;
     z-index: 99;
-    left: 0;
     top: 0;
+  }
+  .prev-page {
+    left: 0;
+  }
+  .next-page {
+    right: 0;
   }
 }
 
@@ -310,12 +320,13 @@ li {
   position: relative;
   overflow: hidden;
   height: 45px;
+  font-size: 12px;
 }
 
 .copiryght {
-  width: 244px;
+  width: 200px;
   float: left;
-  margin:0 50px 0 25px;
+  margin:0 50px 0 0;
   text-align: right;
 }
 
@@ -337,6 +348,13 @@ li {
 .socials {
   float: right;
 }
+
+/*  icons  */
+.icon-tell {
+  .square(11px);
+  background-position: -51px -367px;
+}
+/*  icons  */
 
 /* ==========================================================================
    Helper classes
