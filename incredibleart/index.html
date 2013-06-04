@@ -215,35 +215,36 @@
         <script src="js/main.js"></script>
 		<script>
 				$(function(){
-						var frame = $(".js-main-slider")
-						var slider = new Sly(frame,{
-								horizontal: 1,
-								itemNav: 'basic',
-								smart: 1,
-								activateMiddle: 1,
-								mouseDragging: 1,
-								touchDragging: 1,
-								releaseSwing: 0,
-								startAt: 0,
-								speed: 300,
-								// buttons
-								prevPage: '.js-prev-page',
-								nextPage: '.js-next-page'
-							});
-							
-					slider.init();
-					
 					var item = 153, size, sliderCnt;
+				
+					var frame = $(".js-main-slider")
+					var slider = new Sly(frame,{
+							horizontal: 1,
+							itemNav: 'basic',
+							smart: 1,
+							activateMiddle: 1,
+							mouseDragging: 1,
+							touchDragging: 1,
+							releaseSwing: 0,
+							startAt: 0,
+							speed: 300,
+							// buttons
+							prevPage: '.js-prev-page',
+							nextPage: '.js-next-page'
+						});
+						
+					slider.init();
+					updateSlider();
 					$(window).resize(function() {
+						updateSlider();
+					});
+					
+					function updateSlider(){
 						size = $(window).width()*0.9;
 						sliderCnt = (Math.floor(size/item)*item);
-						if((size - sliderCnt)>=item){
-							slider.reload();
-							console.log('slider update '+' '+sliderCnt);
-						}
-							frame.width(sliderCnt);
-						console.log('resize '+(size - sliderCnt));
-					});
+						slider.reload();
+						frame.width(sliderCnt);
+					}
 				});
 		</script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
