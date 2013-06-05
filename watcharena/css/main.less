@@ -1,0 +1,910 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+  
+@font-face {font-family: 'PT Sans'; 
+  src: url('../fonts/pts55f_w.eot'); 
+  src: local('PT Sans'), url('../fonts/PTS55F_W.woff') format('woff'),url('../fonts/PTS55F_W.ttf') format('truetype'), url('../fonts/PTS55F_W.svg#PTSans-Regular') format('svg');}
+
+@font-face {font-family: 'PT Sans'; 
+  font-style: italic;
+  src: url('../fonts/pts56f_w.eot'); 
+  src: local('PT Sans Italic'), url('../fonts/PTS56F_W.woff') format('woff'),url('../fonts/PTS56F_W.ttf') format('truetype'), url('../fonts/PTS56F_W.svg#PTSans-Italic') format('svg');}
+
+@font-face {font-family: 'PT Sans';
+  src: url('../fonts/pts75f_w.eot');
+  font-style: normal;
+  font-weight: bold; 
+  src: local('PT Sans Bold'), url('../fonts/PTS75F_W.woff') format('woff'),url('../fonts/PTS75F_W.ttf') format('truetype'), url('../fonts/PTS75F_W.svg#PTSans-Bold') format('svg');}
+
+@font-face {font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: bold; 
+  src: url('../fonts/pts76f_w.eot'); 
+  src: local('PT Sans Bold Italic'), url('../fonts/PTS76F_W.woff') format('woff'),url('../fonts/PTS76F_W.ttf') format('truetype'), url('../fonts/PTS76F_W.svg#PTSans-BoldItalic') format('svg');}
+
+@font-face {font-family: 'PT Sans Caption'; 
+  src: url('../fonts/ptc55f_w.eot');
+  src: local('PT Sans Caption'), url('../fonts/PTC55F_W.woff') format('woff'),url('../fonts/PTC55F_W.ttf') format('truetype'), url('../fonts/PTC55F_W.svg#PTSans-Caption') format('svg');}
+
+@font-face {font-family: 'PT Sans Caption';
+  font-weight: bold; 
+  src: url('../fonts/ptc75f_w.eot');
+  src: local('PT Sans Caption Bold'), url('../fonts/PTC75F_W.woff') format('woff'),url('../fonts/PTC75F_W.ttf') format('truetype'), url('../fonts/PTC75F_W.svg#PTSans-CaptionBold') format('svg');}
+
+@font-face {font-family: 'PT Sans Narrow';
+  src: url('../fonts/ptn57f_w.eot');
+  src: local('PT Sans Narrow'), url('../fonts/PTN57F_W.woff') format('woff'),url('../fonts/PTN57F_W.ttf') format('truetype'), url('../fonts/PTN57F_W.svg#PTSans-Narrow') format('svg');}
+
+@font-face {font-family: 'PT Sans Narrow';
+  font-weight: bold; 
+  src: url('../fonts/ptn77f_w.eot');
+  src: local('PT Sans Narrow Bold'), url('../fonts/PTN77F_W.woff') format('woff'),url('../fonts/PTN77F_W.ttf') format('truetype'), url('../fonts/PTN77F_W.svg#PTSans-NarrowBold') format('svg');}  
+
+@font-face {font-family: 'PT Serif'; 
+  src: url('../fonts/ptf55f_w.eot'); 
+  src: local('PT Serif'), url('../fonts/ptf55f_w.woff') format('woff'),url('../fonts/ptf55f_w.ttf') format('truetype'), url('../fonts/ptf55f_w.svg#PTSerif-Regular') format('svg');}
+
+@font-face {font-family: 'PT Serif'; 
+  font-style: italic;
+  src: url('../fonts/ptf56f_w.eot'); 
+  src: local('PT Serif Italic'), url('../fonts/ptf56f_w.woff') format('woff'),url('../fonts/ptf56f_w.ttf') format('truetype'), url('../fonts/ptf56f_w.svg#PTSerif-Italic') format('svg');}
+
+@font-face {font-family: 'PT Serif';
+  src: url('../fonts/ptf75f_w.eot');
+  font-style: normal;
+  font-weight: bold; 
+  src: local('PT Serif Bold'), url('../fonts/ptf75f_w.woff') format('woff'),url('../fonts/ptf75f_w.ttf') format('truetype'), url('../fonts/ptf75f_w.svg#PTSerif-Bold') format('svg');}
+
+@font-face {font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: bold; 
+  src: url('../fonts/ptf76f_w.eot'); 
+  src: local('PT Serif Bold Italic'), url('../fonts/ptf76f_w.woff') format('woff'),url('../fonts/ptf76f_w.ttf') format('truetype'), url('../fonts/ptf76f_w.svg#PTSerif-BoldItalic') format('svg');}
+
+@font-face {font-family: 'PT Serif Caption'; 
+  src: url('../fonts/ptz55f_w.eot');
+  src: local('PT Serif Caption'), url('../fonts/ptz55f_w.woff') format('woff'),url('../fonts/ptz55f_w.ttf') format('truetype'), url('../fonts/ptz55f_w.svg#PTSerif-Caption') format('svg');}
+
+@font-face {font-family: 'PT Serif Caption';
+  font-style: italic; 
+  src: url('../fonts/ptz56f_w.eot');
+  src: local('PT Serif Caption Italic'), url('../fonts/ptz56f_w.woff') format('woff'),url('../fonts/ptz56f_w.ttf') format('truetype'), url('../fonts/ptz56f_w.svg#PTSerif-CaptionItalic') format('svg');}
+
+@sprite : url(../img/sprite.png);
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}  
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+  
+body {
+  min-width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'PT Sans', "Helvetica CY","Nimbus Sans L", Arial, sans-serif;
+}
+
+/*  less elements  */
+
+// Square
+.square(@size) {
+  width: @size;
+  height: @size;
+}
+
+// Box
+.box(@width,@height) {
+  width: @width;
+  height: @height;
+}
+
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
+}
+
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Shadow
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+// Box-sizing
+.box-sizing(@sizing: border-box) {
+  -ms-box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+  box-sizing: @sizing;
+}
+/*  less elements  */ 
+
+li {
+  list-style: none;
+}
+
+.active {
+  cursor: default;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  background: @sprite no-repeat;
+  display: inline-block;
+}
+
+.header-site, .inside {
+  position: relative;
+  margin: 0 auto;
+  .box(94.7%, 97px);
+  max-width: 1600px;
+}
+
+.header-cnt {
+  position: absolute;
+  top: -41px;
+  .box(100%, 49px);
+  background-color: #ed3a57;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 9;
+  
+  .inside {
+    position: relative;
+    .box(98.521%, 49px);
+    margin: 0 auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #4a4a4a;
+    
+    .count {
+      font-weight: bold;
+      border-bottom: 1px dotted #fff;
+      color: #fff;
+      cursor: pointer;
+      .transition(all 0.2s ease-in-out);
+    }
+  }
+}
+
+.header-site {
+  .curse {
+  position: absolute;
+  top: 34px;
+  left: 10.454%;
+  width: 75px;
+  color: #858585;
+  
+  .current-curse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .box(27px, 20px);
+    background: @sprite -192px 0;
+    
+    .js-curse {
+      margin-left: 4px; 
+    }
+    
+  }
+  ul{
+    display: none;
+    margin: 0 0 0 48px;
+    border: 1px solid #858585;
+    padding: 0;
+    .box-shadow(0 0 2px 0 rgba(0,0,0,0.4));
+ 
+    li {
+      a {
+        display: block;
+        .box(18px, 21px);
+        padding: 0 0 0 7px;
+        text-decoration: none;
+        color: #858585;
+        line-height: 21px;
+        .transition(all 0.2s ease-in-out);
+        
+        &.active {
+          background-color: #ED1F3F;
+        }
+        &.active:hover {
+          background-color: #ED1F3F;
+        }
+        &:hover {
+          background-color: #eee;
+        }
+      } 
+    }
+   }
+}
+}
+
+.garanty-ilnk {
+  display: inline-block;
+  color: #fff;
+  font-style: italic;
+  margin: 13px 0 0 4.687%;
+  .transition(all 0.2s ease-in-out);
+  
+  &:hover {
+    color: #ee1c3d;
+  }
+}
+
+.search-form {
+  position: absolute;
+  top: 15px;
+  left: 33.44%;
+  
+  button {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    .box(17px, 12px);
+    border: none;
+    background: @sprite -224px -27px;
+    cursor: pointer;
+  }
+  input {
+    .box(131px, 19px);
+    border: none;
+    border-radius: 14px;
+    padding-left: 27px;
+    font-size: 12px;
+    color: #585757;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,.47), inset 0 1px 2px 0 rgba(0,0,0,0.41);
+  }
+}
+
+.time-saver {
+  position: absolute;
+  left: 60.128%;
+  top: 13px;
+  cursor: pointer;
+  
+  &:hover{
+    .count {
+        color: #d71534;
+      }
+  }
+  .min {
+    position: relative;
+    top: -7px;
+    font-size: 11px;
+    color: #fff;
+  }
+  .icon-heart {
+    position: relative;
+    top: 5px;
+  }
+}
+
+.show-cart {
+  position: absolute;
+  left: 68.917%;
+  top: 9px;
+  cursor: pointer;
+  
+  &:hover{
+    .count {
+        color: #d71534;
+      }
+  }
+  img {
+    height: 29px;
+    margin-right: 3px;
+  }
+  .count {
+    vertical-align: middle;
+  }
+}
+
+.log-reg-cnt {
+  position: absolute;
+  right: 3.429%;
+  top: 14px;
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dotted #fff;
+    .transition(all 0.2s ease-in-out);
+    
+    &:hover {
+      color: #d71534;
+    }
+  }
+  .or {
+    font-size: 11px;
+    font-style: italic;
+    color: #a9a9a9;
+  }
+}
+
+.show-menu {
+  position: absolute;
+  left: 70.061%;
+  top: 49px;
+  .box(22px, 13px);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: @sprite #ed3a57 no-repeat -220px -47px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #4a4a4a;
+  }
+  &.js-open {
+    background-position: -235px -47px;
+  }
+}
+
+.languages {
+  position: absolute;
+  top: 35px;
+  left: 1.795%;
+  a {
+    display: block;
+    .box(20px,15px);
+    background: @sprite no-repeat;
+    .transition(all 0.2s ease-in-out);
+  }
+  .ru {
+    background-position: -169px -47px;      
+    
+    &.active, &:hover {
+      background-position: -189px -47px;
+    }
+  }
+  .eng {
+    margin: 0 0 5px 0;
+      background-position: -189px -27px;   
+      
+      &.active, &:hover {
+      background-position: -169px -27px;
+    }   
+   }
+}
+
+
+
+.main-nav {
+  position: absolute;
+  left: 25.554%;
+  top: 35px;
+  
+  ul {
+    
+    li {
+      margin-bottom: 2px;
+      
+      a {
+        padding: 2px 5px 3px;
+        color: #909090;
+        .transition(all 0.2s ease-in-out);
+        .border-radius(5px);
+        
+        &:hover {
+          color: #ee1c3d;
+        }
+        &.active {
+          color: #fff;
+          background-color: #ee1c3d;
+        }
+      }
+    }
+    .col {
+      float: left;
+      min-width: 85px;
+    }
+  }
+}
+
+.contact-tell {
+  position: absolute;
+  top: 45px;
+  left: 55.121%;
+  
+  .phone {
+    display: block;
+    font-family: 'PT Serif', serif;
+    font-size: 22px;
+    color: #ee1c3d;
+  }
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 42px;
+  right: 2.111%;
+  .box(162px, 55px);
+  background: @sprite; 
+}
+
+.wrapper {
+  position: relative;
+  
+  header {
+    .title-page {
+      display: inline-block;
+      position: relative;
+      left: 8.764%;
+      margin-top: 60px;
+      font-family: 'PT Serif', serif;
+      font-weight: normal;
+      font-size: 37px;
+      color: #eb2242;
+      line-height: 30px;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: -18px;
+        content: "";
+        .square(20px);
+        background: @sprite -169px 0;
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    .box(100%, 660px);
+    left: 0;
+    top: -16px;
+    background: url(../img/bg/bg.jpg) center top;
+    z-index: -1;
+  }
+}
+.socials {
+  position: absolute;
+  left: 58.394%;
+  top: 28px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  
+  
+  li {
+    float: left;
+    
+    a {
+      display: block;
+      background: @sprite;
+      .transition(all 0.2s ease-in-out);
+    }
+    .fb {
+      margin: 2px 10px 0 0;
+      .square(17px);
+      background-position: 0 -96px;
+      
+      &:hover {
+        background-position: 0px -114px; 
+      }
+    }
+    .ig {
+      margin: 2px 10px 0 0;
+      .square(17px);
+      background-position: -27px -96px;  
+      
+      &:hover {
+        background-position: -27px -114px; 
+      }     
+    }
+    .yt {
+      .box(54px, 21px);
+      background-position: -54px -94px; 
+      
+      &:hover {
+        background-position: -54px -115px; 
+      }
+    }
+  }
+  
+}
+.news-cnt {
+  margin: 42px 0 0 0;
+  
+  .title-news {
+    display: inline-block;
+    margin-top: 15px;
+    font-family: 'PT Sans Narrow', serif;
+    font-style: bold;
+    font-size: 24px;
+    color: #fff;
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -moz-transform: perspective(1000px) rotate3d(0, 0, 1, -10deg);
+    -webkit-transform: perspective(1000px) rotate3d(0, 0, 1, -10deg);
+      -o-transform: perspective(1000px) rotate3d(0, 0, 1, -10deg);
+      -ms-transform: perspective(1000px) rotate3d(0, 0, 1, -10deg);
+          transform: perspective(1000px) rotate3d(0, 0, 1, -10deg);
+  }
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  
+  .news-item {
+    position: relative;
+    float: left;
+    width: 270px;
+    margin-left: 4.54%;
+    text-shadow: 1px 1px rgba(79,8,8,.75);
+    
+    .news-date {
+      color: #eb2242;
+    }
+    .text {
+      color: #fff;
+    }
+    &.news-1 {
+      top: 32px;
+    }
+    &.news-3 {
+      top: -70px;
+    }
+  }
+}
+
+.action-link {
+  position: absolute;
+  left: 37.17%;
+  top: 157px; 
+  font: bold 35px 'Myriad Pro', Helvetica, Arial, serif; 
+  text-decoration: none;
+  span {
+  border-bottom: 1px solid #c2c1c1;
+  color: #fff;    
+  }
+}
+
+.clock-list {
+  padding: 0;
+  margin: 113px 0 0 0;
+  
+  .clock-item {
+    float: left;
+    width: 207px;
+    
+    img {
+      float: left;
+    }
+    .product-name {
+      display: inline-block;
+      width: 100px;
+      font-family: 'PT Sans Caption', serif;
+      font-size: 13px;
+      color: #4d4d4d;
+    }
+    .by-product {
+      display: inline-block;
+      position: relative;
+      margin-left: -9px;
+       .box(119px, 29px);
+       background: @sprite 0 -62px; 
+       text-align: center;
+       line-height: 29px;
+       font-family: 'PT Sans', serif;
+       font-weight: bold;
+       font-size: 22px;
+       color: #5a4d4f;
+       
+       .curse {
+         margin-left: 7px;
+       }
+    }
+  }
+}
+
+.footer-site {
+  
+}
+
+/* icons */
+
+.icon-heart {
+  .box(18px,16px);
+  background-position: -223px 0;
+}
+
+/* icons */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
