@@ -9,17 +9,22 @@ body {
 	margin: 0 auto;
     border: 2px solid #CCCCCC;
     border-radius: 3px 3px 3px 3px;
-    font-size: 70px;
+    font-size: 65px;
     height: 1em;
     overflow: hidden;
     text-align: center;
     box-shadow:  0px 0px 0px 1px rgba(255, 255, 255, 0.7);
+    0 -19px 20px -18px rgba(9, 9, 9, 0.34) inset, 0 19px 20px -18px rgba(9, 9, 9, 0.34) inset
 }
 #numbers span {
+	padding-left: 18px;
     color: gray;
     display: inline-block;
     font: bold 1em/1 sans-serif;
     position: relative;
+    text-align: center;
+}
+#numbers div {
 }
 button {
 	display: block;

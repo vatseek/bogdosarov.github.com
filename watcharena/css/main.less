@@ -79,6 +79,18 @@
   src: url('../fonts/ptz56f_w.eot');
   src: local('PT Serif Caption Italic'), url('../fonts/ptz56f_w.woff') format('woff'),url('../fonts/ptz56f_w.ttf') format('truetype'), url('../fonts/ptz56f_w.svg#PTSerif-CaptionItalic') format('svg');}
 
+@font-face {
+    font-family: 'bodonicitalic';
+    src: url('../fonts/bodonic-italic-webfont.eot');
+    src: url('../fonts/bodonic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bodonic-italic-webfont.woff') format('woff'),
+         url('../fonts/bodonic-italic-webfont.ttf') format('truetype'),
+         url('../fonts/bodonic-italic-webfont.svg#bodonicitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @sprite : url(../img/sprite.png);
 
 html,
@@ -170,7 +182,7 @@ textarea {
   
 body {
   min-width: 1000px;
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
   font-family: 'PT Sans', "Helvetica CY","Nimbus Sans L", Arial, sans-serif;
 }
@@ -278,6 +290,8 @@ li {
 }
 
 .header-site {
+  z-index: 9;
+  
   .curse {
   position: absolute;
   top: 34px;
@@ -298,11 +312,13 @@ li {
     
   }
   ul{
+    position: relative;
     display: none;
     margin: 0 0 0 48px;
     border: 1px solid #858585;
     padding: 0;
     .box-shadow(0 0 2px 0 rgba(0,0,0,0.4));
+    z-index: 9;
  
     li {
       a {
@@ -615,7 +631,8 @@ li {
   
 }
 .news-cnt {
-  margin: 42px 0 0 0;
+  width: 947px;
+  margin: 42px auto 0;
   
   .title-news {
     display: inline-block;
@@ -665,7 +682,8 @@ li {
 
 .action-link {
   position: absolute;
-  left: 37.17%;
+  left: 50%;
+  margin-left: -86px;
   top: 157px; 
   font: bold 35px 'Myriad Pro', Helvetica, Arial, serif; 
   text-decoration: none;
@@ -677,11 +695,14 @@ li {
 
 .clock-list {
   padding: 0;
-  margin: 113px 0 0 0;
+  width: 945px;
+  margin: 113px auto 0 auto;
   
   .clock-item {
-    float: left;
+    display: inline-block;
     width: 207px;
+    vertical-align: top;
+    margin-bottom: 52px;
     
     img {
       float: left;
@@ -692,11 +713,15 @@ li {
       font-family: 'PT Sans Caption', serif;
       font-size: 13px;
       color: #4d4d4d;
+      
+      &:hover {
+        color: #ee1c3d;
+      }
     }
     .by-product {
       display: inline-block;
       position: relative;
-      margin-left: -9px;
+      margin: 5px 0 0 -9px;
        .box(119px, 29px);
        background: @sprite 0 -62px; 
        text-align: center;
@@ -705,23 +730,230 @@ li {
        font-weight: bold;
        font-size: 22px;
        color: #5a4d4f;
+       cursor: pointer;
        
        .curse {
          margin-left: 7px;
        }
     }
   }
+  .col {
+    position: relative;
+    width: 207px;
+    float: left;
+    margin-right: 28px;
+    
+    &:last {
+      margin-right: 0;
+    }
+    &.col-1 {
+      margin-top: 144px;
+      
+      .product-name {
+        margin-top: 11px;
+      }
+    }
+    &.col-2 {
+      margin-top: 92px;
+      
+      .product-name {
+        margin-top: 42px;
+      }
+    }
+    &.col-3 {
+      margin-top: 54px;
+      
+      .product-name {
+        margin-top: 38px;
+      }
+    }
+    &.col-4 {
+      .product-name {
+        margin-top: 22px;
+      }
+    }
+  }
+}
+
+.seo-title-cnt {
+  position: absolute;
+}
+.seo-title-cnt {
+  position: relative;
+
+  .seo-title {
+    position: absolute;
+    top: -150px;
+    right:0;
+    background: url(../img/bg/bg.jpg) 0 -1387px; 
+    .box(740px,144px);
+    z-index: -1;
+    
+    h2 {
+      color: transparent;
+    }
+  }
+}
+  
+.seo-text {
+  position: relative;
+  .left-col {
+    float: left;
+    width: 38.648%;
+    margin: 88px 4.857% 0 9.186%;
+    
+    p:first-child {
+      padding-left: 20px;
+    }
+    .red-text {
+    margin-top: 7px;
+    
+    .row {
+      margin-bottom: 6px;
+    }
+    .red-bg {
+      position: relative;
+      margin-bottom: 2px;
+      padding: 2px 0px;
+      background-color: #eb2242;
+      color: #fff;
+      
+      &:before {
+        content: "—";
+        display: inline;
+        position: absolute;
+        left: 6px;
+        color: #fff;
+        z-index: 9;
+      }
+      span {
+        position: relative;
+        background-color: #eb2242;
+        left: 30px;
+        padding: 2px 0px;
+        
+        span {
+          position: relative;
+          left: -9.5px;
+          background-color: #eb2242;
+        }
+      }
+    }
+  }
+  }
+  .right-col {
+    float: left;
+    width: 38.648%;
+    
+    .red-text {
+      margin: 52px 0 0 18px;
+      line-height: 24px;
+      font-family: 'bodonicitalic', serif;
+      font-size: 29px;
+      color: #eb2242;
+    }
+  }
+  p {
+    margin: 0;
+    color: #818181;
+  }
 }
 
 .footer-site {
+  height: 538px;
+  padding-top: 59px;
+  background: url(../img/bg/bg.jpg) center -664px  no-repeat;
   
+  .contact-tell {
+    left: 33.051%;
+    top: 123px;
+    .phone {
+      color: #fff;
+    }
+  }
 }
 
+.copyright {
+  position: absolute;
+  top: 88px;
+  left: 15.311%;
+  width: 104px;
+  font: 11px Tahoma, serif;
+  color: #fff;
+  
+  a {
+    color: #fff;
+  }
+}
+
+.soc-sharing {
+  position: relative;
+  margin-top: 40px;
+  
+  a {
+    display: block;
+    margin-bottom: 13px;
+    overflow: hidden;
+    color: #fff;
+    font-family: Tahoma, serif;
+    line-height: 20px;
+    
+    [class^="icon-"], [class*=" icon-"] {
+      float: left;
+    }
+    .counter {
+      display: block;
+      float: left;
+      height: 22px;
+      border: 1px solid #fff;
+      border-left: none;
+      font-size: 11px;
+      line-height: 22px;
+      padding: 0 4px;
+      vertical-align: middle;
+    }
+  }
+  .facebook {
+    .counter {
+      margin-top: 1px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+  .twitter {
+    .counter {
+      margin-top: 2px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+  .vk {
+    .counter {
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+}
 /* icons */
 
 .icon-heart {
   .box(18px,16px);
   background-position: -223px 0;
+}
+
+.icon-facebook {
+  .box(56px, 20px);
+  background-position: -134px -114px;
+}
+
+.icon-vkontakte {
+  .box(52px, 22px);
+  background-position: -134px -67px;
+}
+
+.icon-twitter {
+  .box(68px, 22px);
+  background-position: -134px -90px;
 }
 
 /* icons */
