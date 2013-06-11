@@ -125,6 +125,21 @@ textarea {
           transition: @transition;
 }
 
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+  -moz-transform: rotate(@degrees);
+  -ms-transform: rotate(@degrees);
+  -o-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+}
+
+.transform-origin (@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin:    @x @y;
+  -ms-transform-origin:     @x @y;
+  -o-transform-origin:      @x @y;
+}
+
 /*  less elements  */
 
 html, body {
@@ -192,7 +207,7 @@ li {
 
 .main-nav {
   height: 50px;
-  margin: 18px 0 0 4%;
+  margin: 18px 0 0 8%;
   
   ul {
     overflow: hidden;
@@ -230,7 +245,7 @@ li {
 
 .languages {
   position: absolute;
-  right: 10%;
+  right: 9.5%;
   top: 44px;
   
   ul {
@@ -241,7 +256,7 @@ li {
       margin-left: 9px;
       
       a {
-        font-size: 12px;
+        font-size: 11px;
         color: #999;
         text-decoration: none;
         border-bottom: 1px solid;
@@ -360,29 +375,46 @@ li {
 }
 
 .socials {
+  position: relative;
   float: right;
+  margin: 10px 6% 0 0;
   
   &:hover {
     .social-list {
-      left: 0;
       .opacity(1);
     }
     .share {
       left: 39;
       .opacity(0);
+      z-index: 1;
     }
   }
+  &:hover {
+      .s-i-gl {
+        left: 0px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-tw {
+        left: 33px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-fb {
+        left: 66px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-vk {
+        left: 99px;
+        -moz-animation: round1 0.5s 1;
+      }
+    }
   .social-list {
     position: relative;
-    left: 145px;
+    margin-right: -42px;
+    .box(117px, 16px);
     overflow: hidden;
     float: left;
-    .opacity(0);
     .transition(all 200ms ease-in-out);
-  }
-  .social-item {
-    float: left;
-    margin-right: 20px;
+    z-index: 2;
   }
   .share {
     position: relative;
@@ -402,6 +434,7 @@ li {
     right: 34px;
     float: left;
     margin-right: 6px;
+    z-index: 3;
   }
   .amount {
     position: relative;
@@ -412,6 +445,7 @@ li {
     border-left: none;
     font: 12px/12px Helvetica, Arial, serif;
     background-color: #fff;
+    z-index: 10;
     
     &:before {
       content: "";
@@ -421,6 +455,50 @@ li {
       .box(6px, 16px);
       background: url(../img/sprite.jpg) no-repeat 0 -367px;
     }
+  }
+}
+
+ .social-item {
+    position: absolute;
+    margin-right: 20px;
+    
+    &.s-i-tw, &.s-i-fb, &.s-i-vk, &.s-i-gl {
+      left: -20px;
+      .transform-origin(50%, 50%);
+      .transition(all 0.25s ease-in-out);
+    }
+  }
+
+@-webkit-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@-moz-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@-o-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
   }
 }
 
