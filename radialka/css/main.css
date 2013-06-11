@@ -140,6 +140,9 @@ h2 {
   min-height: 35px;
   background: url(../img/bg/sprite-bg.png) #edf0f2 repeat-x 0 -596px;
 }
+.header-top .row {
+  margin-bottom: 0px;
+}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
