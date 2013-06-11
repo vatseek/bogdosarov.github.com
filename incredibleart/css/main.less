@@ -166,13 +166,12 @@ li {
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  background: url(../img/sprite.jpg) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   display: inline-block;
 }
 
 .header-site {
   position: relative;
-  padding-top: 3px;
   height: 86px;
 }
 
@@ -180,6 +179,7 @@ li {
   display: block;
   .box(100%,32px);
   overflow: hidden;
+  padding: 3px 0;
   min-width: 270px;
   text-align: justify;
   text-transform: uppercase;
@@ -187,6 +187,7 @@ li {
   color: #000;
   text-decoration: none;
   line-height: 32px;
+  background-color: #fff;
   
   &:after {
       content: "";
@@ -218,7 +219,7 @@ li {
     a {
       display: block;
       height: 50px;
-      background: url(../img/bg/menu-sprite.jpg);
+      background: url(../img/bg/menu-sprite.jpg) no-repeat;
       
       &:hover {
         .opacity(0.6);
@@ -476,7 +477,7 @@ li {
       top: -1px;
       left: -6px;
       .box(6px, 16px);
-      background: url(../img/sprite.jpg) no-repeat 0 -367px;
+      background: url(../img/sprite.png) no-repeat 0 -367px;
     }
   }
 }
@@ -522,6 +523,67 @@ li {
   }
   100% {
     .rotate(0deg);
+  }
+}
+
+.page-blog {
+  background-color: #000;
+  
+  .languages {
+    ul li a {
+      color: #fff;
+    }
+  }
+  .main-nav {
+    .to-portfolio {
+      background-position: 0 -121px;
+    }
+    .to-blog {
+      background-position: -138px -122px;
+    }
+    .to-team {
+      left: -35px;
+      background-position: -228px -129px;
+    }
+    &.eng {
+      .to-portfolio {
+        background-position: 0 -178px;
+      }
+      .to-blog {
+        background-position: -135px -182px;
+      }
+      .to-team {
+        left: 0px;
+        background-position: -191px -183px;
+      }
+    }
+  }
+  .copiryght {
+    color: #fff;
+  }
+  .contact-mails a{
+    color: #fff;
+  }
+  .contact-phones {
+    color: #fff;
+    
+    .icon-tell {
+      background-position: -67px -367px;
+    }
+    .icon-skype {
+      background-position: -35px -367px;      
+    }
+  }
+  .socials {
+    .amount {
+      border-color: #fff;
+      background-color: #000;
+      color: #fff;
+      
+      &:before {
+        background-position: -10px -367px; 
+      }
+    }
   }
 }
 
