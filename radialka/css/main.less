@@ -2117,6 +2117,9 @@ h2 {
   margin-bottom: 26px;
   padding:0 0 0 20px;
   
+  form {
+    width: 559px;
+  }
   input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
     width: 399px;
     height: 27px;
@@ -2154,10 +2157,13 @@ h2 {
     width: 250px;
   }
   .method-delivery {
-    width: 338px;
+    width: 308px;
   }
   .icon-asterisk {
     margin: 0 3px 6px 0; 
+   }
+   .notify {
+     margin: -10px 0 -2px;
    }
 }
 
@@ -2180,7 +2186,6 @@ h2 {
 
 .delivery-info {
   margin: 40px 0 19px;
-  padding-right: 105px;
   min-height: 187px;
   
   .address-represent {
@@ -3044,6 +3049,9 @@ h2 {
     border-top: solid 1px #cbd3da;
     padding: 14px 0 48px;
   }
+  .notify {
+    margin: -8px 0 7px;
+  }
 }
 
 .product-tooltip {
@@ -3396,6 +3404,47 @@ h2 {
     background-position: -162px  -448px;
   }
 }
+
+.notify {
+  .box-sizing(border-box);
+  .border-radius(3px);
+  min-height: 40px;
+  overflow: hidden;
+  margin: 12px 0;
+  padding: 13px 10px 9px 10px;
+  color: #426412;
+  background: #edf8dd; /* Old browsers */
+  background: -moz-linear-gradient(top, #edf8dd 0%, #dbeec0 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf8dd), color-stop(100%,#dbeec0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #edf8dd 0%,#dbeec0 100%); /* W3C */
+  
+  &.error {
+    background-color: #f5dfdf;
+    background-image: -webkit-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -moz-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -o-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -ms-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: linear-gradient(to top, #f2d9d9, #f7e4e4);
+    color: #80303b;
+    
+    .icon-notify {
+      background-position: -144px -466px;
+    }
+  }
+  .icon-notify {
+    float: left;
+    // margin: 12px 10px 0 10px;
+  }
+  .notify-content {
+    margin:0 0 0 25px;
+    line-height: 1.2em; 
+    
+  }
+}
+
  // media queries
  
  @media screen and (min-width:1000px) {
@@ -3648,4 +3697,9 @@ h2 {
   width: 11px;
   height: 11px;
   background-position: -121px -252px;
+}
+
+.icon-notify {
+  .box(16px, 17px);
+  background-position: -126px -466px; 
 }
