@@ -161,6 +161,14 @@ li {
   list-style: none;
 }
 
+nav {
+  ul {
+    li {
+      float: left;
+    }
+  }
+}
+
 .active {
   cursor: default;
 }
@@ -172,7 +180,6 @@ li {
 
 .header-site {
   position: relative;
-  height: 86px;
 }
 
 .logo {
@@ -270,7 +277,7 @@ li {
 .languages {
   position: absolute;
   right: 9.5%;
-  top: 44px;
+  top: 56px;
   
   ul {
     overflow: hidden;
@@ -585,6 +592,53 @@ li {
       }
     }
   }
+}
+
+.project-nav {
+  margin: 18px 0 0 9%;
+  
+  ul {
+    overflow: hidden;
+  }
+  a {
+    padding: 10px;    
+    color: #000;
+    
+    &.active {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.additional-link {
+  position: absolute;
+  right: 9.5%;
+  top: 117px;
+}
+
+.content {
+  .work-info {
+    margin: 0 auto;
+    margin-top: 53px;
+    width: 85%;
+    line-height: 16px;
+  }
+  .line {
+    margin: 15px 0;
+    border-bottom: 1px solid #000;
+  }
+  .text {
+    width: 85%;
+    margin: 0 auto;
+    
+    img {
+      width: auto;
+    }
+  }
+}
+.text {
+
 }
 
 /*  icons  */

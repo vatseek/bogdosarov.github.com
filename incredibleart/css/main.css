@@ -96,6 +96,9 @@ ul {
 li {
   list-style: none;
 }
+nav ul li {
+  float: left;
+}
 .active {
   cursor: default;
 }
@@ -106,7 +109,6 @@ li {
 }
 .header-site {
   position: relative;
-  height: 86px;
 }
 .logo {
   display: block;
@@ -201,7 +203,7 @@ li {
 .languages {
   position: absolute;
   right: 9.5%;
-  top: 44px;
+  top: 56px;
 }
 .languages ul {
   overflow: hidden;
@@ -533,6 +535,42 @@ li {
 }
 .page-blog .socials .amount:before {
   background-position: -10px -367px;
+}
+.project-nav {
+  margin: 18px 0 0 9%;
+}
+.project-nav ul {
+  overflow: hidden;
+}
+.project-nav a {
+  padding: 10px;
+  color: #000;
+}
+.project-nav a.active {
+  text-decoration: none;
+  font-weight: bold;
+}
+.additional-link {
+  position: absolute;
+  right: 9.5%;
+  top: 117px;
+}
+.content .work-info {
+  margin: 0 auto;
+  margin-top: 53px;
+  width: 85%;
+  line-height: 16px;
+}
+.content .line {
+  margin: 15px 0;
+  border-bottom: 1px solid #000;
+}
+.content .text {
+  width: 85%;
+  margin: 0 auto;
+}
+.content .text img {
+  width: auto;
 }
 /*  icons  */
 .icon-tell {

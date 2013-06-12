@@ -1,9 +1,10 @@
 $(function(){
 	// height for main container
-	var wrapper = $('.wrapper');
-	wrapper.height($(window).height()-141);
+	var wrapper = $('.wrapper')
+		height = $(window).height()-141;
+		wrapper.css({minHeight: height+'px'});			
 	
 	$(window).resize(function() {
-		wrapper.height($(window).height()-141);			
+		wrapper.css({minHeight: height+'px'});			
 	});
 })
