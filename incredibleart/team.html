@@ -25,13 +25,6 @@
         			<li><a href="#" class="main-nav-item to-team"></a></li>
         		</ul>
         	</nav> <!-- /.main-nav -->
-        	<nav class="project-nav">
-        		<ul>
-        			<li><a href="#" class="active">Работа</a></li>
-        			<li><a href="#">Кухня</a></li>
-        		</ul>
-        	</nav> <!-- /.project-nav -->
-        	<a href="#" class="additional-link">Приложение для "Рупора"</a>
         	<nav class="languages">
         		<ul>
         			<li><a href="#" class="active">ru</a></li>
@@ -40,35 +33,58 @@
         	</nav>
         </header> <!-- /.header-site -->
 		<div class="wrapper">
-			<div class="content">
-				<div class="work-info">
-					Дизайн мобильного приложения краудсорчинг-проекта "Рупор", <br />
-					дающее возможность сообщить о проблеме в несколько простых шагов.
-				</div>
-				<div class="line"></div>
-				<div class="bg">
-					
-				</div>
-				<div class="text">
-					<p>Первая страничка-конфетка</p>
-					<center>
-						<img src="http://incredibleart.ru/images/projects/rupor/3.jpg">
-					</center>
-					<br /><p>И красивые формы обратной связи.</p> <br />
-					<center>
-						<img src="http://incredibleart.ru/images/projects/rupor/3.jpg">
-					</center>
-					<br /> <br /> <br />
-					<center>
-						<img src="http://incredibleart.ru/images/projects/rupor/3.jpg">
-					</center>
-					<br /> <br /> <br />
-					<center>
-						<img src="http://incredibleart.ru/images/projects/rupor/3.jpg">
-					</center>
-					<br /> <br /> <br />
-				</div>
-			</div>
+			<ul class="team-list">
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+				<li class="team-item">
+					<img src="img/fish/1111.jpg" alt="" />
+					<span class="name">ростислав котанаев</span>
+					<div class="job">руководитель</div>
+				</li> <!-- /.team-item -->
+			</ul>
 		</div> <!-- /.wrapper -->
 		<footer class="footer-site">
 			<div class="copiryght">
@@ -99,8 +115,18 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script>
-				$(function(){
-				});
+		$(function(){
+			// height for main container
+			var wrapper = $('.wrapper')
+				height = $(window).height()-154;
+				wrapper.css({minHeight: height+'px'});			
+			
+			
+			$(window).resize(function() {
+				height = $(window).height()-154;
+				wrapper.css({minHeight: height+'px'});			
+			});
+		})
 		</script>
     </body>
 </html>

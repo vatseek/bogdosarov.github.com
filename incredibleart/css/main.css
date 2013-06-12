@@ -87,7 +87,7 @@ body {
   font-size: 14px;
 }
 body {
-  min-width: 736px;
+  min-width: 767px;
 }
 ul {
   margin: 0;
@@ -116,7 +116,7 @@ nav ul li {
   height: 32px;
   overflow: hidden;
   padding: 3px 0;
-  min-width: 270px;
+  min-width: 676px;
   text-align: justify;
   text-transform: uppercase;
   font-family: Times;
@@ -155,7 +155,8 @@ nav ul li {
   height: 50px;
   background: url(../img/bg/menu-sprite.jpg) no-repeat;
 }
-.main-nav ul a:hover {
+.main-nav ul a:hover,
+.main-nav ul a.active {
   -moz-opacity: 0.6;
   -khtml-opacity: 0.6;
   -webkit-opacity: 0.6;
@@ -258,6 +259,7 @@ nav ul li {
   margin: 0 auto;
   margin-top: -190px;
   width: 90%;
+  min-width: 615px;
 }
 .main-slider .main-slider-cnt {
   overflow: hidden;
@@ -376,6 +378,7 @@ nav ul li {
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  line-height: 14px;
 }
 .socials .arrow {
   position: absolute;
@@ -513,6 +516,14 @@ nav ul li {
   left: 0px;
   background-position: -191px -183px;
 }
+.page-blog .main-nav a.active {
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+  filter: alpha(opacity=60);
+}
 .page-blog .copiryght {
   color: #fff;
 }
@@ -539,6 +550,9 @@ nav ul li {
 .project-nav {
   margin: 18px 0 0 9%;
 }
+.project-nav.portfolio {
+  margin-left: 4%;
+}
 .project-nav ul {
   overflow: hidden;
 }
@@ -555,6 +569,9 @@ nav ul li {
   right: 9.5%;
   top: 117px;
 }
+.content {
+  position: relative;
+}
 .content .work-info {
   margin: 0 auto;
   margin-top: 53px;
@@ -562,7 +579,7 @@ nav ul li {
   line-height: 16px;
 }
 .content .line {
-  margin: 15px 0;
+  margin: 15px 0 0 0;
   border-bottom: 1px solid #000;
 }
 .content .text {
@@ -571,6 +588,41 @@ nav ul li {
 }
 .content .text img {
   width: auto;
+}
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.team-list {
+  margin: 86px 0 60px;
+  text-align: center;
+}
+.team-list .team-item {
+  display: inline-block;
+  padding: 5px 20px 20px;
+  width: 200px;
+  text-align: center;
+}
+.team-list .team-item .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px dashed #000;
+}
+.team-list .team-item .job {
+  margin-top: 11px;
+  text-transform: uppercase;
+}
+.work-list-cnt .works-list {
+  margin: 28px 0 52px;
+  text-align: center;
+}
+.work-list-cnt .works-list li {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  padding: 5px 10px 10px;
 }
 /*  icons  */
 .icon-tell {

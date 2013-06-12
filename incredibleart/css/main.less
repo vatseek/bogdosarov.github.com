@@ -149,7 +149,7 @@ html, body {
 }
 
 body {
-  min-width: 736px;
+  min-width: 767px;
 }
 
 ul {
@@ -187,7 +187,7 @@ nav {
   .box(100%,32px);
   overflow: hidden;
   padding: 3px 0;
-  min-width: 270px;
+  min-width: 676px;
   text-align: justify;
   text-transform: uppercase;
   font-family: Times;
@@ -228,7 +228,7 @@ nav {
       height: 50px;
       background: url(../img/bg/menu-sprite.jpg) no-repeat;
       
-      &:hover {
+      &:hover, &.active {
         .opacity(0.6);
       }
     }
@@ -344,6 +344,8 @@ nav {
   margin: 0 auto;
   margin-top: -190px;
   width: 90%;
+  min-width: 615px;
+  
   .main-slider-cnt {
     overflow: hidden;
     height: 185px;
@@ -458,6 +460,7 @@ nav {
     font: 9px Helvetica, Arial, serif;
     z-index: 5;
     .transition(all 200ms ease-in-out);
+    line-height: 14px;
   }
   .arrow {
     position: absolute;
@@ -564,6 +567,9 @@ nav {
         background-position: -191px -183px;
       }
     }
+    a.active { 
+      .opacity(0.6);
+    }
   }
   .copiryght {
     color: #fff;
@@ -597,6 +603,9 @@ nav {
 .project-nav {
   margin: 18px 0 0 9%;
   
+  &.portfolio {
+    margin-left: 4%;
+  }
   ul {
     overflow: hidden;
   }
@@ -618,6 +627,8 @@ nav {
 }
 
 .content {
+  position: relative;
+  
   .work-info {
     margin: 0 auto;
     margin-top: 53px;
@@ -625,7 +636,7 @@ nav {
     line-height: 16px;
   }
   .line {
-    margin: 15px 0;
+    margin: 15px 0 0 0;
     border-bottom: 1px solid #000;
   }
   .text {
@@ -637,8 +648,48 @@ nav {
     }
   }
 }
-.text {
 
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  // background-color: #cdcdcd;    
+}
+
+.team-list {
+  margin: 86px 0 60px;
+  text-align: center;
+  
+  .team-item {
+    display: inline-block;
+    padding: 5px 20px 20px;
+    width: 200px;
+    text-align: center;
+    
+    .name {
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px dashed #000;
+    }
+    .job {
+      margin-top: 11px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.work-list-cnt {
+  .works-list {
+    margin: 28px 0 52px;
+    text-align: center;
+    
+    li {
+      display: inline-block;
+      .square(150px);
+      padding: 5px 10px 10px;
+    }
+  }
 }
 
 /*  icons  */
