@@ -23,7 +23,7 @@ $(document).ready(function() {
 		matrixCnt.html('');
 		for(i=1; i<=k; i++){
 			for(j=1; j<=k; j++){
-				matrixCnt.append($('<div editcontentable/>').addClass('item').attr('contenteditable','true').html(matrix[i-1][j-1]));
+				matrixCnt.append($('<div editcontentable/>').addClass('item').attr('contenteditable','true').html(e[i-1][j-1]));
 			}
 			matrixCnt.append('<div class="clear"></div>');
 		}
