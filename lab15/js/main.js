@@ -7,7 +7,8 @@ return(!i||i!==r&&!b.contains(r,i))&&(e.type=o.origType,n=o.handler.apply(this,a
 
 $(document).ready(function() {
 	var matrixCnt = $('.matrix-cnt'),
-		resultCnt = $('.result-cnt');
+		resultCnt = $('.result-cnt'),
+		resultMatrix = $('.result-matrix');
 	var e = [[0.3,0.4,0.2,0.1],
 		     [0  ,0.4,0.4,0.2],
 		     [0  ,0  ,0.3,0.7],
@@ -20,26 +21,74 @@ $(document).ready(function() {
 	
 	// Генеруємо матрицю для введення чисел
 	$('.generete').click(function() {
+		k = $('.matrix-size').val();
 		matrixCnt.html('');
 		for(i=1; i<=k; i++){
 			for(j=1; j<=k; j++){
-				matrixCnt.append($('<div editcontentable/>').addClass('item').attr('contenteditable','true').html(e[i-1][j-1]));
+				// matrixCnt.append($('<div editcontentable/>').addClass('item').attr('contenteditable','true').html(e[i-1][j-1]));
+				matrixCnt.append($('<div editcontentable/>').addClass('item').attr('contenteditable','true'));
 			}
 			matrixCnt.append('<div class="clear"></div>');
 		}
 		$('.find').fadeIn(400);
 	});
-	 
-	// for(i=0; i<k; i++) {
-		// p.push([]);
-		// for(j=0; j<k; j++) {			
-			// p[i].push(matrix[i][j]);
-		// }
-	// }
-	console.log(p);
+	
+	function drowMtrix(data){
+		resultMatrix.html('');
+		for(i=1; i<=k; i++){
+			for(j=1; j<=k; j++){
+				if(i < k){
+					resultMatrix.append($('<div editcontentable/>').addClass('item').html(data[i-1][j-1].toFixed(3)));					
+				} else {
+					resultMatrix.append($('<div editcontentable/>').addClass('item result').html(data[i-1][j-1].toFixed(3)));					
+				}
+			}
+			resultMatrix.append('<div class="clear"></div>');
+		}
+	}
+
 	
 	$('.find').click(function(){
+		var mas = $('.matrix-cnt .item');
+		e = []; 
+		console.log('Очистили масив = '+e);
+		var n=0;
 		
+		//формуємо масив з введених чисел
+		console.log('Формуэмо новий масив');
+		for(i = 0; i < k; i++) {
+			e.push([]);
+			for(j = 0; j<k; j++) {
+				e[i].push( parseFloat($(mas[n]).html()));
+				console.log($(mas[n]).html());
+				n++;
+			}
+		};
+		
+		for(i=0; i<k; i++){
+			p[0][i]=e[0][i];
+		}
+		
+		console.log(p);
+		
+		//формуємо масив з результатами
+		for(i=0; i<k; i++) {
+			p.push([]);
+			for(j=0; j<k; j++) {			
+				p[i].push(e[i][j]);
+			}
+		};
+		
+		
+		// знаходимо необхідін значення
+		for(i=2; i<=k; i++){
+			for(j=1; j<=k; j++) {
+				p[i-1][j-1] = findP(i, j, j, j);
+			}
+		}
+		
+		// Виводимо матрицю з результатами
+		drowMtrix(p);
 	});
 	
 	function findP(i, j, x, y){
@@ -49,14 +98,5 @@ $(document).ready(function() {
 			return p[i-2][j-1]*e[x-1][y-1] + findP(i, j-1, x-1, y);
 		}
 	};
-	
-	for(i=2; i<=k; i++){
-		for(j=1; j<=k; j++) {
-			p[i-1][j-1] = findP(i, j, j, j);
-		}
-	}
-
-	console.log('Головний результат: '+findP(2, 4, 4, 4));
-	console.log('Головний результат: '+p);
 	
 });

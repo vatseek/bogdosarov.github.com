@@ -45,27 +45,31 @@ h1 {
 }
 
 .main-cnt {
-	width: 700px;
+	width: 900px;
 	margin: 0 auto; 
 	text-align: center;
 }
 
-.matrix-cnt {
+.matrix-cnt, .result-matrix {
 	display: inline-block;
 	margin: 20px 0;
 }
 
-.matrix-cnt .item {
+.matrix-cnt .item,  .result-matrix .item {
     float: left;
-	width: 30px;
-	height: 30px;
+	width: 70px;
+	height: 70px;
 	border: 1px solid #959595;
 	text-align: center;
-	line-height: 30px;
+	line-height: 70px;
 	overflow: hidden;
 }
-.matrix-cnt .item:hover {
+.matrix-cnt .item:hover, .result-matrix .item:hover {
 	font-weight: bold;
+}
+
+.result-matrix .item.result {
+	background-color: rgba(32, 208, 42, 0.34);
 }
 
 .matrix-cnt .item:focus {
