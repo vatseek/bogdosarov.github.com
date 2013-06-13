@@ -1,4 +1,4 @@
-@main-font: Arial, Helvetica, sans-serif;
+@main-font: Helvetica, Arial, sans-serif;
 
 @font-size: 14px;
 
@@ -2215,7 +2215,7 @@ h2 {
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
   padding: 30px 0 40px 0;
-  width: 542px;
+  width: 558px;
   
   small {
     display: block;
@@ -2276,10 +2276,45 @@ h2 {
   .delivery-price {
     padding: 8px 13px 0 19px;
   }
+  input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+    height: 27px;
+    padding: 5px 0 5px 6px; 
+  }
+}
+
+.cupon-form {
+  border-top: 1px solid #CBD3DA;
+  margin-top: 13px;
+  padding: 13px;
+  
+  input {
+    width: 172px;
+    margin-left:1px;
+  }
+}
+
+.cupon-info {
+  overflow: hidden;
+  padding: 8px 13px 8px 20px;
+  border-top: 1px solid #CBD3DA;
+  
+  .cupon-name {
+    float: left;
+  }
+  .cupon-size {
+    float: right;
+    margin: 0 6px 0 0;
+    color: #b60526;
+    font-weight: bold;
+  }
+  .icon-remove-product {
+    float: right;
+    position: relative;
+    margin: 2px 0 0 0;
+  }
 }
 
 .intotal {
-  margin-top: 14px;
   border-top: 1px solid #cbd3da;
   padding: 15px 14px 12px 0;
   font-size: 0.857em;
@@ -3444,6 +3479,8 @@ h2 {
     
   }
 }
+
+
 
  // media queries
  

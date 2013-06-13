@@ -22,7 +22,7 @@ html {
 }
 body {
   font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
 }
 ::-moz-selection {
@@ -1953,7 +1953,7 @@ h2 {
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
   padding: 30px 0 40px 0;
-  width: 542px;
+  width: 558px;
 }
 .autoriz-cnt small {
   display: block;
@@ -2011,8 +2011,43 @@ h2 {
 .checkout-check-list .delivery-price {
   padding: 8px 13px 0 19px;
 }
+.checkout-check-list input[type="text"],
+.checkout-check-list input[type="password"],
+.checkout-check-list input[type="number"],
+.checkout-check-list input[type="email"],
+.checkout-check-list select {
+  height: 27px;
+  padding: 5px 0 5px 6px;
+}
+.cupon-form {
+  border-top: 1px solid #CBD3DA;
+  margin-top: 13px;
+  padding: 13px;
+}
+.cupon-form input {
+  width: 172px;
+  margin-left: 1px;
+}
+.cupon-info {
+  overflow: hidden;
+  padding: 8px 13px 8px 20px;
+  border-top: 1px solid #CBD3DA;
+}
+.cupon-info .cupon-name {
+  float: left;
+}
+.cupon-info .cupon-size {
+  float: right;
+  margin: 0 6px 0 0;
+  color: #b60526;
+  font-weight: bold;
+}
+.cupon-info .icon-remove-product {
+  float: right;
+  position: relative;
+  margin: 2px 0 0 0;
+}
 .intotal {
-  margin-top: 14px;
   border-top: 1px solid #cbd3da;
   padding: 15px 14px 12px 0;
   font-size: 0.857em;
@@ -3488,6 +3523,17 @@ h2 {
   .team-member .team-member-info {
     width: 313px;
   }
+  .cupon-form {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .cupon-form input {
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+  .cupon-info {
+    padding: 10px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
@@ -3891,6 +3937,34 @@ h2 {
   .checkout-cnt .checkout-info label,
   .checkout-cnt .checkout-user-info label {
     width: 235px;
+  }
+  .checkout-cnt .cupon-form {
+    margin-top: 10px;
+    padding: 15px 0;
+  }
+  .checkout-cnt .cupon-form .cupon-form-field input {
+    width: 238px;
+    margin: 0 20px 0 0;
+  }
+  .checkout-cnt .cupon-form .blue-btn {
+    height: 40px;
+    background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
+    font-size: 22px;
+  }
+  .checkout-cnt .cupon-info {
+    padding: 15px 0 15px 10px;
+  }
+  .checkout-cnt .cupon-info .icon-remove-product {
+    margin: 0;
+    width: 35px;
+    height: 35px;
+    background-position: -129px -181px;
+  }
+  .checkout-cnt .cupon-info .cupon-name {
+    margin-top: 6px;
+  }
+  .checkout-cnt .cupon-info .cupon-size {
+    margin: 6px 20px;
   }
   .checkout-info {
     padding-bottom: 23px;
@@ -4340,6 +4414,9 @@ h2 {
   }
   .checkout-user-info .user-pass .set-pass {
     margin-top: -1px;
+  }
+  .checkout-user-info .cupon-form .cupon-form-field input {
+    width: 129px;
   }
   .product-slider-cnt {
     float: none;
