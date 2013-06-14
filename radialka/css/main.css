@@ -4310,6 +4310,9 @@ h2 {
   .social-links .tw-link {
     background-position: -92px -448px;
   }
+  .bottomLine.page-check {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 479px) {
   .hidden-320 {
