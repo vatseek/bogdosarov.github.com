@@ -410,6 +410,12 @@ a[class*="btn"] {
 .user i {
   vertical-align: -0.071em;
 }
+.user .icon-cab {
+  margin-right: 3px;
+}
+.user .user-cab {
+  margin-right: 22px;
+}
 .contactNumbers {
   position: relative;
   margin: 0 0 0 23px;
@@ -3597,6 +3603,11 @@ h2 {
     right: 59px;
     margin-top: 0;
   }
+  .logo-item .user.logined {
+    top: 108px;
+    right: 0;
+    margin: 0;
+  }
   .logo-item .shoppingCart {
     width: 100%;
   }
@@ -4313,6 +4324,14 @@ h2 {
   .logo-item .user {
     right: 12px;
   }
+  .logo-item .user.logined {
+    right: 0;
+    width: 108px;
+  }
+  .logo-item .user.logined .user-cab {
+    display: inline-block;
+    margin: 0 0 1px 0;
+  }
   .mainSliderCtn {
     width: 296px;
   }
@@ -4884,4 +4903,9 @@ h2 {
   width: 16px;
   height: 17px;
   background-position: -126px -466px;
+}
+.icon-cab {
+  width: 11px;
+  height: 11px;
+  background-position: -165px -468px;
 }
