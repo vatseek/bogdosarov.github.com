@@ -1976,15 +1976,15 @@ h2 {
   border-bottom: 1px dashed #bad0ea;
 }
 .confirm-cnt {
-  padding: 0 105px 0 0;
+  padding: 0 0px 0 0;
   text-align: right;
 }
 .checkout-check-list {
   position: relative;
-  width: 292px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  width: 292px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.4);
@@ -3942,17 +3942,21 @@ h2 {
     margin-top: 10px;
     padding: 15px 0;
   }
+  .checkout-cnt .cupon-form .cupon-form-field {
+    overflow: hidden;
+  }
   .checkout-cnt .cupon-form .cupon-form-field input {
-    width: 238px;
-    margin: 0 20px 0 0;
+    width: 258px;
+    margin: 8px 20px 0 0;
   }
   .checkout-cnt .cupon-form .blue-btn {
+    float: right;
     height: 40px;
     background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
-    font-size: 22px;
+    font-size: 20px;
   }
   .checkout-cnt .cupon-info {
-    padding: 15px 0 15px 10px;
+    padding: 15px 0 15px 0;
   }
   .checkout-cnt .cupon-info .icon-remove-product {
     margin: 0;
@@ -4043,7 +4047,8 @@ h2 {
   }
   .confirm-cnt .green-btn {
     background-position: 0 -425px;
-    font-size: 1.286em;
+    font-size: 22px;
+    font-weight: normal;
     height: 38px;
     text-align: center;
     width: 100%;
@@ -4416,7 +4421,7 @@ h2 {
     margin-top: -1px;
   }
   .checkout-user-info .cupon-form .cupon-form-field input {
-    width: 129px;
+    width: 154px;
   }
   .product-slider-cnt {
     float: none;
