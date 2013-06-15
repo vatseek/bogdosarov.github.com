@@ -2402,7 +2402,6 @@ h2 {
 
 .modal-cnt {
     display: none;
-    min-width: 410px; 
     position: relative;
     background-color: #fff; 
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 10px 29px 14px rgba(0,0,0,.33); 
@@ -2411,6 +2410,13 @@ h2 {
     border: solid 6px #1a62ba;
     .border-radius(5px);
     
+    &.modal-callback {
+      width: 410px;
+      
+      form {
+        margin-top: 60px;
+      }
+    }
     .close-modal {
       position: absolute;
       width: 21px;
@@ -2437,11 +2443,13 @@ h2 {
      }
     }
      .form-row {
+       position: relative;
        margin-bottom: 15px;
        
        .icon-eye {
-         position: relative;
-         left: -32px;
+         position: absolute;
+         right: 20px;
+         top: 36px;
          cursor: pointer;
        }
      }
@@ -2453,11 +2461,8 @@ h2 {
       font-size: 0.786em;
       color:#7f8489;
     }
-  }
-  
-  .modal-form {
     form {
-      margin-left: 40px;
+      padding: 0 40px;
     }
   }
   

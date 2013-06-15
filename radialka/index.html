@@ -19,6 +19,21 @@
 		<script async="async" src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
+			<div class="modal-cnt modal-callback js-modal-callback">	
+				<div class="close-modal js-close-modal"><i class="icon-close-modal close"></i></div>
+				<div class="callback-cnt">
+					<form action="#" class="callback-form">
+						<div class="form-row">
+								<label for="">Пожалуйста, укажите ваш контактный телефон. <br />Мы свяжемся с вами в ближайшее время.<i class="icon-asterisk"></i></label> <br />
+								<input type="email" name="email" value="" id="" required class="js-autofocus-callback"/>
+								<div class="info">Например: 067 999 99 99</div>
+						</div>
+						<div class="form-row">
+								<button class="blue-btn" type="submit">Жду звонка</button>
+						</div>
+					</form>
+				</div> <!-- /.callback-cnt -->
+			</div>
 			<div class="modal-cnt modal-cnt-login js-modal-cnt-login">
 				<div class="close-modal js-close-modal"><i class="icon-close-modal close"></i></div>
 				<div class="login-reg-tabs js-login-reg-tabs">
@@ -132,7 +147,7 @@
 								</div>
 							</div>
 							<br />
-							<a href="#" class="order-phone hidden-phone"><i class="icon-tell"></i> <span>заказать обратный звонок</span></a>
+							<a href="#" class="order-phone hidden-phone js-order-phone"><i class="icon-tell"></i> <span>заказать обратный звонок</span></a>
 						</address>	<!-- /.contactNumbers -->
 					</div> 
 
