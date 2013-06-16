@@ -284,6 +284,16 @@ $(function() {
   $('.js-open-cart').click(function(){
   	$('.js-shopping-cart').toggleClass('js-show');
   });
+
+  // show other telephones in header
+  $('.js-show-operators').click(function(){
+  	$('.js-numbers').toggleClass('js-show');
+  });
+  
+   // show cart list
+  $('.js-open-cart').click(function(){
+  	$('.js-shopping-cart').toggleClass('js-show');
+  });
   
   // create select from navigation when page size <= 480px
   function createSelect(className){
