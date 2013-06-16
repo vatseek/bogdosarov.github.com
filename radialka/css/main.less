@@ -193,6 +193,10 @@ a {
   border-bottom: 1px solid #bad0ea;
   border-bottom: 1px solid rgba(26,98,186, .3); 
   cursor: pointer;
+  
+  &.pseudo {
+    border-bottom: 1px dashed #A3C0E3;
+  }
 }
 
 li { 
@@ -2954,7 +2958,9 @@ h2 {
       }
     }
   }
-  .product-tabs-cnt{
+}
+
+.product-tabs-cnt, .empty-cart-info {
     padding: 30px 20px 5px 0;
     border-bottom: solid 1px #cbd3da;
     background: url(../img/bg/product-tab.png) center top no-repeat;
@@ -2992,6 +2998,12 @@ h2 {
       }
     }
   }
+
+.empty-cart-info {
+  margin: 8px 0 40px;
+  border: 0;
+  padding: 0;
+  background: none;
 }
 
 #product-tab-2 {
