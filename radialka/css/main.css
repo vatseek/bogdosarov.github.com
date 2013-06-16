@@ -1860,6 +1860,7 @@ h2 {
   width: 559px;
 }
 .checkout-cnt input[type="text"],
+.checkout-cnt input[type="tel"],
 .checkout-cnt input[type="password"],
 .checkout-cnt input[type="number"],
 .checkout-cnt input[type="email"],
