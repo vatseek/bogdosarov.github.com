@@ -2137,12 +2137,6 @@ h2 {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.modal-cnt.modal-callback {
-  width: 410px;
-}
-.modal-cnt.modal-callback form {
-  margin-top: 60px;
-}
 .modal-cnt .close-modal {
   position: absolute;
   width: 21px;
@@ -2187,6 +2181,12 @@ h2 {
 }
 .modal-cnt form {
   padding: 0 40px;
+}
+.modal-callback {
+  width: 410px;
+}
+.modal-callback form {
+  margin-top: 60px;
 }
 .login-reg-tabs {
   margin-bottom: 24px;
@@ -3255,6 +3255,7 @@ h2 {
   }
   .mainSliderThumbs .thumb-item.active li {
     background-color: transparent;
+    background-position: -70px -51px;
   }
   .mainSliderThumbs .thumb-item.active li:after {
     display: none;
@@ -3271,12 +3272,6 @@ h2 {
     border-radius: 3px;
     background-position: -43px -51px;
     cursor: pointer;
-  }
-  .mainSliderThumbs li.active {
-    background-position: -70px -51px;
-  }
-  .mainSliderThumbs li.active:after {
-    display: none;
   }
   .mainSliderThumbs .thumb-separator {
     display: none;
@@ -4218,7 +4213,6 @@ h2 {
     width: 100%;
   }
   .modal-cnt {
-    border: none;
     width: 480px;
   }
   .modal-cnt .close-modal {
@@ -4248,9 +4242,11 @@ h2 {
     width: 480px;
     height: 480px;
   }
-  .modal-cnt.modal-cnt-login {
+  .modal-callback {
     width: 410px;
-    border: 6px solid #1A62BA;
+  }
+  .modal-cnt-login {
+    width: 410px;
   }
   .action-cnt {
     width: 100%;
@@ -4700,12 +4696,12 @@ h2 {
     padding: 0 10px 0 10px;
     text-align: left;
   }
-  .modal-cnt.modal-cnt-login {
-    width: 320px;
+  .modal-cnt {
     border: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    width: 320px;
   }
   .modal-cnt.modal-cnt-login .login-reg-tabs-title {
     margin: 20px 0 23px 12px;
@@ -4714,15 +4710,21 @@ h2 {
     padding: 0 12px;
     margin: 0;
   }
-  .modal-cnt.modal-cnt-login .register-user input {
+  .modal-cnt form {
+    padding: 0 12px;
+  }
+  .modal-cnt input {
     width: 100%;
   }
-  .modal-cnt.modal-cnt-login .blue-btn {
+  .modal-cnt .blue-btn {
     width: 100%;
     height: 40px;
     background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
     margin-right: 20px;
     font-size: 22px;
+  }
+  .modal-cnt.modal-product-slider {
+    overflow: hidden;
   }
 }
 /* ==========================================================================

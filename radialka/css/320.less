@@ -463,30 +463,33 @@
   }
   
   .modal-cnt {
-    
-    &.modal-cnt-login {
-      width: 320px;
-      border: none;
-      .border-radius(0);
-      
+    border: none;
+    .border-radius(0); 
+    width: 320px;
+     
+    &.modal-cnt-login {      
       .login-reg-tabs-title  {
         margin: 20px 0 23px 12px;
       }
       .register-user {
         padding: 0 12px;
         margin: 0;
-        
-        input {
+      }      
+    }
+    form {
+      padding: 0 12px;
+    }
+    input {
           width: 100%;
-        }
-      }
-      .blue-btn{
+    }
+    .blue-btn{
         .box(100%, 40px);
         background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
         margin-right: 20px;
         font-size: 22px;
       }
-      
+    &.modal-product-slider {
+      overflow: hidden;
     }
   }
   
