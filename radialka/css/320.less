@@ -14,9 +14,18 @@
   .logo-item{
     .user{
       right: 12px;
+      
+      &.logined {
+        right: 0;
+        width: 109px;
+        
+        .user-cab {
+          display: inline-block;
+          margin: 0 0 1px 0;
+        }   
     }
   }
-  
+  }
   .mainSliderCtn { 
     width: 296px;
   }
@@ -165,7 +174,14 @@
         margin-top: -1px;
       }
     }
-  }
+     .cupon-form {
+       .cupon-form-field {
+        input {
+          width: 148px;
+        } 
+       }
+    }
+  }   
   
   // page product 
   .product-slider-cnt {
@@ -444,6 +460,37 @@
         padding:0 10px 0 10px;
         text-align: left;
       }
+  }
+  
+  .modal-cnt {
+    border: none;
+    .border-radius(0); 
+    width: 320px;
+     
+    &.modal-cnt-login {      
+      .login-reg-tabs-title  {
+        margin: 20px 0 23px 12px;
+      }
+      .register-user {
+        padding: 0 12px;
+        margin: 0;
+      }      
+    }
+    form {
+      padding: 0 12px;
+    }
+    input {
+          width: 100%;
+    }
+    .blue-btn{
+        .box(100%, 40px);
+        background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
+        margin-right: 20px;
+        font-size: 22px;
+      }
+    &.modal-product-slider {
+      overflow: hidden;
+    }
   }
   
 }

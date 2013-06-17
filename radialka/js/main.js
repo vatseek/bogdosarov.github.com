@@ -155,6 +155,20 @@ $(function() {
 		});
 		e.preventDefault();
 	});
+	
+	// show callback popup
+	$('.js-order-phone').click(function(e) {
+		$('.js-modal-callback').lightbox_me({
+		centered: true,
+		overlayCSS: {
+			background: '#1e262e',
+			opacity: .9
+		}, 
+		onLoad: function(){			
+		}
+		});
+		e.preventDefault();
+	});
 	 
 	// show login popup 
 	$('.js-login').click(function(e) {
@@ -267,6 +281,16 @@ $(function() {
   });
   
   // show cart list
+  $('.js-open-cart').click(function(){
+  	$('.js-shopping-cart').toggleClass('js-show');
+  });
+
+  // show other telephones in header
+  $('.js-show-operators').click(function(){
+  	$('.js-numbers').toggleClass('js-show');
+  });
+  
+   // show cart list
   $('.js-open-cart').click(function(){
   	$('.js-shopping-cart').toggleClass('js-show');
   });

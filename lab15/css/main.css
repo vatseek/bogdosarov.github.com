@@ -4,35 +4,18 @@ body {
 	background: url(http://365psd.ru/images/backgrounds/bg-light-4834.png);
 }
 
-#numbers {
-	width: 840px;
-	margin: 0 auto;
-    border: 2px solid #CCCCCC;
-    border-radius: 3px 3px 3px 3px;
-    font-size: 65px;
-    height: 1em;
-    overflow: hidden;
-    text-align: center;
-    box-shadow:  0px 0px 0px 1px rgba(255, 255, 255, 0.7);
-    0 -19px 20px -18px rgba(9, 9, 9, 0.34) inset, 0 19px 20px -18px rgba(9, 9, 9, 0.34) inset
+* {
+	outline: none;
 }
-#numbers span {
-	padding-left: 18px;
-    color: gray;
-    display: inline-block;
-    font: bold 1em/1 sans-serif;
-    position: relative;
-    text-align: center;
-}
-#numbers div {
-}
+
 button {
 	display: block;
 	width: auto;
 	padding: 10px;
-	font-size: 50px;
-	margin: 50px  auto 50px;
-	color: #c2c2c2;
+	font-size: 16px;
+	margin: 15px  auto;
+	color: #fff;
+	font-weight: bold;
 	border: 0;
 	background: rgb(109,109,109); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(109,109,109,1) 0%, rgba(107,107,107,1) 47%, rgba(109,109,109,1) 100%); /* FF3.6+ */
@@ -55,4 +38,40 @@ h1 {
 	width: 700px;
 	margin: 0 auto;
 	line-height: 20px;
+}
+
+.clear {
+	clear:left;
+}
+
+.main-cnt {
+	width: 900px;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+.matrix-cnt, .result-matrix {
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.matrix-cnt .item,  .result-matrix .item {
+    float: left;
+	width: 70px;
+	height: 70px;
+	border: 1px solid #959595;
+	text-align: center;
+	line-height: 70px;
+	overflow: hidden;
+}
+.matrix-cnt .item:hover, .result-matrix .item:hover {
+	font-weight: bold;
+}
+
+.result-matrix .item.result {
+	background-color: rgba(32, 208, 42, 0.34);
+}
+
+.matrix-cnt .item:focus {
+	background-color: #fff;
 }

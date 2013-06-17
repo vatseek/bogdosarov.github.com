@@ -125,6 +125,21 @@ textarea {
           transition: @transition;
 }
 
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+  -moz-transform: rotate(@degrees);
+  -ms-transform: rotate(@degrees);
+  -o-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+}
+
+.transform-origin (@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin:    @x @y;
+  -ms-transform-origin:     @x @y;
+  -o-transform-origin:      @x @y;
+}
+
 /*  less elements  */
 
 html, body {
@@ -134,7 +149,7 @@ html, body {
 }
 
 body {
-  min-width: 600px;
+  min-width: 767px;
 }
 
 ul {
@@ -146,32 +161,40 @@ li {
   list-style: none;
 }
 
+nav {
+  ul {
+    li {
+      float: left;
+    }
+  }
+}
+
 .active {
   cursor: default;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  background: url(../img/sprite.jpg) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   display: inline-block;
 }
 
 .header-site {
   position: relative;
-  padding-top: 3px;
-  height: 86px;
 }
 
 .logo {
   display: block;
   .box(100%,32px);
   overflow: hidden;
-  min-width: 270px;
+  padding: 3px 0;
+  min-width: 676px;
   text-align: justify;
   text-transform: uppercase;
   font-family: Times;
   color: #000;
   text-decoration: none;
   line-height: 32px;
+  background-color: #fff;
   
   &:after {
       content: "";
@@ -192,7 +215,7 @@ li {
 
 .main-nav {
   height: 50px;
-  margin: 18px 0 0 4%;
+  margin: 18px 0 0 8%;
   
   ul {
     overflow: hidden;
@@ -203,9 +226,9 @@ li {
     a {
       display: block;
       height: 50px;
-      background: url(../img/bg/menu-sprite.jpg);
+      background: url(../img/bg/menu-sprite.jpg) no-repeat;
       
-      &:hover {
+      &:hover, &.active {
         .opacity(0.6);
       }
     }
@@ -226,12 +249,35 @@ li {
     background-position: -228px -7px;    
   }
 }
+.main-nav.eng {
+  height: 50px;
+  margin: 18px 0 0 8%;
+  
+  .to-portfolio {
+    margin-right: 2px;
+    width: 129px;
+    background-position: 0 -54px;
+    height: 56px;
+  }
+  .to-blog {
+    width: 52px;
+    height: 53px;
+    margin: 0 2px;
+    background-position: -134px -54px;
+  }
+  .to-team {
+    left: 0px;
+    top: 3px;
+    width: 71px;
+    background-position: -190px -55px;    
+  }
+}
 
 
 .languages {
   position: absolute;
-  right: 10%;
-  top: 44px;
+  right: 9.5%;
+  top: 56px;
   
   ul {
     overflow: hidden;
@@ -241,7 +287,7 @@ li {
       margin-left: 9px;
       
       a {
-        font-size: 12px;
+        font-size: 11px;
         color: #999;
         text-decoration: none;
         border-bottom: 1px solid;
@@ -298,6 +344,8 @@ li {
   margin: 0 auto;
   margin-top: -190px;
   width: 90%;
+  min-width: 615px;
+  
   .main-slider-cnt {
     overflow: hidden;
     height: 185px;
@@ -360,29 +408,46 @@ li {
 }
 
 .socials {
+  position: relative;
   float: right;
+  margin: 10px 6% 0 0;
   
   &:hover {
     .social-list {
-      left: 0;
       .opacity(1);
     }
     .share {
       left: 39;
       .opacity(0);
+      z-index: 1;
     }
   }
+  &:hover {
+      .s-i-gl {
+        left: 0px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-tw {
+        left: 33px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-fb {
+        left: 66px;
+        -moz-animation: round1 0.5s 1;
+      }
+      .s-i-vk {
+        left: 99px;
+        -moz-animation: round1 0.5s 1;
+      }
+    }
   .social-list {
     position: relative;
-    left: 145px;
+    margin-right: -42px;
+    .box(117px, 16px);
     overflow: hidden;
     float: left;
-    .opacity(0);
     .transition(all 200ms ease-in-out);
-  }
-  .social-item {
-    float: left;
-    margin-right: 20px;
+    z-index: 2;
   }
   .share {
     position: relative;
@@ -395,6 +460,7 @@ li {
     font: 9px Helvetica, Arial, serif;
     z-index: 5;
     .transition(all 200ms ease-in-out);
+    line-height: 14px;
   }
   .arrow {
     position: absolute;
@@ -402,6 +468,7 @@ li {
     right: 34px;
     float: left;
     margin-right: 6px;
+    z-index: 3;
   }
   .amount {
     position: relative;
@@ -412,6 +479,7 @@ li {
     border-left: none;
     font: 12px/12px Helvetica, Arial, serif;
     background-color: #fff;
+    z-index: 10;
     
     &:before {
       content: "";
@@ -419,7 +487,207 @@ li {
       top: -1px;
       left: -6px;
       .box(6px, 16px);
-      background: url(../img/sprite.jpg) no-repeat 0 -367px;
+      background: url(../img/sprite.png) no-repeat 0 -367px;
+    }
+  }
+}
+
+ .social-item {
+    position: absolute;
+    margin-right: 20px;
+    
+    &.s-i-tw, &.s-i-fb, &.s-i-vk, &.s-i-gl {
+      left: -20px;
+      .transform-origin(50%, 50%);
+      .transition(all 0.25s ease-in-out);
+    }
+  }
+
+@-webkit-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@-moz-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@-o-keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+@keyframes round1 {
+  0%   {
+    .rotate(180deg);
+  }
+  100% {
+    .rotate(0deg);
+  }
+}
+
+.page-blog {
+  background-color: #000;
+  
+  .languages {
+    ul li a {
+      color: #fff;
+    }
+  }
+  .main-nav {
+    .to-portfolio {
+      background-position: 0 -121px;
+    }
+    .to-blog {
+      background-position: -138px -122px;
+    }
+    .to-team {
+      left: -35px;
+      background-position: -228px -129px;
+    }
+    &.eng {
+      .to-portfolio {
+        background-position: 0 -178px;
+      }
+      .to-blog {
+        background-position: -135px -182px;
+      }
+      .to-team {
+        left: 0px;
+        background-position: -191px -183px;
+      }
+    }
+    a.active { 
+      .opacity(0.6);
+    }
+  }
+  .copiryght {
+    color: #fff;
+  }
+  .contact-mails a{
+    color: #fff;
+  }
+  .contact-phones {
+    color: #fff;
+    
+    .icon-tell {
+      background-position: -67px -367px;
+    }
+    .icon-skype {
+      background-position: -35px -367px;      
+    }
+  }
+  .socials {
+    .amount {
+      border-color: #fff;
+      background-color: #000;
+      color: #fff;
+      
+      &:before {
+        background-position: -10px -367px; 
+      }
+    }
+  }
+}
+
+.project-nav {
+  margin: 18px 0 0 9%;
+  
+  &.portfolio {
+    margin-left: 4%;
+  }
+  ul {
+    overflow: hidden;
+  }
+  a {
+    padding: 10px;    
+    color: #000;
+    
+    &.active {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.additional-link {
+  position: absolute;
+  right: 9.5%;
+  top: 117px;
+}
+
+.content {
+  position: relative;
+  
+  .work-info {
+    margin: 0 auto;
+    margin-top: 53px;
+    width: 85%;
+    line-height: 16px;
+  }
+  .line {
+    margin: 15px 0 0 0;
+    border-bottom: 1px solid #000;
+  }
+  .text {
+    width: 85%;
+    margin: 0 auto;
+    
+    img {
+      width: auto;
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  // background-color: #cdcdcd;    
+}
+
+.team-list {
+  margin: 86px 0 60px;
+  text-align: center;
+  
+  .team-item {
+    display: inline-block;
+    padding: 5px 20px 20px;
+    width: 200px;
+    text-align: center;
+    
+    .name {
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px dashed #000;
+    }
+    .job {
+      margin-top: 11px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.work-list-cnt {
+  .works-list {
+    margin: 28px 0 52px;
+    text-align: center;
+    
+    li {
+      display: inline-block;
+      .square(150px);
+      padding: 5px 10px 10px;
     }
   }
 }

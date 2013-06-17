@@ -108,9 +108,9 @@
 						</div>	<!-- /.smallBanerList -->
 					</div> 
 					<div class="span1">
-						<div class="user">
-							<a href="#" class="login"><i class="icon-cas"></i> Войти</a>
-							<a href="#" class="hidden-phone"><i class="icon-user"></i> Зарегистрироваться</a>
+						<div class="user logined">
+							<a href="#" class="user-cab"><i class="icon-cab"></i>Личный кабинет</a>
+							<a href="#"><i class="icon-cas"></i> Выйти</a>
 						</div>	<!-- /.user-cabinet-ctn -->
 						
 						<div class="shoppingCart float-l  js-shopping-cart">
@@ -301,6 +301,12 @@
 		 	<div class="row">
 		 		<div class="span3 checkout-cnt">
 		 			<form action="#" method="" name="checkout" accept-charset="utf-8">
+		 				<div class="notify error">
+							<div class="icon-notify"></div>
+							<div class="notify-content">
+								Cпасибо за Ваш отзыв. Он отправлен администратору на утверждение.
+							</div>
+						</div> <!-- /.notify -->
 						<div class="checkout-info">
 							<div class="clearfix">
 								<div class="method-payment">
@@ -363,10 +369,10 @@
 									<label for=""><i class="icon-asterisk"></i>Имя и фамилия</label><input type="text" name="" id=""/>
 								</div>
 								<div class="form-row">
-									<label for=""><i class="icon-asterisk"></i>Эл. почта</label><input type="text" name="" id=""/>
+									<label for=""><i class="icon-asterisk"></i>Эл. почта</label><input type="email" name="" id=""/>
 								</div>
 								<div class="form-row">
-									<label for=""><i class="icon-asterisk"></i>Телефон</label><input type="text" name="" id=""/>
+									<label for=""><i class="icon-asterisk"></i>Телефон</label><input type="tel" name="" id=""/>
 								</div>
 								<div class="form-row user-pass">
 									Ваш пароль <span class="bold">f34f412</span> <a class="set-pass js-set-pass">сменить на свой</a>
@@ -384,6 +390,17 @@
 						 			Для бесплатной доставки вам необходимо добрать товара на сумму <span class="bold">299</span> грн. <br />
 						 			<a href="#">← <span class="border">Продолжить покупки</span></a>
 						 		</div> <!-- /.info-cnt -->
+						 		<div class="cupon-form">
+									   <div class="cupon-form-field">
+									   	<input type="text" name="cupon" placeholder="код купона на скидку" />
+									   	<button class="blue-btn">Применить</button>
+									   </div>	
+								</div> <!-- /.cupon-form -->
+								<div class="cupon-info">
+										<div class="cupon-name">Купон на скидку</div>
+										<i class="icon-remove-product"></i>
+										<div class="cupon-size">-10%</div>
+								</div>
 								<div class="intotal">
 						 			<span class="total-info">Всего к оплате:</span>
 						 			<span class="total-prise"><span class="bold">47 363</span> грн.</span>
@@ -421,6 +438,17 @@
 			 			Для бесплатной доставки вам необходимо добрать товара на сумму <span class="bold">299</span> грн. <br />
 			 			<a href="#">← <span class="border">Продолжить покупки</span></a>
 			 		</div> <!-- /.info-cnt -->
+					<div class="cupon-form">
+						   <div class="cupon-form-field">
+						   	<input type="text" name="cupon" placeholder="код купона на скидку" />
+						   	<button class="blue-btn">Применить</button>
+						   </div>	
+					</div> <!-- /.cupon-form -->
+					<div class="cupon-info">
+							<div class="cupon-name">Купон на скидку</div>
+							<i class="icon-remove-product"></i>
+							<div class="cupon-size">-10%</div>
+					</div>	
 			 		<div class="intotal">
 			 			<span class="total-info"><span class="br">Всего</span> к оплате:</span>
 			 			<span class="total-prise"><span class="bold">47 363</span> грн.</span>

@@ -65,6 +65,12 @@
       top: 122px;
       right: 59px;
       margin-top: 0;
+      
+      &.logined {
+        top: 108px;
+        right: 0;
+        margin: 0;
+      }
     }
     
     .shoppingCart {
@@ -441,8 +447,12 @@
      // page checkout 480px
     .checkout-cnt{
       margin-bottom: 28px;
-     .method-payment, .method-delivery, .delivery-info, .delivery-data, .autoriz-cnt, .confirm-cnt {
+      
+     .method-payment, form, .method-delivery, .delivery-info, .delivery-data, .autoriz-cnt, .confirm-cnt {
       width: 100%;
+     }
+     .notify {
+       margin-top: 10px;
      }
      .checkout-info, .checkout-user-info {  
        .box-sizing(border-box);
@@ -450,10 +460,10 @@
        padding-left: 20px;
        padding-right: 20px;
        
-       .form-row {
+       .form-row { 
          text-align: left;
        }         
-       input[type=text],select {
+       input[type=text], input[type=tel], input[type=email],select {
          width: 100%;
          margin: 5px 0 0 0;
        }
@@ -461,6 +471,42 @@
          width: 235px;
        }
      }
+    .cupon-form {
+    margin-top: 10px;
+    padding: 15px 0;
+    
+    .cupon-form-field {
+      overflow: hidden;
+      
+      input {
+        width: 252px; 
+        margin:8px 20px 0 0;
+      }
+    }
+    .blue-btn{
+      float: right;
+      height: 40px;
+      background: url(../img/bg/sprite-bg.png) repeat-x 0 -101px;
+      font-size: 20px;
+    }
+  }
+  
+  .cupon-info {
+    padding: 15px 0 15px 0;
+    
+    .icon-remove-product {
+      margin: 0;
+      width: 35px;
+      height: 35px;
+      background-position: -129px -181px;
+    }
+    .cupon-name {
+      margin-top: 6px;
+    }
+    .cupon-size {
+      margin: 7px 20px;
+    }
+  }
     } 
     
     .checkout-info {
@@ -550,11 +596,12 @@
     .confirm-cnt {
       .green-btn {
           background-position: 0 -425px;
-          font-size: 1.286em;
+          font-size: 22px;
+          font-weight: normal; 
           height: 38px;
           text-align: center;
           width: 100%;
-        }
+      } 
       }
       h1 {
         font-size: 1.714em;
@@ -746,7 +793,7 @@
   }
   
   .modal-cnt {
-    border: none;
+    
     width: 480px;
     .close-modal {
       right: 25px;
@@ -773,6 +820,12 @@
         }
       }
     }
+  }
+  .modal-callback {
+    width: 410px;
+  }
+  .modal-cnt-login {
+      width: 410px;
   }
   
   // page action
@@ -863,5 +916,13 @@
     .tw-link {
       background-position: -92px  -448px;
     }
+  }
+  
+  .bottomLine.page-check {
+    margin-top: 15px;
+  }
+  
+  .empty-cart-info {
+    padding-right: 39px;
   }
 }

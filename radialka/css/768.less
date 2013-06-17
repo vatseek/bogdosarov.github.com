@@ -161,7 +161,7 @@
   .thumb-item.active {
     li {
       background-color: transparent;
-       
+      background-position: -70px -51px;
        &:after {
         display: none;
        }
@@ -177,12 +177,6 @@
     .border-radius(3px);
     background-position: -43px -51px;
     cursor: pointer;
-    &.active{
-      background-position: -70px -51px;
-      &:after{
-        display: none;
-      }
-    }
   }
   .thumb-separator {
     display: none;
@@ -383,6 +377,9 @@
     width: 480px;
     padding-left: 0;
     
+    form {
+      width: 480px; 
+    }
     .method-delivery {
       width: 230px;
       
@@ -526,5 +523,20 @@
       width: 313px;
     }
 }
+
+.cupon-form {
+  margin-top: 10px;
+  padding: 10px;
+  
+  input {
+    width: 100%;
+    margin:0 0 8px 0;
+  }
+}
+
+.cupon-info {
+  padding: 10px;
+}
+
 
 }

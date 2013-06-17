@@ -1,4 +1,4 @@
-@main-font: Arial, Helvetica, sans-serif;
+@main-font: Helvetica, Arial, sans-serif;
 
 @font-size: 14px;
 
@@ -193,6 +193,10 @@ a {
   border-bottom: 1px solid #bad0ea;
   border-bottom: 1px solid rgba(26,98,186, .3); 
   cursor: pointer;
+  
+  &.pseudo {
+    border-bottom: 1px dashed #A3C0E3;
+  }
 }
 
 li { 
@@ -233,6 +237,10 @@ h1, h2 {
 .header-top {
   min-height: 35px;
   background: @sprite-bg #edf0f2 repeat-x 0 -596px;
+  
+  .row {
+    margin-bottom: 0px;
+  }
 }
 
   input[type=number]::-webkit-inner-spin-button,
@@ -320,7 +328,7 @@ h1, h2 {
   padding-top: 34px;
   margin-bottom: 7px;
 }
-  input[type="text"],input[type="number"],input[type="email"],input[type="password"], input[type="text"]:focus  {
+  input[type="text"],input[type="tel"],input[type="number"],input[type="email"],input[type="password"], input[type="text"]:focus  {
     .box-sizing(border-box);
     .border-radius(2px);
     color: #000;
@@ -503,6 +511,12 @@ a[class*="btn"]{
   i {
   vertical-align: -0.071em;
   }
+  .icon-cab {
+    margin-right: 3px;
+  }
+  .user-cab {
+    margin-right: 22px;
+  }
 
 }
 
@@ -550,7 +564,7 @@ a[class*="btn"]{
 .operators {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 42px;
   left: 18px;
   width: 133px;
   height: 44px;
@@ -2113,7 +2127,10 @@ h2 {
   margin-bottom: 26px;
   padding:0 0 0 20px;
   
-  input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+  form {
+    width: 559px;
+  }
+  input[type="text"], input[type="tel"], input[type="password"], input[type="number"], input[type="email"], select {
     width: 399px;
     height: 27px;
     padding: 5px 0 5px 6px; 
@@ -2150,10 +2167,13 @@ h2 {
     width: 250px;
   }
   .method-delivery {
-    width: 338px;
+    width: 308px;
   }
   .icon-asterisk {
     margin: 0 3px 6px 0; 
+   }
+   .notify {
+     margin: -10px 0 -2px;
    }
 }
 
@@ -2176,7 +2196,6 @@ h2 {
 
 .delivery-info {
   margin: 40px 0 19px;
-  padding-right: 105px;
   min-height: 187px;
   
   .address-represent {
@@ -2206,7 +2225,7 @@ h2 {
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
   padding: 30px 0 40px 0;
-  width: 542px;
+  width: 558px;
   
   small {
     display: block;
@@ -2233,14 +2252,14 @@ h2 {
 }
 
 .confirm-cnt {
-  padding: 0 105px 0 0;
+  padding: 0 0px 0 0;
   text-align: right;
 }
 
 .checkout-check-list {
-  position: relative;
-  width: 292px;
+  position: relative; 
   .border-radius(5px);
+  width: 292px;
   background-color: #fff; 
   -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
   -moz-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 3px 5px rgba(0,0,0,.4); 
@@ -2267,10 +2286,45 @@ h2 {
   .delivery-price {
     padding: 8px 13px 0 19px;
   }
+  input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+    height: 27px;
+    padding: 5px 0 5px 6px; 
+  }
+}
+
+.cupon-form {
+  border-top: 1px solid #CBD3DA;
+  margin-top: 13px;
+  padding: 13px;
+  
+  input {
+    width: 172px;
+    margin-left:1px;
+  }
+}
+
+.cupon-info {
+  overflow: hidden;
+  padding: 8px 13px 8px 20px;
+  border-top: 1px solid #CBD3DA;
+  
+  .cupon-name {
+    float: left;
+  }
+  .cupon-size {
+    float: right;
+    margin: 0 6px 0 0;
+    color: #b60526;
+    font-weight: bold;
+  }
+  .icon-remove-product {
+    float: right;
+    position: relative;
+    margin: 2px 0 0 0;
+  }
 }
 
 .intotal {
-  margin-top: 14px;
   border-top: 1px solid #cbd3da;
   padding: 15px 14px 12px 0;
   font-size: 0.857em;
@@ -2352,7 +2406,6 @@ h2 {
 
 .modal-cnt {
     display: none;
-    min-width: 410px; 
     position: relative;
     background-color: #fff; 
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,.15), 0 10px 29px 14px rgba(0,0,0,.33); 
@@ -2387,11 +2440,13 @@ h2 {
      }
     }
      .form-row {
+       position: relative;
        margin-bottom: 15px;
        
        .icon-eye {
-         position: relative;
-         left: -32px;
+         position: absolute;
+         right: 13px;
+         top: 36px;
          cursor: pointer;
        }
      }
@@ -2403,13 +2458,19 @@ h2 {
       font-size: 0.786em;
       color:#7f8489;
     }
-  }
-  
-  .modal-form {
     form {
-      margin-left: 40px;
+      padding: 0 40px;
     }
   }
+  
+  .modal-callback {
+      width: 410px;
+      padding-bottom: 20px; 
+      
+      form {
+        margin-top: 60px;
+      }
+    }
   
   .login-reg-tabs {
     margin-bottom: 24px;
@@ -2898,7 +2959,9 @@ h2 {
       }
     }
   }
-  .product-tabs-cnt{
+}
+
+.product-tabs-cnt, .empty-cart-info {
     padding: 30px 20px 5px 0;
     border-bottom: solid 1px #cbd3da;
     background: url(../img/bg/product-tab.png) center top no-repeat;
@@ -2936,6 +2999,12 @@ h2 {
       }
     }
   }
+
+.empty-cart-info {
+  margin: 8px 0 40px;
+  border: 0;
+  padding: 0;
+  background: none;
 }
 
 #product-tab-2 {
@@ -3039,6 +3108,9 @@ h2 {
     margin-top: 15px; 
     border-top: solid 1px #cbd3da;
     padding: 14px 0 48px;
+  }
+  .notify {
+    margin: -8px 0 7px;
   }
 }
 
@@ -3392,6 +3464,49 @@ h2 {
     background-position: -162px  -448px;
   }
 }
+
+.notify {
+  .box-sizing(border-box);
+  .border-radius(3px);
+  min-height: 40px;
+  overflow: hidden;
+  margin: 12px 0;
+  padding: 13px 10px 9px 10px;
+  color: #426412;
+  background: #edf8dd; /* Old browsers */
+  background: -moz-linear-gradient(top, #edf8dd 0%, #dbeec0 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf8dd), color-stop(100%,#dbeec0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #edf8dd 0%,#dbeec0 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #edf8dd 0%,#dbeec0 100%); /* W3C */
+  
+  &.error {
+    background-color: #f5dfdf;
+    background-image: -webkit-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -moz-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -o-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: -ms-linear-gradient(bottom, #f2d9d9, #f7e4e4); 
+    background-image: linear-gradient(to top, #f2d9d9, #f7e4e4);
+    color: #80303b;
+    
+    .icon-notify {
+      background-position: -144px -466px;
+    }
+  }
+  .icon-notify {
+    float: left;
+    // margin: 12px 10px 0 10px;
+  }
+  .notify-content {
+    margin:0 0 0 25px;
+    line-height: 1.2em; 
+    
+  }
+}
+
+
+
  // media queries
  
  @media screen and (min-width:1000px) {
@@ -3644,4 +3759,14 @@ h2 {
   width: 11px;
   height: 11px;
   background-position: -121px -252px;
+}
+
+.icon-notify {
+  .box(16px, 17px);
+  background-position: -126px -466px; 
+}
+
+.icon-cab {
+  .square(11px);
+  background-position: -165px -468px; 
 }
