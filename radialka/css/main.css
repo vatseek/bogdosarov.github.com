@@ -3960,6 +3960,10 @@ h2 {
   }
   .checkout-cnt .checkout-info input[type=text],
   .checkout-cnt .checkout-user-info input[type=text],
+  .checkout-cnt .checkout-info input[type=tel],
+  .checkout-cnt .checkout-user-info input[type=tel],
+  .checkout-cnt .checkout-info input[type=email],
+  .checkout-cnt .checkout-user-info input[type=email],
   .checkout-cnt .checkout-info select,
   .checkout-cnt .checkout-user-info select {
     width: 100%;
