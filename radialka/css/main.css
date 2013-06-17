@@ -457,7 +457,7 @@ a[class*="btn"] {
 .operators {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 42px;
   left: 18px;
   width: 133px;
   height: 44px;
@@ -2172,7 +2172,7 @@ h2 {
 }
 .modal-cnt .form-row .icon-eye {
   position: absolute;
-  right: 20px;
+  right: 13px;
   top: 36px;
   cursor: pointer;
 }
@@ -2189,6 +2189,7 @@ h2 {
 }
 .modal-callback {
   width: 410px;
+  padding-bottom: 20px;
 }
 .modal-callback form {
   margin-top: 60px;
